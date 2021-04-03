@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE PISI SYSTEM 'https://getsol.us/standard/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>freewb</Name>
+        <Homepage>http://www.freewb.org/</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Packager>
+        <Summary>极点五笔输入法</Summary>
+        <Description>极点五笔输入法</Description>
+        <License>Proprietary</License>
+        <Archive sha1sum="af973e0898ae3453b854b9dc7ac07b44433edea3" type="binary">210.22.22.150:1278/freewb_0.1.3_amd64.deb</Archive>
+        <BuildDependencies>
+            <Dependency>fcitx</Dependency>
+            <Dependency>fcitx-devel</Dependency>
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>freewb</Name>
+        <Icon>freewb</Icon>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>fcitx</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>03-04-2021</Date>
+            <Version>0.1.3</Version>
+            <Comment>First eopkg version</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Update>
+    </History>
+</PISI>
