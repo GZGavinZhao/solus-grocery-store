@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://getsol.us/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Microsoft Edge (dev)</Name>
+        <Homepage>https://www.microsoftedgeinsider.com/en-us/download</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Packager>
+        <Summary>The web browser from Microsoft</Summary>
+        <Description>Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier</Description>
+        <License>Proprietary</License>
+        <Archive sha1sum="048ffe19582eebdceae3e7697f978039836d974e" type="binary">https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_91.0.831.1-1_amd64.deb</Archive>
+        <BuildDependencies>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>microsoft-edge-dev</Name>
+        <Icon>microsoft-edge-dev</Icon>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>gconf</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>28-03-2020</Date>
+            <Version>91.0.831.1</Version>
+            <Comment>Update Microsoft Edge Dev version 91.0.831.1, adds Linux sync ability</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>19-12-2020</Date>
+            <Version>89.0.731.0</Version>
+            <Comment>Update Microsoft Edge Dev version 89.0.731.0</Comment>
+            <Name>Prateek SU</Name>
+            <Email>prateekmedia@github.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>24-10-2020</Date>
+            <Version>88.0.673.0</Version>
+            <Comment>Add Microsoft Edge Dev version 88.0.673.0</Comment>
+            <Name>Prateek SU</Name>
+            <Email>prateekmedia@github.com</Email>
+        </Update>
+    </History>
+</PISI>

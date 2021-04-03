@@ -31,6 +31,7 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>fcitx</Dependency>
+            <Dependency>fcitx-configtool</Dependency>
             <Dependency>fcitx-gtk2</Dependency>
             <Dependency>fcitx-gtk3</Dependency>
             <Dependency>fcitx-qt5</Dependency>
