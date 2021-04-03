@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE PISI SYSTEM "https://getsol.us/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sogoupinyin</Name>
+        <Homepage>https://pinyin.sogou.com/linux/</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Packager>
+        <Summary>Business Sogou Input Method</Summary>
+        <Description>Based on web search engine technology, Sogou Pinyin input method is the next-generation input method designed for Internet users. As it is backed with search engine technology, user input method can be extremely fast, and it is much more advanced than other input method engines in terms of the volume of the vocabulary database and its accuracy. Sogou input method is the most popular input methods in China, and Sogou promises it will always be free of charge.</Description>
+        <License>Proprietary</License>
+        <Archive sha1sum="cf830b972350e4d0f4bd7484c901c84a411e6e61" type="binary">https://ime.sogoucdn.com/dl/index/1612260778/sogoupinyin_2.4.0.3469_amd64.deb?st=XrvFhEiHcHCS_ggTPejJWA&amp;e=1617057768&amp;fn=sogoupinyin_2.4.0.3469_amd64.deb</Archive>
+        <BuildDependencies>
+            <Dependency>fcitx</Dependency>
+            <Dependency>fcitx-devel</Dependency>
+            <Dependency>fcitx-gtk2</Dependency>
+            <Dependency>fcitx-gtk3</Dependency>
+            <Dependency>fcitx-qt5</Dependency>
+            <Dependency>fcitx-qt5-devel</Dependency>
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sogoupinyin</Name>
+        <Icon>sogoupinyin</Icon>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>fcitx</Dependency>
+            <Dependency>fcitx-gtk2</Dependency>
+            <Dependency>fcitx-gtk3</Dependency>
+            <Dependency>fcitx-qt5</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>31-03-2021</Date>
+            <Version>2.4.0.3469</Version>
+            <Comment>First eopkg version</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Update>
+    </History>
+</PISI>
