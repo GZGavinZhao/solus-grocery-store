@@ -24,9 +24,14 @@ $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/so
 ```
 $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/solus-grocery-store/main/netease-cloud-music/ncm/pspec.xml && sudo eopkg it netease-cloud-music-1.2.1-1-1-x86_64.eopkg && sudo rm netease-cloud-music-1.2.1-1-1-x86_64.eopkg
 ```
+**注意事项：** 复制粘贴干就完了。如果启动不了，提交[issue](https://github.com/GZGavinZhao/solus-grocery-store/issues)，同时附上在terminal里面执行`netease-cloud-music`后的所有输出。
+
 **NOTE:** This should work flawlessly, but it's possible that I am missing some dependencies. If you can't start it, execute `netease-cloud-music` and create an issue [here](https://github.com/GZGavinZhao/solus-grocery-store/issues) with the warning/error messages, if any.
 
 ### 搜狗拼音(sogoupinyin)
+
+***别用，根本用不了……
+Don't use it, it just doesn't work.***
 
 ```
 $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/solus-grocery-store/main/sogoupinyin/sogoupinyin/pspec.xml && sudo eopkg it sogoupinyin-2.4.0.3469-1-1-x86_64.eopkg && sudo rm sogoupinyin-2.4.0.3469-1-1-x86_64.eopkg
@@ -39,7 +44,7 @@ $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/so
 
 ### 搜狗拼音(sogoupinyin)
 
-总结：能用，但很不稳定。建议先开`Fcitx`自带的拼音输入法以防万一，同时参考安装指南中的文章。
+总结：~~能用，但很不稳定~~根本没法用。建议先开`Fcitx`自带的拼音输入法或者`ibus`的`libpinyin`和`Pinyin`以防万一，同时参考安装指南中的文章。
 
 `Fcitx`和`ibus`似乎仍然存在互相干扰的问题……例如，尽管能正常打字/切换中英文，terminal中输入`fcitx`时会显示如下错误：
 ```
@@ -48,7 +53,7 @@ $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/so
 ```
 同时，搜狗拼音经常会“诈尸”。有时候它能用，有时候它自己就消失了。还请有能力的大神指点一二！
 
-The interference between `Fcitx` and `ibus` has been a headache for me. It does work normally, but still gives weird warning messages when running `fcitx` in the terminal:
+The interference between `Fcitx` and `ibus` is still a headache for me. It does work normally, but still gives weird warning messages when running `fcitx` in the terminal:
 ```
 (WARN-7334 dbusstuff.c:248) DBus Service Already Exists
 (ERROR-7334 instance.c:443) Exiting.
