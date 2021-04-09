@@ -19,6 +19,13 @@ $ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/so
 ```
 **NOTE:** In order to use the latest sign-in and sync support for version 91.0.831.1 and above, after installation you might need to manually type `edge://flags` in the address bar, then search for and enable the "MSA sign in" experiment.
 
+### 网易云音乐(NetEase Cloud Music)
+
+```
+$ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/solus-grocery-store/main/netease-cloud-music/ncm/pspec.xml && sudo eopkg it netease-cloud-music-1.2.1-1-1-x86_64.eopkg && sudo rm netease-cloud-music-1.2.1-1-1-x86_64.eopkg
+```
+**NOTE:** This should work flawlessly, but it's possible that I am missing some dependencies. If you can't start it, execute `netease-cloud-music` and create an issue [here](https://github.com/GZGavinZhao/solus-grocery-store/issues) with the warning/error messages, if any.
+
 ### 搜狗拼音(sogoupinyin)
 
 ```
