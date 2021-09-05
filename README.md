@@ -4,6 +4,8 @@ Some unofficial 3rd party packages for Solus OS. The idea of setting up such a r
 
 I typically update these packages once a month, and will work on some aesthetic improvements later.
 
+I just learned how to more formally package using `solbuild`, and will try to do some re-builds when I have time.
+
 ## Disclaimer
 
 These packages are **not official**, they are neither supported nor endorsed by the official Solus devs. Do not ask for help in Solus's (or any other) help forum, instead create an issue [here](https://github.com/GZGavinZhao/solus-grocery-store/issues). 
