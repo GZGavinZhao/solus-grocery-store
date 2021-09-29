@@ -1,0 +1,24 @@
+name       : rpi-imager
+version    : 1.6.2
+release    : 1
+source     :
+    - https://github.com/raspberrypi/rpi-imager/archive/refs/tags/v1.6.2.tar.gz : 32f7fcd732ed8b707e862f51311c846b13a9dfb805cc6d901c601e2e5c2ec2d7
+license    : Apache-2.0
+component  : system.utils
+summary    : Raspberry Pi Imaging Utility.
+description: |
+    Raspberry Pi Imager provides an easy way to install Raspberry Pi OS and other operating systems to an SD card ready to use with your Raspberry Pi.
+builddeps  :
+    - pkgconfig(libarchive)
+    - pkgconfig(libcurl)
+    - pkgconfig(openssl)
+    - pkgconfig(Qt5Gui)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5UiTools)
+setup      : |
+    %cmake
+build      : |
+    %make
+install    : |
+    %make_install
