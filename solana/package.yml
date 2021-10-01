@@ -5,6 +5,8 @@ source     :
     - https://github.com/solana-labs/solana/archive/refs/tags/v1.7.13.tar.gz : e89af646d14bf5e7d1c8b36dd988b09b7d8b7d03bdbaeb7fdb5230ee6d530191
 license    : Apache-2.0
 component  : programming.tools
+clang      : yes
+networking : yes
 summary    : Solana CLI tools.
 description: |
     Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces.
