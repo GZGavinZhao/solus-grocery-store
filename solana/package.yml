@@ -19,7 +19,7 @@ build      : |
     rustup install 1.52.1
     cargo build --release --bin solana
 install    : |
-    install -Dm0064 $installdir/usr/share/solana
+    install -dm0064 $installdir/usr/share/solana
     cp -R bin/* $installdir/usr/share/solana
 
     pushd $installdir/usr/share/solana
