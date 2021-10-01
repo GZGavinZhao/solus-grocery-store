@@ -2,7 +2,7 @@ name       : solana
 version    : 1.6.27
 release    : 1
 source     :
-    - https://github.com/solana-labs/solana/archive/refs/tags/v1.6.27.tar.gz : cba75d0e5ac09a8b2dc67615bf2e2a7b82245a88ced5c435e9f455b896ea6ec1
+    - https://github.com/solana-labs/solana/archive/refs/tags/v1.7.13.tar.gz : e89af646d14bf5e7d1c8b36dd988b09b7d8b7d03bdbaeb7fdb5230ee6d530191
 license    : Apache-2.0
 component  : programming.tools
 summary    : Solana CLI tools.
