@@ -5,6 +5,7 @@ source     :
     - https://github.com/solana-labs/solana/archive/refs/tags/v1.6.27.tar.gz : cba75d0e5ac09a8b2dc67615bf2e2a7b82245a88ced5c435e9f455b896ea6ec1
 license    : Apache-2.0
 component  : programming.tools
+clang      : yes
 networking : yes
 summary    : Solana CLI tools.
 description: |
