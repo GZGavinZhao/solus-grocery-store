@@ -16,6 +16,7 @@ builddeps  :
     - llvm-clang
 build      : |
     # ./scripts/cargo-install-all.sh .
+    rustup install 1.52.1
     cargo build --release --bin solana
 install    : |
     install -Dm0064 $installdir/usr/share/solana
