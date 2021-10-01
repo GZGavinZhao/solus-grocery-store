@@ -1,0 +1,23 @@
+name       : solana
+version    : 1.6.27
+release    : 1
+source     :
+    - https://github.com/solana-labs/solana/archive/refs/tags/v1.6.27.tar.gz : cba75d0e5ac09a8b2dc67615bf2e2a7b82245a88ced5c435e9f455b896ea6ec1
+license    : Apache-2.0
+component  : programming.tools
+summary    : Solana CLI tools.
+description: |
+    Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces.
+builddeps  :
+    - pkgconfig(libssl)
+    - rustup
+    - llvm-clang
+build      : |
+    ./scripts/cargo-install-all.sh .
+install    : |
+    install -Dm0064 $installdir/usr/share/solana
+    cp -R bin/* $installdir/usr/share/solana
+
+    pushd $installdir/usr/share/solana
+    find . -maxdepth 1 -type f -executable -exec ln -s /usr/share/solana/{} $installdir/usr/bin/{} \;
+    popd
