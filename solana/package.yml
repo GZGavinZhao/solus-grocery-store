@@ -20,7 +20,8 @@ build      : |
     cargo build --release --bin solana
 install    : |
     install -dm0064 $installdir/usr/share/solana
-    cp -R bin/* $installdir/usr/share/solana
+    install -dm0064 $installdir/usr/bin
+    cp -R bin/* $installdir/usr/share/solana/
 
     pushd $installdir/usr/share/solana
     find . -maxdepth 1 -type f -executable -exec ln -s /usr/share/solana/{} $installdir/usr/bin/{} \;
