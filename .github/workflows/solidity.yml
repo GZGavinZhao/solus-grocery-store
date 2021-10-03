@@ -1,8 +1,8 @@
-name: solana
+name: solidity
 
 on:
   push:
-    branches: [ main ]
+    branches: [ solidity ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,10 +23,10 @@ jobs:
           packager: "Gavin Zhao"
           email: "gavin@example.com"
       - name: 'Build package'
-        run: cd solana && sudo solbuild build && cd ..
+        run: cd solidity && sudo solbuild build && cd ..
         shell: bash
       - name: 'Upload artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: solana
-          upload: solana
+          name: solidity
+          upload: solidity
