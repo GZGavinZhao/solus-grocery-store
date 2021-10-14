@@ -1,0 +1,17 @@
+name       : flatbuffers
+version    : 2.0.0
+release    : 1
+source     :
+    - https://github.com/google/flatbuffers/archive/refs/tags/v2.0.0.tar.gz : 9ddb9031798f4f8754d00fca2f1a68ecf9d0f83dfac7239af1311e4fd9a565c4
+license    : Apache-2.0
+component  : programming
+summary    : Google's memory efficient serialization library
+description: |
+    FlatBuffers is a cross platform serialization library architected for maximum memory efficiency.
+    It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.
+setup      : |
+    %cmake
+build      : |
+    %make
+install    : |
+    %make_install
