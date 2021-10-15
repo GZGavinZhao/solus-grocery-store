@@ -1,0 +1,40 @@
+name       : solidity
+version    : 0.8.9
+release    : 1
+homepage   : https://soliditylang.org
+source     :
+    - https://github.com/ethereum/solidity/releases/download/v0.8.9/solidity_0.8.9.tar.gz : 36643d0282998136b610f740808acb4dc6728144bb9ee70e5fd4124cda85ddab
+    - https://github.com/cvc5/cvc5/archive/refs/tags/1.8.tar.gz : 19d9572cc0bd0cd51352e015dca257b8fe7b817ab7e11202342118b1a17c04a4
+license    : GPL-3.0-or-later
+component  : programming
+summary    : Solidity, the smart contract programming language
+description: |
+    Solidity is a statically typed, contract-oriented, high-level language for implementing smart contracts on the Ethereum platform.
+builddeps  :
+    - pkgconfig(cln) # cvc4 optional dependency for optimized build
+    - pkgconfig(gmp) # cvc4
+    - pkgconfig(z3)
+    - libboost-devel
+    - openjdk-11-devel # cvc4
+    - python-toml # cvc4
+networking : yes
+environment: |
+    JAVA_HOME=/usr/lib64/openjdk-11
+    export PATH=$JAVA_HOME/bin:$PATH
+setup      : |
+    # Install cvc4
+    tar -xf $sources/1.8.tar.gz -C .
+    cd cvc5-1.8 && mkdir build
+    ./contrib/get-antlr-3.4 && ./contrib/get-glpk-cut-log
+    ./configure.sh production --gpl --cln --glpk --prefix=/usr # Can't use the macro, this is the only option it takes...
+    cd build
+    %make
+    make check # The installation instructions instructed to put tests here
+    %make_install
+build      : |
+    mkdir build && cd build
+    %cmake ..
+    %make
+install    : |
+    cd build
+    %make_install
