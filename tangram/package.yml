@@ -1,0 +1,24 @@
+name       : tangram
+version    : 1.3.2
+release    : 1
+source     :
+    - https://github.com/sonnyp/Tangram/archive/refs/tags/v1.3.2.tar.gz : 90336dd665f3749a8fd95086357ba2434d398be5f6c36889a25a2e2f17e80a86
+    - https://github.com/sonnyp/troll/archive/5b09b5bf4345e87f702dc4900ce2eefb995b44e9.zip : 0bb3aca37365e2c0e1c5e4dc90f3edb822663847809ae97750b164d05c24eafe
+license    : GPL-3.0-or-later
+component  : network.web.browser
+summary    : Browser for your pinned tabs
+homepage   : https://github.com/sonnyp/Tangram
+description: |
+    Tangram is a new kind of browser. It is designed to organize and run your Web applications. Each tab is persistent and independent. You can set multiple tabs with different accounts for the same application.
+builddeps  :
+    - pkgconfig(appstream-glib)
+    - pkgconfig(gjs-1.0)
+    - nodejs
+setup      : |
+    rm -r src/troll
+    unzip $sources/5b09b5bf4345e87f702dc4900ce2eefb995b44e9.zip -d src && mv src/troll-5b09b5bf4345e87f702dc4900ce2eefb995b44e9 src/troll
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
