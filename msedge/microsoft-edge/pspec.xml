@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://getsol.us/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Microsoft Edge</Name>
+        <Homepage>https://www.microsoft.com/en-us/edge</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Packager>
+        <Summary>The web browser from Microsoft</Summary>
+        <Description>Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier</Description>
+        <License>Proprietary</License>
+        <Archive sha1sum="49a9f94818cad81e8694eaf1570a11de92ac9fec" type="binary">https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_95.0.1020.40-1_amd64.deb</Archive>
+        <BuildDependencies>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>microsoft-edge</Name>
+        <Icon>microsoft-edge</Icon>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>gconf</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>03-11-2021</Date>
+            <Version>95.0.1020.40</Version>
+            <Comment>Initial Microsoft Edge stable.</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>74938940+GZGavinZhao@users.noreply.github.com</Email>
+        </Update>
+    </History>
+</PISI>
