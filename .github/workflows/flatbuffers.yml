@@ -3,7 +3,7 @@ name: flatbuffers
 
 on:
   push:
-    branches: [ flatbuffers ]
+    branches: [ main, flatbuffers ]
     paths:
       - flatbuffers/**.yml
 
