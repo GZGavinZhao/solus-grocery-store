@@ -16,7 +16,8 @@ description: |
 setup      : |
     sed -i 's/-Werror=/-W/g;s/-Werror//g' CMakeLists.txt
     %cmake \
-        -DFLATBUFFERS_BUILD_FLATLIB=OFF \
+        -DFLATBUFFERS_CODE_SANITIZE=ON \
+        -DFLATBUFFERS_ENABLE_PCH=ON \
         -DFLATBUFFERS_BUILD_SHAREDLIB=ON
 build      : |
     %make
