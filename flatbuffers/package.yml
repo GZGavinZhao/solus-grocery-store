@@ -13,6 +13,8 @@ description: |
 
     It was originally created at Google for game development and other
     performance-critical applications.
+builddeps  :
+    - pkgconfig(valgrind)
 setup      : |
     sed -i 's/-Werror=/-W/g;s/-Werror//g' CMakeLists.txt
     %cmake \
