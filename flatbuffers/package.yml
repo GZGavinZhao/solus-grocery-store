@@ -1,17 +1,28 @@
 name       : flatbuffers
 version    : 2.0.0
-release    : 1
+release    : 5
 source     :
-    - https://github.com/google/flatbuffers/archive/refs/tags/v2.0.0.tar.gz : 9ddb9031798f4f8754d00fca2f1a68ecf9d0f83dfac7239af1311e4fd9a565c4
+    - https://github.com/google/flatbuffers/archive/v2.0.0.tar.gz : 9ddb9031798f4f8754d00fca2f1a68ecf9d0f83dfac7239af1311e4fd9a565c4
 license    : Apache-2.0
 component  : programming.library
-summary    : Google's memory efficient serialization library
+summary    : FlatBuffers is an efficient cross platform serialization library.
 description: |
-    FlatBuffers is a cross platform serialization library architected for maximum memory efficiency.
-    It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.
+    FlatBuffers is an efficient cross platform serialization library for
+    C++, C#, C, Go, Java, JavaScript, Lobster, Lua, TypeScript, PHP,
+    Python, and Rust.
+
+    It was originally created at Google for game development and other
+    performance-critical applications.
 setup      : |
-    %cmake
+    sed -i 's/-Werror=/-W/g;s/-Werror//g' CMakeLists.txt
+    %cmake_ninja \
+        -DFLATBUFFERS_BUILD_FLATLIB=OFF \
+        -DFLATBUFFERS_BUILD_SHAREDLIB=ON
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+    # kodi needs the flatc binary
+    # install -Dm00755 solusBuildDir/flatc -t $installdir/usr/bin/
+check      : |
+    make test
