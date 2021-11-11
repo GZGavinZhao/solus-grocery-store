@@ -25,4 +25,4 @@ install    : |
     # kodi needs the flatc binary
     # install -Dm00755 solusBuildDir/flatc -t $installdir/usr/bin/
 check      : |
-    make test
+    cd solusBuildDir && make test
