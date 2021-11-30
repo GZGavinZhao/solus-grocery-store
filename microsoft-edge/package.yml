@@ -25,5 +25,5 @@ install    : |
     install -Dm00644 opt/microsoft/msedge/product_logo_128.png $installdir/usr/share/pixmaps/microsoft-edge.png
 
     # Remove stuff that aren't necessary on Solus
-    sed -i 's/microsoft-edge-stable/microsoft-edge/g' $installdir/usr/share/applications/microsoft-browser.desktop
+    sed -i 's/microsoft-edge-stable/microsoft-edge/g' $installdir/usr/share/applications/microsoft-edge.desktop
     rm -f $installdir/usr/bin/microsoft-edge-stable
