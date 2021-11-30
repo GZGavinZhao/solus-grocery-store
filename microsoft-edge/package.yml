@@ -1,0 +1,29 @@
+name       : microsoft-edge-stable_96.0.1054.34
+version    : 96.0.1054.34-1
+release    : 2
+source     :
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_96.0.1054.34-1_amd64.deb : 2877152fc9468c64fc512bbd76488d68f864a6e3f63ec1ef078e60b0bcedc8eb
+license    : Proprietary
+component  : network.web.browser
+summary    : The web browser from Microsoft.
+description: |
+    Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+builddeps  :
+    - pkgconfig(gconf-2.0)
+    - pkgconfig(xscrnsaver)
+rundeps    :
+    - gconf 
+    - libxscrnsaver
+setup      : |
+    ar x $sources/microsoft-edge-stable_${version}_amd64.deb
+    tar xf data.tar.*
+install    : |
+    mkdir -p $installdir
+    cp -r usr $installdir/
+    cp -r opt/microsoft/msedge $installdir/usr/share/
+    ln -sfn /usr/share/msedge/microsoft-edge $installdir/usr/bin/microsoft-edge
+    install -Dm00644 opt/microsoft/msedge/product_logo_128.png $installdir/usr/share/pixmaps/microsoft-edge.png
+
+    # Remove stuff that aren't necessary on Solus
+    sed -i 's/microsoft-edge-stable/microsoft-edge/g' $installdir/usr/share/applications/microsoft-browser.desktop
+    rm -f $installdir/usr/bin/microsoft-edge-stable
