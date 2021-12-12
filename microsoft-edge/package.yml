@@ -1,8 +1,8 @@
 name       : microsoft-edge
-version    : 96.0.1054.34
-release    : 2
+version    : 96.0.1054.53
+release    : 3
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_96.0.1054.34-1_amd64.deb : 2877152fc9468c64fc512bbd76488d68f864a6e3f63ec1ef078e60b0bcedc8eb
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_96.0.1054.53-1_amd64.deb : 5b74062683f768f01b06ddee1012c2a95bd60c0e7378687bf8e12deb6d646ac4
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
@@ -12,12 +12,12 @@ builddeps  :
     - pkgconfig(gconf-2.0)
     - pkgconfig(xscrnsaver)
 rundeps    :
-    - gconf 
+    - gconf
     - libxscrnsaver
 setup      : |
     ar x $sources/microsoft-edge-stable_${version}-1_amd64.deb
     tar xf data.tar.*
-install    : |
+install    : |-
     mkdir -p $installdir
     cp -r usr $installdir/
     cp -r opt/microsoft/msedge $installdir/usr/share/
