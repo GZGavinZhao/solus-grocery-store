@@ -10,7 +10,7 @@ I just learned how to more formally package using `solbuild`, and will try to do
 
 These packages are **not official**, they are neither supported nor endorsed by the official Solus devs. Do not ask for help in Solus's (or any other) help forum, instead create an issue [here](https://github.com/GZGavinZhao/solus-grocery-store/issues).
 
-I do **NOT** have the source code for any of the software. The installation files are created by simply decompressing official the .deb installation file and copying/assigning its contents to the right location(s) your Solus system.
+I do **NOT** have the source code for any of the proprietary software. The installation files are created by simply decompressing official the .deb installation file and copying/assigning its contents to the right location(s) your Solus system (this applies to Microsoft Edge).
 
 ## Installation Instructions
 
@@ -34,7 +34,7 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/GZGavinZhao/solu
 
 ### 搜狗拼音(sogoupinyin)
 
-***别用，根本用不了……
+***别用，根本用不了…… 估计依赖有问题
 Don't use it, it just doesn't work.***
 
 ```
