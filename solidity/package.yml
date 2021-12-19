@@ -16,7 +16,7 @@ builddeps  :
         - libboost-devel
     # - openjdk-11-devel # cvc4
     # - python-toml # cvc4
-    # networking : yes
+networking : yes
     # environment: |
     #     JAVA_HOME=/usr/lib64/openjdk-11
     #     export PATH=$JAVA_HOME/bin:$PATH
