@@ -1,9 +1,9 @@
 name       : solidity
-version    : 0.8.10
+version    : 0.8.11
 release    : 1
 homepage   : https://soliditylang.org
 source     :
-    - https://github.com/ethereum/solidity/releases/download/v0.8.10/solidity_0.8.10.tar.gz : 3f157aa2bc8bcbd8975fe5e41c476b3d777432dfe7c64e9d59247ee225a89ee3
+    - https://github.com/ethereum/solidity/releases/download/v0.8.11/solidity_0.8.11.tar.gz : b67df542cc19f4181a07050950e235f60a6dcc8018529335701384e632947b5a
 license    : GPL-3.0-or-later
 component  : programming
 summary    : Solidity, the smart contract programming language
@@ -12,8 +12,8 @@ description: |
 builddeps  :
     # - pkgconfig(cln) # cvc4 optional dependency for optimized build
     # - pkgconfig(gmp) # cvc4
-        - pkgconfig(z3)
-        - libboost-devel
+    - pkgconfig(z3)
+    - libboost-devel
     # - openjdk-11-devel # cvc4
     # - python-toml # cvc4
 networking : yes
