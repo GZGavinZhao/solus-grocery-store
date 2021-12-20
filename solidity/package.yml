@@ -30,8 +30,9 @@ networking : yes
     #     %make
     #     make check # The installation instructions instructed to put tests here
     #     %make_install
-build      : |
+setup      : |
     %cmake_ninja -DUSE_CVC4=OFF
+build      : |
     %ninja_build
 install    : |
     %ninja_install
