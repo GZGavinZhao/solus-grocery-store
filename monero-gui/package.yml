@@ -4,29 +4,27 @@ release    : 1
 source     :
     - git|https://github.com/monero-project/monero-gui : v0.17.3.0
 homepage   : https://getmonero.org
-license    : Distributable # Verify, I can't identify what license they're using.
+license    : BSD-3-Clause
 component  : network.web
-summary    : GUI for the core Monero implementation.
+summary    : Monero GUI client.
 description: |
-    The official GUI client for Monero.
+    The Qt GUI client for Monero, based on the core Monero implementation.
 builddeps  :
     - pkgconfig(hidapi-libusb)
     - pkgconfig(libcurl)
     - pkgconfig(libgcrypt)
+    - pkgconfig(libgvc) # For graphviz
     - pkgconfig(libsodium)
     - pkgconfig(libunbound)
     - pkgconfig(libunwind)
     - pkgconfig(libusb-1.0)
-    - pkgconfig(libxdot)
     - pkgconfig(libzmq)
     - pkgconfig(miniupnpc)
     - pkgconfig(openpgm-5.3)
     - pkgconfig(protobuf)
-    # - pkgconfig(Qt5Gui)
     - pkgconfig(Qt5Help) # For `lrelease` when dealing with internationalization
     - pkgconfig(Qt5MultimediaWidgets) # For optional camera scan QR-code module
     - pkgconfig(Qt5Qml)
-    # - pkgconfig(Qt5Quick)
     - pkgconfig(Qt5QuickControls2)
     - pkgconfig(Qt5QuickTemplates2)
     - pkgconfig(Qt5Svg)
@@ -39,4 +37,10 @@ setup      : |
 build      : |
     %ninja_build
 install    : |
-    %ninja_install
+    install -Dm00755 build/bin/monero-wallet-gui -t $installdir/usr/bin
+
+    install -Dm00644 $pkgfiles/monero-gui.desktop -t $installdir/usr/share/applications/
+
+    for x in 16 24 32 48 64 96 128 256; do
+      install -Dm00644 "images/appicons/${x}x${x}.png" "$installdir/usr/share/icons/hicolor/${x}x${x}/apps/monero-gui.png"
+    done
