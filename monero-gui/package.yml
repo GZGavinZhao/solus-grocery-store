@@ -1,0 +1,35 @@
+name       : monero-gui
+version    : 0.17.3.0
+release    : 1
+source     :
+    - https://github.com/monero-project/monero-gui : v0.17.3.0
+homepage   : https://getmonero.org
+license    : Distributable # Verify, I can't identify what license they're using.
+component  : network.web
+summary    : GUI for the core Monero implementation.
+description: |
+    The official GUI client for Monero.
+builddeps  :
+    - pkgconfig(miniupnpc)
+    - pkgconfig(libunbound)
+    - pkgconfig(libunwind)
+    - pkgconfig(libxdot)
+    - pkgconfig(libcurl)
+    - pkgconfig(hidapi-libusb) 
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(libzmq)
+    - pkgconfig(libgcrypt)
+    - pkgconfig(Qt5Gui)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5QuickTemplates2)
+    - pkgconfig(Qt5MultimediaWidgets)
+    - pkgconfig(Qt5Svg)
+    - doxygen
+    - libboost-devel
+setup      : |
+    %cmake_ninja -DWITH_SCANNER=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
