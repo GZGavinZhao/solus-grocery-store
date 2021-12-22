@@ -14,14 +14,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Fix solbuild directory permissions
-        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R a+rwx /var/lib/solbuild
+        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R 755 /var/lib/solbuild
         shell: bash
 
       - name: Cache solbuild artifacts
         id: cache-solbuild
         uses: actions/cache@v2
         with:
-          path: /var/lib/solbuild/
+          path: /var/lib/solbuild
           key: ${{ github.workflow }}-v3
 
       - uses: gzgavinzhao/setup-solbuild@v1
@@ -40,6 +40,6 @@ jobs:
           path: cln
 
       - name: Fix solbuild directory permissions
-        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R a+rwx /var/lib/solbuild
+        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R 755 /var/lib/solbuild
         shell: bash
 
