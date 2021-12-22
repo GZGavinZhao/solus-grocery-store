@@ -4,37 +4,42 @@ on:
   push:
     branches: [ main, cln ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: gzgavinzhao/setup-solbuild@v1
-        with:
-          packager: "Gavin Zhao"
-          email: "gavin@example.com"
+
+      - name: Fix solbuild directory permissions
+        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R a+rwx /var/lib/solbuild
+        shell: bash
 
       - name: Cache solbuild artifacts
         id: cache-solbuild
         uses: actions/cache@v2
         with:
           path: /var/lib/solbuild/
-          key: ${{ github.workflow }}
+          key: ${{ github.workflow }}-v3
+
+      - uses: gzgavinzhao/setup-solbuild@v1
+        with:
+          packager: "Gavin Zhao"
+          email: "gavin@example.com"
 
       - name: 'Build package'
         run: cd cln && sudo solbuild build && cd ..
         shell: bash
+
       - name: 'Upload artifact'
         uses: actions/upload-artifact@v2
         with:
           name: cln
           path: cln
+
+      - name: Fix solbuild directory permissions
+        run: sudo mkdir -p /var/lib/solbuild && sudo chmod -R a+rwx /var/lib/solbuild
+        shell: bash
+
