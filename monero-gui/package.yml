@@ -10,27 +10,27 @@ summary    : GUI for the core Monero implementation.
 description: |
     The official GUI client for Monero.
 builddeps  :
-    - pkgconfig(miniupnpc)
-    - pkgconfig(libunbound)
-    - pkgconfig(libunwind)
-    - pkgconfig(libxdot)
+    - pkgconfig(hidapi-libusb)
     - pkgconfig(libcurl)
-    - pkgconfig(hidapi-libusb) 
-    - pkgconfig(libusb-1.0)
-    - pkgconfig(libzmq)
     - pkgconfig(libgcrypt)
     - pkgconfig(libsodium)
-    - pkgconfig(Qt5Gui)
-    - pkgconfig(Qt5Xml)
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5QuickTemplates2)
-    - pkgconfig(Qt5MultimediaWidgets)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5Help)
-    - pkgconfig(Qt5Qml)
+    - pkgconfig(libunbound)
+    - pkgconfig(libunwind)
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(libxdot)
+    - pkgconfig(libzmq)
+    - pkgconfig(miniupnpc)
     - pkgconfig(openpgm-5.3)
     - pkgconfig(protobuf)
+    # - pkgconfig(Qt5Gui)
+    - pkgconfig(Qt5Help) # For `lrelease` when dealing with internationalization
+    - pkgconfig(Qt5MultimediaWidgets) # For optional camera scan QR-code module
+    - pkgconfig(Qt5Qml)
+    # - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5QuickTemplates2)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5Xml)
     - pkgconfig(x11)
     - doxygen
     - libboost-devel
