@@ -3,6 +3,8 @@ name: cln
 on:
   push:
     branches: [ main, cln ]
+    paths:
+      - cln/**.yml
 
   workflow_dispatch:
 
