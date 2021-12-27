@@ -1,10 +1,10 @@
-name: flatbuffers
+name: krita
 
 on:
   push:
-    branches: [ main, flatbuffers ]
+    branches: [ main, krita ]
     paths:
-      - flatbuffers/**.yml
+      - krita/**.yml
 
   workflow_dispatch:
 

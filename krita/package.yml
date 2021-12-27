@@ -1,0 +1,72 @@
+name       : krita
+version    : 5.0.1
+release    : 78
+source     :
+    - https://github.com/KDE/krita/archive/refs/tags/v5.0.1.tar.gz : d3f128c60f63a6773391d056b37a48f74d6bc0339038486a3f3057d0c6d8afae
+homepage   : https://krita.org
+license    : GPL-3.0-or-later
+component  : multimedia.graphics
+libsplit   : no
+summary    : Free and open source digital painting application
+description: |
+    Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.
+builddeps  :
+    - pkgconfig(OpenColorIO)
+    - pkgconfig(OpenEXR)
+    - pkgconfig(Qt5Multimedia)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(eigen3)
+    - pkgconfig(exiv2)
+    - pkgconfig(fftw3)
+    - pkgconfig(gsl)
+    - pkgconfig(kseexpr)
+    - pkgconfig(libheif)
+    - pkgconfig(libopenjp2)
+    - pkgconfig(libpng)
+    - pkgconfig(libraw)
+    - pkgconfig(libssh)
+    - pkgconfig(libtiff-4)
+    - pkgconfig(libturbojpeg)
+    - pkgconfig(poppler-qt5)
+    - pkgconfig(python3)
+    - pkgconfig(xcb-atom)
+    - pkgconfig(xcb-keysyms)
+    - pkgconfig(xi)
+    - giflib-devel
+    - kcompletion-devel
+    - kconfig-devel
+    - kcoreaddons-devel
+    - kcrash-devel
+    - kguiaddons-devel
+    - ki18n-devel
+    - kitemmodels-devel
+    - kitemviews-devel
+    - kwidgetsaddons-devel
+    - kwindowsystem-devel
+    - libboost-devel
+    - python-sip
+    - python3-qt5
+    - quazip-devel
+    - vc
+rundeps    :
+    - breeze
+    - ffmpeg
+    - python3-qt5
+setup      : |
+  # %patch -p1 < $pkgfiles/openexr-3.patch
+  # %patch -p1 < $pkgfiles/krita-opencolorio2.patch
+  # mkdir build && cd build
+
+    %cmake -DBUILD_TESTING=OFF \
+           -DPACKAGERS_BUILD=ON \
+           -DQT_NO_DEBUG=ON \
+           -B build
+build      : |
+    %make -C build
+install    : |
+    %make_install -C build
+    %qml_cache
+
+    rm -rf $installdir/usr/share/applications/krita*.desktop
