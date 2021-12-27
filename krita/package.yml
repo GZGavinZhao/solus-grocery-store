@@ -23,12 +23,14 @@ builddeps  :
     - pkgconfig(gsl)
     - pkgconfig(kseexpr)
     - pkgconfig(libheif)
+    - pkgconfig(libmypaint)
     - pkgconfig(libopenjp2)
     - pkgconfig(libpng)
     - pkgconfig(libraw)
     - pkgconfig(libssh)
     - pkgconfig(libtiff-4)
     - pkgconfig(libturbojpeg)
+    - pkgconfig(libwebp)
     - pkgconfig(poppler-qt5)
     - pkgconfig(python3)
     - pkgconfig(xcb-atom)
@@ -39,6 +41,7 @@ builddeps  :
     - kconfig-devel
     - kcoreaddons-devel
     - kcrash-devel
+    - kdesignerplugin-devel
     - kguiaddons-devel
     - ki18n-devel
     - kitemmodels-devel
@@ -60,8 +63,8 @@ setup      : |
   # mkdir build && cd build
 
     %cmake -DBUILD_TESTING=OFF \
-           -DPACKAGERS_BUILD=ON \
-           -DQT_NO_DEBUG=ON \
+           -DENABLE_UPDATERS=OFF \
+           -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
            -B build
 build      : |
     %make -C build
