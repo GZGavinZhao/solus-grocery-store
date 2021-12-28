@@ -5,6 +5,7 @@ on:
     branches: [ main, krita ]
     paths:
       - krita/**.yml
+      - ".github/workflows/krita.yml"
 
   workflow_dispatch:
 
@@ -21,7 +22,7 @@ jobs:
           email: ${{ secrets.EMAIL }}
 
       - name: 'Build package'
-        run:  sudo solbuild build
+        run:  sudo solbuild init -p unstable-x86_64 && sudo solbuild build -p unstable-x86_64
         working-directory: ${{ github.workflow }}
 
       - name: 'Upload artifact'
