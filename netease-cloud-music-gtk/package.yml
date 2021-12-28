@@ -1,0 +1,24 @@
+name       : netease-cloud-music-gtk
+version    : 1.2.2
+release    : 1
+source     :
+    - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/1.2.2.tar.gz : df1ef4d8ab69c9da625783a65a7d43fbf4ac9879087d733efa6b565edd6c6b33
+license    : GPL-3.0-or-later
+component  : multimedia.audio
+summary    : Netease Cloud Music Rust + GTK client.
+description: |
+    Linux 平台下基于 Rust + GTK 开发的网易云音乐播放器。
+networking : yes
+builddeps  :
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-plugins-base-1.0)
+    - gstreamer-1.0-plugins-good
+    - gstreamer-1.0-plugins-bad
+    - gstreamer-1.0-plugins-ugly
+    - cargo
+build      : |
+    cargo build --release
+install    : |
+    install -Dm00755 target/release/netease-cloud-music-gtk $installdir/usr/bin/netease-cloud-music-gtk
+    install -Dm00644 netease-cloud-music-gtk.desktop $installdir/usr/share/applications/netease-cloud-music-gtk.desktop
+    install -Dm00644 icons/netease-cloud-music-gtk.svg $installdir/usr/share/pixmaps/netease-cloud-music-gtk.svg

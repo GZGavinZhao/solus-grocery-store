@@ -1,0 +1,32 @@
+name: netease-cloud-music-gtk
+
+on:
+  push:
+    branches: [ main, netease-cloud-music-gtk ]
+    paths:
+      - netease-cloud-music-gtk/**.yml
+      - ".github/workflows/netease-cloud-music-gtk.yml"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: gzgavinzhao/setup-solbuild@v1
+        with:
+          packager: "Gavin Zhao"
+          email: ${{ secrets.EMAIL }}
+
+      - name: 'Build package'
+        run:  sudo solbuild init -p main-x86_64 && sudo solbuild build -p main-x86_64
+        working-directory: ${{ github.workflow }}
+
+      - name: 'Upload artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ github.workflow }}
+          path: ${{ github.workflow }}
