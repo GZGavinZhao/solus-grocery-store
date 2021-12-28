@@ -13,6 +13,8 @@ builddeps  :
     - pkgconfig(cairo)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
+    # - pkgconfig(gtk+-3.0)
+    - pkgconfig(pango)
     - gstreamer-1.0-plugins-good
     - gstreamer-1.0-plugins-bad
     - gstreamer-1.0-plugins-ugly
