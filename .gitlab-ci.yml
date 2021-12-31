@@ -29,6 +29,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - solbuild init -d -u
     - ls /var/lib
     - ls /var/lib/solbuild
-    - cd mold && solbuild build -d -t
+    - cd mold && solbuild build -d
     - echo "Compile complete."
     - ls /var/lib/solbuild
