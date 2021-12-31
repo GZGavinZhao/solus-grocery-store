@@ -28,6 +28,7 @@ build-job:       # This job runs in the build stage, which runs first.
   script:
     - echo "Compiling the code..."
     - solbuild init -d -u
+    - cd mold && solbuild build -d -t
     - echo "Compile complete."
 
 
