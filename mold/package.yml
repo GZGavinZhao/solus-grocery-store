@@ -11,6 +11,6 @@ description: |
 builddeps  :
     - pkgconfig(libxxhash)
 build      : |
-    %make
+    %make PREFIX=/usr
 install    : |
     %make_install
