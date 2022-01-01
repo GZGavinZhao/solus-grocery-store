@@ -26,9 +26,9 @@ build-job:       # This job runs in the build stage, which runs first.
   script:
     - echo "Compiling the code..."
     - apt-get update && apt-get install build-essential
-    - solbuild init -d -u
+    - solbuild init --debug -u
     - ls /var/lib
     - ls /var/lib/solbuild
-    - cd mold && solbuild --debug build --debug
+    - cd mold && solbuild build --debug
     - echo "Compile complete."
     - ls /var/lib/solbuild
