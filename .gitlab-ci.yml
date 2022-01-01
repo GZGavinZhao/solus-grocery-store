@@ -30,6 +30,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - solbuild init --debug -u
     - ls /var/lib
     - ls /var/lib/solbuild
-    - cd mold && solbuild build --debug && echo success || mount --help && tail /var/log/kern.log
+    - cd mold && sudo solbuild build --debug && echo success || mount --help && tail /var/log/kern.log
     - echo "Compile complete."
     - ls /var/lib/solbuild
