@@ -32,6 +32,6 @@ build-job:       # This job runs in the build stage, which runs first.
     # - ls /var/lib/solbuild
     - eopkg up -y
     - eopkg lr
-    - cd microsoft-edge && ypkg package.yml
+    - cd microsoft-edge && ypkg --force package.yml
     # - echo "Compile complete."
     # - ls /var/lib/solbuild
