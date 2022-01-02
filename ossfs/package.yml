@@ -1,0 +1,20 @@
+name       : ossfs
+version    : 1.80.6
+release    : 1
+source     :
+    - https://github.com/aliyun/ossfs/archive/refs/tags/v1.80.6.tar.gz : 36fa1f915d735c7a849fc2f520cf94eb8cdba78caef9a9d84c5495020d977e51
+license    : GPL-2.0-or-later
+component  : network.clients
+summary    : Export s3fs for Aliyun OSS. 
+description: |
+    OSSFS enables you to mount Alibaba Cloud OSS buckets to a local file in Linux/Mac OS X systems. In the system, you can conveniently operate on objects in OSS while using the local file system to maintain data sharing.
+builddeps  :
+    - pkgconfig(fuse)
+    - pkgconfig(libcurl)
+    - pkgconfig(libxml-2.0)
+setup      : |
+    %autogen
+build      : |
+    %make
+install    : |
+    %make_install
