@@ -1,4 +1,4 @@
-image: registry.gitlab.com/solus-grocery-store/solbuild:latest
+image: silkeh/solus:ypkg
 # This file is a template, and might need editing before it works on your project.
 # To contribute improvements to CI/CD templates, please follow the Development guide at:
 # https://docs.gitlab.com/ee/development/cicd/templates.html
@@ -24,12 +24,14 @@ build-job:       # This job runs in the build stage, which runs first.
       paths:
         - /var/lib/solbuild/
   script:
-    - echo "Compiling the code..."
-    - apk update && apk upgrade && apk add cifs-utils util-linux-misc
-    - mount --version
-    - solbuild init --debug -u
-    - ls /var/lib
-    - ls /var/lib/solbuild
-    - cd mold && solbuild build --debug && echo success || ls /var/cache/solbuild/main-x86_64/mold
-    - echo "Compile complete."
-    - ls /var/lib/solbuild
+    # - echo "Compiling the code..."
+    # - apk update && apk upgrade && apk add cifs-utils util-linux-misc
+    # - mount --version
+    # - solbuild init --debug -u
+    # - ls /var/lib
+    # - ls /var/lib/solbuild
+    - eopkg up -y
+    - eopkg lr
+    - cd mold && ypkg package.yml
+    # - echo "Compile complete."
+    # - ls /var/lib/solbuild
