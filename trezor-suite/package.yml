@@ -1,0 +1,22 @@
+name       : trezor-suite
+version    : 21.12.2
+release    : 1
+source     :
+    - git|https://github.com/trezor/trezor-suite : v21.12.2
+license    : GPL-2.0-or-later # CHECK ME
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+networking : yes
+builddeps  :
+    - yarn
+setup      : |
+    pushd packages/suite-desktop
+    yarn
+build      : |
+    pushd packages/suite-desktop
+    yarn run build:linux
+install    : |
+    pushd packages/suite-desktop
+    ls build

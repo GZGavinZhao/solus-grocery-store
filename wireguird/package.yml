@@ -1,0 +1,26 @@
+name       : wireguird
+version    : 0.2.0
+release    : 1
+source     :
+    - https://github.com/UnnoTed/wireguird/archive/refs/tags/v0.2.0.tar.gz : 42dda84229c3dbf16a9eb6f320a86c4369633c4a495f64ba276ca6a5bac9f4ab
+license    : MIT
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+networking : yes
+builddeps  :
+    - pkgconfig(appindicator3-0.1)
+    - pkgconfig(gtk+-3.0)
+    - golang
+rundeps    :
+    - wireguard-tools
+    - libayatana-appindicator
+build      : |
+    go build
+install    : |
+    install wireguird -Dm00755 $installdir/usr/share/wireguird/wireguird
+    cp -R Icon $installdir/usr/share/wireguird/
+
+    install -dm00755 $installdir/usr/bin
+    ln -s /usr/share/wireguird/wireguird $installdir/usr/bin/wireguird

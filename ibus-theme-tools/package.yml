@@ -1,0 +1,15 @@
+name       : ibus-theme-tools
+version    : 4.2.0
+release    : 1
+source     :
+    - https://github.com/openSUSE/IBus-Theme-Tools/archive/refs/tags/v4.2.0.tar.gz : c87f7a26c5422f02d018f05e43baf8e88320228d2adea9d6f72081ab659d4d02
+license    : GPL-3.0
+component  : desktop.theme # Needs verification
+summary    : A tool to generate the IBus GTK or GNOME Shell theme from existing themes.
+description: |
+    Generate the IBus GTK or GNOME Shell theme from existing themes. (从现有主题中生成 IBus GTK 或 GNOME Shell 主题) 
+rundeps    :
+    - gettext
+    - python-tinycss2
+install    : |
+    %python3_install

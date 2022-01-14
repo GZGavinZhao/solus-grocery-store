@@ -1,16 +1,32 @@
 name       : microsoft-edge
-version    : 96.0.1054.53
-release    : 3
+version    : 97.0.1072.62
+release    : 4
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_96.0.1054.53-1_amd64.deb : 5b74062683f768f01b06ddee1012c2a95bd60c0e7378687bf8e12deb6d646ac4
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_97.0.1072.62-1_amd64.deb : 3995a0ca88091b7ad01e6d2c0bc8fb3d1edaef88e60875c83f30490a15960320
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
 description: |
     Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
 builddeps  :
+    # Why do we need these when we do not actually build the application?
+    # Because eopkg will be able to auto-detect rundeps.
+    - pkgconfig(alsa)
+    - pkgconfig(atk)
+    - pkgconfig(atspi-2)
+    - pkgconfig(atk-bridge-2.0)
+    - pkgconfig(cairo-gl)
     - pkgconfig(gconf-2.0)
+    - pkgconfig(libdrm)
+    - pkgconfig(osmesa)
+    - pkgconfig(pango)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xdamage)
+    - pkgconfig(xfixes)
+    - pkgconfig(xkbcommon-x11)
+    - pkgconfig(xrandr)
     - pkgconfig(xscrnsaver)
+    - cups-devel
 rundeps    :
     - gconf
     - libxscrnsaver
