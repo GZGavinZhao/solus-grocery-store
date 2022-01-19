@@ -11,9 +11,9 @@ description: |
 clang      : yes
 builddeps  :
     - pkgconfig(libxxhash)
-    - intel-tbb-devel
-    - mimalloc-devel # pkgconfig(mimalloc) should work, but it doesn't...
+    # - intel-tbb-devel
+    - mimalloc-devel
 build      : |
-    %make PREFIX=/usr LTO=1 SYSTEM_MIMALLOC=1 SYSTEM_TBB=1 SYSTEM_XXHASH=1
+    %make PREFIX=/usr LIBDIR=%libdir% LTO=1 SYSTEM_MIMALLOC=1 SYSTEM_XXHASH=1
 install    : |
-    %make_install PREFIX=/usr LTO=1 SYSTEM_MIMALLOC=1 SYSTEM_TBB=1 SYSTEM_XXHASH=1
+    %make_install PREFIX=/usr LIBDIR=%libdir% SYSTEM_MIMALLOC=1 SYSTEM_XXHASH=1
