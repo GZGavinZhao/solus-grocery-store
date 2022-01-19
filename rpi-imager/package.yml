@@ -16,6 +16,8 @@ builddeps  :
     - pkgconfig(Qt5QuickControls2)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5UiTools)
+rundeps:
+    - udisks
 setup      : |
     %cmake
 build      : |
