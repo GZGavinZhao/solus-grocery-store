@@ -11,14 +11,9 @@ summary    : Free and open source digital painting application
 description: |
     Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.
 builddeps  :
-    - pkgconfig(OpenColorIO)
-    - pkgconfig(OpenEXR)
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5X11Extras)
     - pkgconfig(eigen3)
     - pkgconfig(exiv2)
+    - pkgconfig(Qt5Multimedia)
     - pkgconfig(fftw3)
     - pkgconfig(gsl)
     - pkgconfig(kseexpr)
@@ -31,6 +26,11 @@ builddeps  :
     - pkgconfig(libtiff-4)
     - pkgconfig(libturbojpeg)
     - pkgconfig(libwebp)
+    - pkgconfig(OpenColorIO)
+    - pkgconfig(OpenEXR)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5X11Extras)
     - pkgconfig(poppler-qt5)
     - pkgconfig(python3)
     - pkgconfig(xcb-atom)
@@ -58,10 +58,6 @@ rundeps    :
     - ffmpeg
     - python3-qt5
 setup      : |
-  # %patch -p1 < $pkgfiles/openexr-3.patch
-  # %patch -p1 < $pkgfiles/krita-opencolorio2.patch
-  # mkdir build && cd build
-
     %cmake -DBUILD_TESTING=OFF \
            -DENABLE_UPDATERS=OFF \
            -DBUILD_KRITA_QT_DESIGNER_PLUGINS=ON \
