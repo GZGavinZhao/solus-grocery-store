@@ -12,6 +12,7 @@ description: |
 builddeps  :
     - pkgconfig(appstream-glib)
     - pkgconfig(gjs-1.0)
+    - desktop-file-utils
     - nodejs
 setup      : |
     %meson_configure
