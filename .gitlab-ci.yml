@@ -20,6 +20,9 @@ stages:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
 
+cascadia-code:
+  extends: .build
+
 ibus-theme-tools:
   extends: .build
 
