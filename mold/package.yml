@@ -1,8 +1,8 @@
 name       : mold
-version    : 1.0.1
-release    : 1
+version    : 1.0.3
+release    : 2
 source     :
-    - https://github.com/rui314/mold/archive/refs/tags/v1.0.1.tar.gz : b0d54602d1229c26583ee8a0132e53463c4d755f9dbc456475f388fd8a1aa3e4
+    - https://github.com/rui314/mold/archive/refs/tags/v1.0.3.tar.gz : 488c12058b4c7c77bff94c6f919e40b2f12c304214e2e0d7d4833c21167837c0
 license    : AGPL-3.0-or-later
 component  : programming.tools
 summary    : A modern linker.
