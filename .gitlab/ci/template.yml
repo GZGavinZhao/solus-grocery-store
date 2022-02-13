@@ -1,6 +1,6 @@
 default:
   before_script:
-    - which ypkg
+    # - which ypkg
     - eopkg lr
     - sudo eopkg dr Solus
     - sudo eopkg ar Unstable https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
