@@ -20,6 +20,9 @@ stages:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
 
+abi-wizard:
+  extends: .build
+
 cascadia-code:
   extends: .build
 
