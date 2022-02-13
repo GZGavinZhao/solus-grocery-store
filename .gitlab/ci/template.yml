@@ -6,7 +6,7 @@ default:
     - sudo eopkg ar Unstable https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
     - sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
     - until sh -c 'sudo eopkg up -y'; do echo 'Trying again ...'; done
-    - until sh -c 'sudo eopkg it -c system.devel'; do echo 'Trying again ...'; done
+    - until sh -c 'sudo eopkg it -y -c system.devel'; do echo 'Trying again ...'; done
 
 .build:
   stage: build
