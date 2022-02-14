@@ -1,0 +1,25 @@
+name       : vala-language-server
+version    : 0.48.4
+release    : 1
+source     :
+    - https://github.com/Prince781/vala-language-server/archive/refs/tags/0.48.4.tar.gz : 9de5d476a3d3b5d4f22f50af6c2417abd44066ab4231cbc00628e9fdab735100
+license    : LGPL-2.1
+component  : programming.tools
+summary    : Code Intelligence for Vala & Genie.
+homepage   : https://github.com/Prince781/vala-language-server
+description: |
+    A language server for the Vala programming language.
+builddeps  :
+    - pkgconfig(gee-0.8)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(jsonrpc-glib-1.0)
+    - pkgconfig(libvala-0.54)
+    - pkgconfig(scdoc)
+    - vala
+setup      : |
+    %meson_configure -Dtests=false -Dman_pages=enabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

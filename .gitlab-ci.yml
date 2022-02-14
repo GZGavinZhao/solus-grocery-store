@@ -52,3 +52,6 @@ tangram:
 
 trezor-bridge:
   extends: .build
+
+vala-language-server:
+  extends: .build
