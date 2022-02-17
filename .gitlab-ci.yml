@@ -26,6 +26,9 @@ abi-wizard:
 cascadia-code:
   extends: .build
 
+glibmm-2.68:
+  extends: .build
+
 ibus-theme-tools:
   extends: .build
 

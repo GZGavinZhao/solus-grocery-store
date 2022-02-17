@@ -1,0 +1,29 @@
+name       : glibmm-2.68
+version    : 2.70.0
+release    : 1
+source     :
+    - https://gitlab.gnome.org/GNOME/glibmm/-/archive/2.70.0/glibmm-2.70.0.tar.gz : 36c0b4c92a0628845d204d80ef5c138735ff6463af3b671ba78c9fac1d30838a
+license    : LGPL-2.1
+component  :
+    - desktop.gnome.core
+    - docs: programming.docs
+summary    :
+    - C++ bindings to GLib (the newer 2.68 ABI).
+    - docs: Documentation for glibmm-2.68.
+description: |
+    C++ bindings to GLib (the newer 2.68 ABI).
+patterns   :
+    - docs:
+      - /usr/share/d*
+builddeps  :
+    - pkgconfig(sigc++-3.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(mm-common-libstdc++)
+    - doxygen
+    - graphviz
+setup      : |
+    %meson_configure -Dbuild-examples=false -Dmaintainer-mode=true
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
