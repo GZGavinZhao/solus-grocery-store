@@ -15,6 +15,7 @@ description: |
 patterns   :
     - docs:
       - /usr/share/d*
+networking : yes # Needed to run tests.
 builddeps  :
     - pkgconfig(sigc++-3.0)
     - pkgconfig(glib-2.0)
