@@ -18,7 +18,7 @@ patterns   :
 builddeps  :
     - pkgconfig(sigc++-3.0)
     - pkgconfig(glib-2.0)
-    - pkgconfig(mm-common-libstdc++)
+    - pkgconfig(mm-common-util)
     - doxygen
     - graphviz
 setup      : |
@@ -27,3 +27,5 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+check      : |
+    %ninja_check
