@@ -31,10 +31,10 @@ networking : yes
 #     make check # The installation instructions instructed to put tests here
 #     %make_install
 setup      : |
-    %cmake_ninja -DUSE_CVC4=OFF
+    %cmake -DUSE_CVC4=OFF -B build
 build      : |
-    %ninja_build
+    %make -C build
 install    : |
-    %ninja_install
+    %make_install -C build
 check      : |
-    %ninja_check
+    %make -C test
