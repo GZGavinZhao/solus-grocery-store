@@ -47,7 +47,7 @@ ossfs:
 rpi-imager:
   extends: .build
 
-sccache:
+solidity:
   extends: .build
 
 tangram:
