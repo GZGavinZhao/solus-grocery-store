@@ -10,31 +10,14 @@ summary    : Solidity, the smart contract programming language
 description: |
     Solidity is a statically typed, contract-oriented, high-level language for implementing smart contracts on the Ethereum platform.
 builddeps  :
-    # - pkgconfig(cln) # cvc4 optional dependency for optimized build
-    # - pkgconfig(gmp) # cvc4
     - pkgconfig(z3)
     - libboost-devel
-    # - openjdk-11-devel # cvc4
-    # - python-toml # cvc4
 networking : yes
-# environment: |
-#     JAVA_HOME=/usr/lib64/openjdk-11
-#     export PATH=$JAVA_HOME/bin:$PATH
-# setup      : |
-#     # Install cvc4
-#     tar -xf $sources/1.8.tar.gz -C .
-#     cd cvc5-1.8 && mkdir build
-#     ./contrib/get-antlr-3.4 && ./contrib/get-glpk-cut-log
-#     ./configure.sh production --gpl --cln --glpk --prefix=/usr # Can't use the macro, this is the only option it takes...
-#     cd build
-#     %make
-#     make check # The installation instructions instructed to put tests here
-#     %make_install
 setup      : |
-    %cmake -DUSE_CVC4=OFF -B build
+    %cmake -B build \
+           -DUSE_CVC4=OFF \
+           -DTESTS=OFF
 build      : |
     %make -C build
 install    : |
     %make_install -C build
-check      : |
-    %make -C test
