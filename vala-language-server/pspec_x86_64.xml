@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>vala-language-server</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>vala-language-server</Name>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/vala-language-server</Path>
+            <Path fileType="man">/usr/share/man/man1/vala-language-server.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-02-14</Date>
+            <Version>0.48.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

@@ -32,6 +32,9 @@ glibmm-2.68:
 ibus-theme-tools:
   extends: .build
 
+krita:
+  extends: .build
+
 microsoft-edge:
   extends: .build
 
@@ -45,9 +48,6 @@ ossfs:
   extends: .build
 
 rpi-imager:
-  extends: .build
-
-solidity:
   extends: .build
 
 tangram:
