@@ -34,6 +34,7 @@ ibus-theme-tools:
 
 krita:
   extends: .build
+  timeout: 5h
 
 microsoft-edge:
   extends: .build
