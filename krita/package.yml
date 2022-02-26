@@ -1,8 +1,8 @@
 name       : krita
-version    : 5.0.1
+version    : 5.0.2
 release    : 78
 source     :
-    - https://github.com/KDE/krita/archive/refs/tags/v5.0.1.tar.gz : d3f128c60f63a6773391d056b37a48f74d6bc0339038486a3f3057d0c6d8afae
+    - https://invent.kde.org/graphics/krita/-/archive/v5.0.2/krita-v5.0.2.tar.gz : 40f1e9a449b658f3e23f228cda9ca00495b0effa976cc34c86eec00eb06d45b0
 homepage   : https://krita.org
 license    : GPL-3.0-or-later
 component  : multimedia.graphics
