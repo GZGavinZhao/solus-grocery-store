@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>darts</Name>
+        <Homepage>http://chasen.org/~taku/software/darts/</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <License>LGPL-2.1-or-later</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">C++ template library for implementation of Double-Array</Summary>
+        <Description xml:lang="en">C++ template library for implementation of Double-Array 
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>darts</Name>
+        <Summary xml:lang="en">C++ template library for implementation of Double-Array</Summary>
+        <Description xml:lang="en">C++ template library for implementation of Double-Array 
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/darts/darts/darts</Path>
+            <Path fileType="library">/usr/lib64/darts/darts/mkdarts</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>darts-devel</Name>
+        <Summary xml:lang="en">Development files for darts</Summary>
+        <Description xml:lang="en">C++ template library for implementation of Double-Array 
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">darts</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/darts.h</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-02-27</Date>
+            <Version>0.32</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
