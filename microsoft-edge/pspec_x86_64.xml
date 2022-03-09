@@ -1,0 +1,171 @@
+<PISI>
+    <Source>
+        <Name>microsoft-edge</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Proprietary</License>
+        <PartOf>network.web.browser</PartOf>
+        <Summary xml:lang="en">The web browser from Microsoft.</Summary>
+        <Description xml:lang="en">Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>microsoft-edge</Name>
+        <Summary xml:lang="en">The web browser from Microsoft.</Summary>
+        <Description xml:lang="en">Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+</Description>
+        <PartOf>network.web.browser</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/microsoft-edge</Path>
+            <Path fileType="data">/usr/share/appdata/microsoft-edge.appdata.xml</Path>
+            <Path fileType="data">/usr/share/applications/microsoft-edge.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/microsoft-edge-stable/changelog.gz</Path>
+            <Path fileType="data">/usr/share/gnome-control-center/default-apps/microsoft-edge.xml</Path>
+            <Path fileType="man">/usr/share/man/man1/microsoft-edge-stable.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/microsoft-edge.1.gz</Path>
+            <Path fileType="data">/usr/share/menu/microsoft-edge.menu</Path>
+            <Path fileType="data">/usr/share/msedge/MEIPreload/manifest.json</Path>
+            <Path fileType="data">/usr/share/msedge/MEIPreload/preloaded_data.pb</Path>
+            <Path fileType="data">/usr/share/msedge/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so</Path>
+            <Path fileType="data">/usr/share/msedge/WidevineCdm/manifest.json</Path>
+            <Path fileType="data">/usr/share/msedge/cron/microsoft-edge</Path>
+            <Path fileType="data">/usr/share/msedge/default-app-block</Path>
+            <Path fileType="data">/usr/share/msedge/icudtl.dat</Path>
+            <Path fileType="data">/usr/share/msedge/libEGL.so</Path>
+            <Path fileType="data">/usr/share/msedge/libGLESv2.so</Path>
+            <Path fileType="data">/usr/share/msedge/liblearning_tools.so</Path>
+            <Path fileType="data">/usr/share/msedge/libmicrosoft_apis.so</Path>
+            <Path fileType="data">/usr/share/msedge/libmip_core.so</Path>
+            <Path fileType="data">/usr/share/msedge/libmip_protection_sdk.so</Path>
+            <Path fileType="data">/usr/share/msedge/liboneauth.so</Path>
+            <Path fileType="data">/usr/share/msedge/liboneds.so</Path>
+            <Path fileType="data">/usr/share/msedge/libsmartscreen.so</Path>
+            <Path fileType="data">/usr/share/msedge/libsmartscreenn.so</Path>
+            <Path fileType="data">/usr/share/msedge/libtelclient.so</Path>
+            <Path fileType="data">/usr/share/msedge/libvk_swiftshader.so</Path>
+            <Path fileType="data">/usr/share/msedge/libvulkan.so.1</Path>
+            <Path fileType="data">/usr/share/msedge/libwns_push_client.so</Path>
+            <Path fileType="data">/usr/share/msedge/locales/af.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/am.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ar.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/as.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/az.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/bg.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/bn-IN.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/bs.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ca-Es-VALENCIA.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ca.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/cs.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/cy.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/da.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/de.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/el.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/en-GB.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/en-US.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/es-419.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/es.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/et.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/eu.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/fa.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/fi.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/fil.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/fr-CA.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/fr.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ga.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/gd.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/gl.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/gu.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/he.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/hi.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/hr.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/hu.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/id.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/is.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/it.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ja.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ka.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/kk.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/km.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/kn.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ko.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/kok.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/lb.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/lo.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/lt.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/lv.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/mi.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/mk.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ml.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/mr.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ms.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/mt.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/nb.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ne.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/nl.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/nn.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/or.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/pa.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/pl.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/pt-BR.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/pt-PT.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/qu.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ro.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ru.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sk.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sl.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sq.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sr-Cyrl-BA.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sr-Latn-RS.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sr.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/sv.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ta.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/te.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/th.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/tr.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/tt.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ug.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/uk.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/ur.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/vi.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/zh-CN.pak</Path>
+            <Path fileType="data">/usr/share/msedge/locales/zh-TW.pak</Path>
+            <Path fileType="data">/usr/share/msedge/microsoft-edge</Path>
+            <Path fileType="data">/usr/share/msedge/msedge</Path>
+            <Path fileType="data">/usr/share/msedge/msedge-sandbox</Path>
+            <Path fileType="data">/usr/share/msedge/msedge_100_percent.pak</Path>
+            <Path fileType="data">/usr/share/msedge/msedge_200_percent.pak</Path>
+            <Path fileType="data">/usr/share/msedge/msedge_crashpad_handler</Path>
+            <Path fileType="data">/usr/share/msedge/nacl_helper</Path>
+            <Path fileType="data">/usr/share/msedge/nacl_helper_bootstrap</Path>
+            <Path fileType="data">/usr/share/msedge/nacl_irt_x86_64.nexe</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_128.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_16.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_24.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_256.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_32.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_32.xpm</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_48.png</Path>
+            <Path fileType="data">/usr/share/msedge/product_logo_64.png</Path>
+            <Path fileType="data">/usr/share/msedge/resources.pak</Path>
+            <Path fileType="data">/usr/share/msedge/swiftshader/libEGL.so</Path>
+            <Path fileType="data">/usr/share/msedge/swiftshader/libGLESv2.so</Path>
+            <Path fileType="data">/usr/share/msedge/v8_context_snapshot.bin</Path>
+            <Path fileType="data">/usr/share/msedge/vk_swiftshader_icd.json</Path>
+            <Path fileType="data">/usr/share/msedge/xdg-mime</Path>
+            <Path fileType="data">/usr/share/msedge/xdg-settings</Path>
+            <Path fileType="data">/usr/share/pixmaps/microsoft-edge.png</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="6">
+            <Date>2022-03-09</Date>
+            <Version>99.0.1150.36</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
