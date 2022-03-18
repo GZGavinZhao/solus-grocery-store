@@ -1,0 +1,21 @@
+name       : skeuos-theme
+version    : 20220315
+release    : 1
+source     :
+    - https://github.com/daniruiz/skeuos-gtk/archive/refs/tags/20220315.tar.gz : 078f51f46ee2fb3ea806f5fa49ba323dab96315968c6297e8e2e1a3e43e8a727
+homepage   : https://github.com/daniruiz/skeuos-gtk
+license    : GPL-3.0-or-later
+component  : desktop.theme
+summary    : Skeuos GTK Theme
+description: |
+    A clean & classy flat theme for GTK3 & GTK4.
+builddeps  :
+    # - inkscape # For generating custom color themes.
+    - sassc
+# No need to generate custom color themes here.
+# setup      : |
+#     ./generate-color-theme.sh
+build      : |
+    %make
+install    : |
+    %make_install

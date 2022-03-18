@@ -1,0 +1,83 @@
+<PISI>
+    <Source>
+        <Name>tangram</Name>
+        <Homepage>https://github.com/sonnyp/Tangram</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>network.web.browser</PartOf>
+        <Summary xml:lang="en">Browser for your pinned tabs</Summary>
+        <Description xml:lang="en">Tangram is a new kind of browser. It is designed to organize and run your Web applications. Each tab is persistent and independent. You can set multiple tabs with different accounts for the same application.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>tangram</Name>
+        <Summary xml:lang="en">Browser for your pinned tabs</Summary>
+        <Description xml:lang="en">Tangram is a new kind of browser. It is designed to organize and run your Web applications. Each tab is persistent and independent. You can set multiple tabs with different accounts for the same application.
+</Description>
+        <PartOf>network.web.browser</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/re.sonny.Tangram</Path>
+            <Path fileType="data">/usr/share/Tangram/AboutDialog.js</Path>
+            <Path fileType="data">/usr/share/Tangram/Actions.js</Path>
+            <Path fileType="data">/usr/share/Tangram/AddressBar.js</Path>
+            <Path fileType="data">/usr/share/Tangram/Header.js</Path>
+            <Path fileType="data">/usr/share/Tangram/InstanceDialog.ui</Path>
+            <Path fileType="data">/usr/share/Tangram/Notebook.js</Path>
+            <Path fileType="data">/usr/share/Tangram/Shortcuts.js</Path>
+            <Path fileType="data">/usr/share/Tangram/WebView.js</Path>
+            <Path fileType="data">/usr/share/Tangram/application.js</Path>
+            <Path fileType="data">/usr/share/Tangram/constants.js</Path>
+            <Path fileType="data">/usr/share/Tangram/env.js</Path>
+            <Path fileType="data">/usr/share/Tangram/instanceDialog.js</Path>
+            <Path fileType="data">/usr/share/Tangram/instances.js</Path>
+            <Path fileType="data">/usr/share/Tangram/main.js</Path>
+            <Path fileType="data">/usr/share/Tangram/persistentActions.js</Path>
+            <Path fileType="data">/usr/share/Tangram/re.sonny.Tangram.data.gresource</Path>
+            <Path fileType="data">/usr/share/Tangram/re.sonny.Tangram.in</Path>
+            <Path fileType="data">/usr/share/Tangram/setup.js</Path>
+            <Path fileType="data">/usr/share/Tangram/state.js</Path>
+            <Path fileType="data">/usr/share/Tangram/tab.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/.eslintrc.yml</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/.git</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/README.md</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/assert.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/globals.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/gsx.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/WebSocket.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/base64.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/console.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/encoding.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/fetch.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/std/timers.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/test_timers.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/test_websocket.js</Path>
+            <Path fileType="data">/usr/share/Tangram/troll/util.js</Path>
+            <Path fileType="data">/usr/share/Tangram/util.js</Path>
+            <Path fileType="data">/usr/share/Tangram/utils.js</Path>
+            <Path fileType="data">/usr/share/Tangram/utils.test.js</Path>
+            <Path fileType="data">/usr/share/Tangram/webapp/ephy.js</Path>
+            <Path fileType="data">/usr/share/Tangram/webapp/test.js</Path>
+            <Path fileType="data">/usr/share/Tangram/webapp/webapp.js</Path>
+            <Path fileType="data">/usr/share/Tangram/window.js</Path>
+            <Path fileType="data">/usr/share/applications/re.sonny.Tangram.desktop</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/re.sonny.Tangram.service</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas/re.sonny.Tangram.gschema.xml</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/re.sonny.Tangram.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/re.sonny.Tangram-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/metainfo/re.sonny.Tangram.metainfo.xml</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2022-03-14</Date>
+            <Version>1.4.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
