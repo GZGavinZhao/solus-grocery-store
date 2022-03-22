@@ -14975,9 +14975,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2022-03-18</Date>
-            <Version>20220315</Version>
+            <Version>2022.03.15</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
