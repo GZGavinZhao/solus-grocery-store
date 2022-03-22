@@ -16,11 +16,9 @@ builddeps  :
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gstreamer-plugins-bad-1.0)
     - pkgconfig(gstreamer-player-1.0)
     - pkgconfig(pango)
-    - gstreamer-1.0-plugins-good
-    - gstreamer-1.0-plugins-bad
-    - gstreamer-1.0-plugins-ugly
     - cargo
 build      : |
     cargo build --release

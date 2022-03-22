@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>netease-cloud-music-gtk</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>multimedia.audio</PartOf>
+        <Summary xml:lang="en">Netease Cloud Music (网易云音乐) Rust + GTK client.</Summary>
+        <Description xml:lang="en">Linux 平台下基于 Rust + GTK 开发的网易云音乐播放器。
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>netease-cloud-music-gtk</Name>
+        <Summary xml:lang="en">Netease Cloud Music (网易云音乐) Rust + GTK client.</Summary>
+        <Description xml:lang="en">Linux 平台下基于 Rust + GTK 开发的网易云音乐播放器。
+</Description>
+        <PartOf>multimedia.audio</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/netease-cloud-music-gtk</Path>
+            <Path fileType="data">/usr/share/applications/netease-cloud-music-gtk.desktop</Path>
+            <Path fileType="data">/usr/share/pixmaps/netease-cloud-music-gtk.svg</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2022-03-22</Date>
+            <Version>1.2.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
