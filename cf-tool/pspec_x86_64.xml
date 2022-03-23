@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>cf-tool</Name>
-        <Homepage>https://github.com/GZGavinZhao/cf-tool</Homepage>
+        <Homepage>https://gitlab.com/GZGavinZhao/cf-tool</Homepage>
         <Packager>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
@@ -24,7 +24,7 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2022-03-23</Date>
             <Version>1.0.2</Version>
             <Comment>Packaging update</Comment>
