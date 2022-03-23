@@ -1,0 +1,18 @@
+name       : cf-tool
+version    : 1.0.2
+release    : 1
+source     :
+    - https://github.com/GZGavinZhao/cf-tool/archive/refs/tags/v1.0.1.tar.gz : fa74a368d79c5fd1664b956f8c64ae60cb9dddbd9959899f478aa3ab26b3afbb
+homepage   : https://github.com/GZGavinZhao/cf-tool
+license    : MIT
+component  : programming.tools
+summary    : Codeforces CLI (Submit, Parse, Test, etc.)
+description: |
+    Codeforces Tool is a command-line interface tool for Codeforces.
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build cf.go
+install    : |
+    install -Dm00755 cf -t $installdir/usr/bin
