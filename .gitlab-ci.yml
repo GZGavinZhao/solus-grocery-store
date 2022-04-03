@@ -32,10 +32,6 @@ glibmm-2.68:
 ibus-theme-tools:
   extends: .build
 
-krita:
-  extends: .build
-  timeout: 5h
-
 microsoft-edge:
   extends: .build
 
