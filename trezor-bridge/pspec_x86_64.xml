@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>trezor-bridge</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Trezor Bridge for Trezor hardware wallets.</Summary>
+        <Description xml:lang="en">Trezor Communication Daemon aka Trezor Bridge (written in Go).
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>trezor-bridge</Name>
+        <Summary xml:lang="en">Trezor Bridge for Trezor hardware wallets.</Summary>
+        <Description xml:lang="en">Trezor Communication Daemon aka Trezor Bridge (written in Go).
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/trezord</Path>
+            <Path fileType="library">/usr/lib64/systemd/system/trezord.service</Path>
+            <Path fileType="library">/usr/lib64/udev/rules.d/50-trezor.rules</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2022-04-03</Date>
+            <Version>2.0.31</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

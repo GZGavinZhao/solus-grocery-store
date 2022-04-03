@@ -1,6 +1,6 @@
 name       : ossfs
 version    : 1.80.6
-release    : 1
+release    : 2
 source     :
     - https://github.com/aliyun/ossfs/archive/refs/tags/v1.80.6.tar.gz : 36fa1f915d735c7a849fc2f520cf94eb8cdba78caef9a9d84c5495020d977e51
 license    : GPL-2.0-or-later

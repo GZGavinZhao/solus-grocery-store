@@ -1,6 +1,6 @@
 name       : trezor-bridge
 version    : 2.0.31
-release    : 1
+release    : 2
 source     :
     - https://github.com/trezor/trezord-go/archive/refs/tags/v2.0.31.tar.gz : fd834a5bf04417cc50ed4a418d40de4c257cbc86edca01b07aa01a9cf818e60e
 license    : Apache-2.0
@@ -18,5 +18,5 @@ build      : |
 install    : |
     install -Dm00755 trezord-go $installdir/usr/bin/trezord
 
-    install -Dm0064 release/linux/trezor.rules $installdir/lib/udev/rules.d/50-trezor.rules
+    install -Dm0064 release/linux/trezor.rules $installdir/%libdir%/udev/rules.d/50-trezor.rules
     install -Dm0064 release/linux/trezord.service $installdir/%libdir%/systemd/system/trezord.service

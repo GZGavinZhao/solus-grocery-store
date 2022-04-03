@@ -1,6 +1,6 @@
 name       : darts
 version    : 0.32
-release    : 1
+release    : 2
 source     :
     - http://chasen.org/~taku/software/darts/src/darts-0.32.tar.gz : 0dfc0b82f0a05d93b92acf849368e54bf93f1de8ffb31ba0a21e45ab9e269285
 homepage   : http://chasen.org/~taku/software/darts/
@@ -15,6 +15,7 @@ setup      : |
     %configure
 build      : |
     %make
-    %make check
 install    : |
     %make_install
+check      : |
+    %make check

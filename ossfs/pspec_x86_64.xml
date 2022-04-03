@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>ossfs</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>network.clients</PartOf>
+        <Summary xml:lang="en">Export s3fs for Aliyun OSS.</Summary>
+        <Description xml:lang="en">OSSFS enables you to mount Alibaba Cloud OSS buckets to a local file in Linux/Mac OS X systems. In the system, you can conveniently operate on objects in OSS while using the local file system to maintain data sharing.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>ossfs</Name>
+        <Summary xml:lang="en">Export s3fs for Aliyun OSS.</Summary>
+        <Description xml:lang="en">OSSFS enables you to mount Alibaba Cloud OSS buckets to a local file in Linux/Mac OS X systems. In the system, you can conveniently operate on objects in OSS while using the local file system to maintain data sharing.
+</Description>
+        <PartOf>network.clients</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/ossfs</Path>
+            <Path fileType="man">/usr/share/man/man1/ossfs.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2022-04-03</Date>
+            <Version>1.80.6</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
