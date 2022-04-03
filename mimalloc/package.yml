@@ -1,0 +1,16 @@
+name       : mimalloc
+version    : 1.7.5
+release    : 3
+source     :
+    - https://github.com/microsoft/mimalloc/archive/refs/tags/v1.7.5.tar.gz : 4f9ed087fc1804a8a77c4225ffc3337468f18d6c4f060c4d44f3a3eff85bc5b6
+license    : MIT
+component  : programming.library
+summary    : A compact general purpose allocator with excellent performance.
+description: |
+    mimalloc (pronounced "me-malloc") is a general purpose allocator with excellent performance characteristics. It is a drop-in replacement for malloc and can be used in other programs without code changes.
+setup      : |
+    %cmake_ninja -DMI_BUILD_STATIC=OFF -DMI_BUILD_OBJECT=OFF -DMI_BUILD_TESTS=OFF -DMI_INSTALL_TOPLEVEL=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
