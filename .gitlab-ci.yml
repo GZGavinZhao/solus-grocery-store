@@ -39,6 +39,9 @@ krita:
 microsoft-edge:
   extends: .build
 
+mimalloc:
+  extends: .build
+
 mold:
   extends: .build
 
