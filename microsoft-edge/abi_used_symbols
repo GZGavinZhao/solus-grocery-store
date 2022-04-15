@@ -555,7 +555,9 @@ libc.so.6:pthread_attr_destroy
 libc.so.6:pthread_attr_getdetachstate
 libc.so.6:pthread_attr_init
 libc.so.6:pthread_attr_setdetachstate
+libc.so.6:pthread_create
 libc.so.6:pthread_self
+libc.so.6:pthread_setname_np
 libc.so.6:ptrace
 libc.so.6:putchar
 libc.so.6:puts
@@ -1355,15 +1357,6 @@ libsecret-1.so.0:secret_password_clear_sync
 libsecret-1.so.0:secret_password_free
 libsecret-1.so.0:secret_password_lookup_sync
 libsecret-1.so.0:secret_password_store_sync
-libsmime3.so:NSS_CMSContentInfo_SetContent_SignedData
-libsmime3.so:NSS_CMSEncoder_Finish
-libsmime3.so:NSS_CMSEncoder_Start
-libsmime3.so:NSS_CMSMessage_Create
-libsmime3.so:NSS_CMSMessage_Destroy
-libsmime3.so:NSS_CMSMessage_GetContentInfo
-libsmime3.so:NSS_CMSSignedData_AddCertificate
-libsmime3.so:NSS_CMSSignedData_CreateCertsOnly
-libsmime3.so:NSS_CMSSignedData_Destroy
 libstdc++.so.6:_ZNKSt11logic_error4whatEv
 libstdc++.so.6:_ZNKSt12__basic_fileIcE7is_openEv
 libstdc++.so.6:_ZNKSt13runtime_error4whatEv

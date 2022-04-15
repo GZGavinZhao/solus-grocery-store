@@ -160,9 +160,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2022-03-22</Date>
-            <Version>99.0.1150.46</Version>
+        <Update release="8">
+            <Date>2022-04-15</Date>
+            <Version>100.0.1185.44</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>

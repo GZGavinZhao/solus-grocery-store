@@ -32,7 +32,6 @@ libpthread.so.0
 libresolv.so.2
 librt.so.1
 libsecret-1.so.0
-libsmime3.so
 libstdc++.so.6
 libuuid.so.1
 libxcb.so.1
