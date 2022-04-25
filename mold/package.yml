@@ -1,11 +1,11 @@
 name       : mold
-version    : 1.1.1
-release    : 5
+version    : 1.2.0
+release    : 6
 source     :
-    - https://github.com/rui314/mold/archive/refs/tags/v1.1.1.tar.gz : 47c5ddfe60beffc01da954191c819d78924e4d1eb96aeebfa24e1862cb3a33f9
+    - https://github.com/rui314/mold/archive/refs/tags/v1.2.0.tar.gz : f3fd3d0fbb143695ef33126f496eb9f0449aae1c26c764fee394d71ba1cd4310
 license    : AGPL-3.0-or-later
 component  : programming.tools
-summary    : A modern linker.
+summary    : A modern linker
 description: |
     mold is a faster drop-in replacement for existing Unix linkers. mold is created for increasing developer productivity by reducing build time especially in rapid debug-edit-rebuild cycles.
 clang      : yes
