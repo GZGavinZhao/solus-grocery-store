@@ -1,8 +1,8 @@
 name       : microsoft-edge
-version    : 100.0.1185.44
-release    : 8
+version    : 101.0.1210.47
+release    : 9
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_100.0.1185.44-1_amd64.deb : 09fd1ca8b6fe591d38801e16225cb194ec95cf86d51a65c6ef401828a3ff617f
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_101.0.1210.47-1_amd64.deb : 80539a3db22eb0438ea1e619b0dd8f2837ef3b2630c52af20b833760412a0791
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
@@ -34,7 +34,7 @@ rundeps    :
 setup      : |
     ar x $sources/microsoft-edge-stable_${version}-1_amd64.deb
     tar xf data.tar.*
-install    : |-
+install    : |
     mkdir -p $installdir
     cp -r usr $installdir/
     cp -r opt/microsoft/msedge $installdir/usr/share/
