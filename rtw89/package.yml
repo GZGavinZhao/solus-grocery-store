@@ -1,0 +1,16 @@
+name       : rtw89
+version    : 20211102
+release    : 1
+source     :
+    - https://github.com/lwfinger/rtw89/archive/refs/tags/20211102.tar.gz : 218ee0102dbcb0c8d8a5d6c85ca3adc5857792d60016d9f7ab3c9e93bd88133f
+license    :
+    - GPL-2.0-only
+    - BSD-3
+component  : network.drivers
+summary    : WLAN Driver for Realtek 8852AE, an 802.11ax device
+description: |
+    WLAN Driver for Realtek 8852AE, an 802.11ax device.
+build      : |
+    %make
+install    : |
+    %make_install

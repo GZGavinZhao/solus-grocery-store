@@ -50,6 +50,9 @@ ossfs:
 rpi-imager:
   extends: .build
 
+rtw89:
+  extends: .build
+
 skeuos-theme:
   extends: .build
 
