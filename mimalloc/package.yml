@@ -1,8 +1,8 @@
 name       : mimalloc
-version    : 1.7.5
-release    : 3
+version    : 1.7.6
+release    : 4
 source     :
-    - https://github.com/microsoft/mimalloc/archive/refs/tags/v1.7.5.tar.gz : 4f9ed087fc1804a8a77c4225ffc3337468f18d6c4f060c4d44f3a3eff85bc5b6
+    - https://github.com/microsoft/mimalloc/archive/refs/tags/v1.7.6.tar.gz : d74f86ada2329016068bc5a243268f1f555edd620b6a7d6ce89295e7d6cf18da
 license    : MIT
 component  : programming.library
 summary    : A compact general purpose allocator with excellent performance.

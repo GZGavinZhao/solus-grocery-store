@@ -108,6 +108,7 @@ libmimalloc.so.1:mi_new_reallocn
 libmimalloc.so.1:mi_option_disable
 libmimalloc.so.1:mi_option_enable
 libmimalloc.so.1:mi_option_get
+libmimalloc.so.1:mi_option_get_clamp
 libmimalloc.so.1:mi_option_is_enabled
 libmimalloc.so.1:mi_option_set
 libmimalloc.so.1:mi_option_set_default
