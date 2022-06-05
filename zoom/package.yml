@@ -1,0 +1,28 @@
+name       : zoom
+version    : 5.10.4.2845
+release    : 1
+source     :
+    - https://cdn.zoom.us/prod/5.10.4.2845/zoom_x86_64.tar.xz : 1af06e98f2ff52cab9290047ab66f3d3f9cceb8e519d72d35e14a825d248b738
+license    : Proprietary
+component  : network.web
+summary    : Zoom video conference client
+description: |
+    Zoom video conference client.
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(libglvnd)
+    - pkgconfig(Qt53DCore)
+    - pkgconfig(Qt5Multimedia)
+    - pkgconfig(Qt5Positioning)
+    - pkgconfig(Qt5WaylandClient)
+    - pkgconfig(Qt5XmlPatterns)
+    - pkgconfig(x11)
+install    : |
+    install -dm00755 $installdir/usr/share/zoom
+    cp -r $PWD $installdir/usr/share
+
+    install -Dm00644 $pkgfiles/ZoomLauncher.desktop -t $installdir/usr/share/applications
+    install -Dm00644 $pkgfiles/us.zoom.Zoom.64.png $installdir/usr/share/icons/hicolor/64x64/apps/us.zoom.Zoom.png
+    install -Dm00644 $pkgfiles/us.zoom.Zoom.96.png $installdir/usr/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png
+    install -Dm00644 $pkgfiles/us.zoom.Zoom.128.png $installdir/usr/share/icons/hicolor/128x128/apps/us.zoom.Zoom.png
+    install -Dm00644 $pkgfiles/us.zoom.Zoom.256.png $installdir/usr/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png
