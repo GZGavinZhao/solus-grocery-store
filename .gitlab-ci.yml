@@ -64,3 +64,6 @@ trezor-bridge:
 
 vala-language-server:
   extends: .build
+
+zoom:
+  extends: .build
