@@ -1,6 +1,6 @@
 name       : vala-language-server
 version    : 0.48.4
-release    : 1
+release    : 2
 source     :
     - https://github.com/Prince781/vala-language-server/archive/refs/tags/0.48.4.tar.gz : 9de5d476a3d3b5d4f22f50af6c2417abd44066ab4231cbc00628e9fdab735100
 license    : LGPL-2.1
@@ -14,7 +14,7 @@ builddeps  :
     - pkgconfig(glib-2.0)
     - pkgconfig(json-glib-1.0)
     - pkgconfig(jsonrpc-glib-1.0)
-    - pkgconfig(libvala-0.54)
+    - pkgconfig(libvala-0.56)
     - pkgconfig(scdoc)
     - vala
 setup      : |
