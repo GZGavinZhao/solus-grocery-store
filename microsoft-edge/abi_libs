@@ -14,6 +14,7 @@ libvulkan.so.1
 libwidevinecdm.so
 libwns_push_client.so
 msedge
+msedge-management-service
 msedge-sandbox
 msedge_crashpad_handler
 nacl_helper

@@ -1,8 +1,8 @@
 name       : microsoft-edge
-version    : 101.0.1210.47
-release    : 9
+version    : 102.0.1245.33
+release    : 10
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_101.0.1210.47-1_amd64.deb : 80539a3db22eb0438ea1e619b0dd8f2837ef3b2630c52af20b833760412a0791
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_102.0.1245.33-1_amd64.deb : 12652db28f710480592c68daca40b0cf0e17add5044d2a76c958fc206225ce4b
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
@@ -38,7 +38,7 @@ install    : |
     mkdir -p $installdir
     cp -r usr $installdir/
     cp -r opt/microsoft/msedge $installdir/usr/share/
-    ln -sfn /usr/share/msedge/microsoft-edge $installdir/usr/bin/microsoft-edge
+    ln -s /usr/share/msedge/microsoft-edge $installdir/usr/bin/microsoft-edge
     install -Dm00644 opt/microsoft/msedge/product_logo_128.png $installdir/usr/share/pixmaps/microsoft-edge.png
 
     # Remove stuff that aren't necessary on Solus
