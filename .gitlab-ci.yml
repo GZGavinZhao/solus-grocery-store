@@ -59,9 +59,6 @@ rpi-imager:
 rtw89:
   extends: .build
 
-skeuos-theme:
-  extends: .build
-
 tangram:
   extends: .build
 
