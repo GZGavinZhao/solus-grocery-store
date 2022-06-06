@@ -26,6 +26,9 @@ cascadia-code:
 darts:
   extends: .build
 
+glab:
+  extends: .build
+
 glibmm-2.68:
   extends: .build
 
