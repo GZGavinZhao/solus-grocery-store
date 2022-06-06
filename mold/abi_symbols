@@ -1,9 +1,13 @@
 mold:_ZdaPv
+mold:_ZdaPvRKSt9nothrow_t
 mold:_ZdaPvSt11align_val_t
+mold:_ZdaPvSt11align_val_tRKSt9nothrow_t
 mold:_ZdaPvm
 mold:_ZdaPvmSt11align_val_t
 mold:_ZdlPv
+mold:_ZdlPvRKSt9nothrow_t
 mold:_ZdlPvSt11align_val_t
+mold:_ZdlPvSt11align_val_tRKSt9nothrow_t
 mold:_ZdlPvm
 mold:_ZdlPvmSt11align_val_t
 mold:_Znam
