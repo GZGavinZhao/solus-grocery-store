@@ -1,0 +1,65 @@
+<PISI>
+    <Source>
+        <Name>xone</Name>
+        <Homepage>https://github.com/medusalix/xone</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Linux kernel driver for Xbox One and Xbox Series X|S accessories</Summary>
+        <Description xml:lang="en">xone is a Linux kernel driver for Xbox One and Xbox Series X|S accessories. It serves as a modern replacement for xpad, aiming to be compatible with Microsoft&apos;s Game Input Protocol.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>xone-common</Name>
+        <Summary xml:lang="en">Common component for xone kernel modules</Summary>
+        <Description xml:lang="en">xone is a Linux kernel driver for Xbox One and Xbox Series X|S accessories. It serves as a modern replacement for xpad, aiming to be compatible with Microsoft&apos;s Game Input Protocol.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/xone-get-firmware.sh</Path>
+            <Path fileType="library">/usr/lib/modprobe.d/xone-blacklist.conf</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xone-current</Name>
+        <Summary xml:lang="en">xone for the linux-current kernel</Summary>
+        <Description xml:lang="en">xone is a Linux kernel driver for Xbox One and Xbox Series X|S accessories. It serves as a modern replacement for xpad, aiming to be compatible with Microsoft&apos;s Game Input Protocol.
+</Description>
+        <PartOf>kernel.drivers</PartOf>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="1">xone-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-dongle.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-gip-chatpad.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-gip-gamepad.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-gip-guitar.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-gip-headset.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-gip.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.43-215.current/drivers/input/joystick/xone-wired.ko</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xone-modaliases</Name>
+        <Summary xml:lang="en">These files are used by the Software Center for hardware detection</Summary>
+        <Description xml:lang="en">xone is a Linux kernel driver for Xbox One and Xbox Series X|S accessories. It serves as a modern replacement for xpad, aiming to be compatible with Microsoft&apos;s Game Input Protocol.
+</Description>
+        <PartOf>kernel.drivers</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/linux-driver-management/modaliases/xone.modaliases</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-06-22</Date>
+            <Version>0.3</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
