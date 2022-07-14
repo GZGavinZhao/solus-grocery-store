@@ -19,15 +19,20 @@
 </Description>
         <PartOf>multimedia.audio</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin/netease-cloud-music-gtk</Path>
-            <Path fileType="data">/usr/share/applications/netease-cloud-music-gtk.desktop</Path>
-            <Path fileType="data">/usr/share/pixmaps/netease-cloud-music-gtk.svg</Path>
+            <Path fileType="executable">/usr/bin/netease-cloud-music-gtk4</Path>
+            <Path fileType="data">/usr/share/appdata/com.gitee.gmg137.NeteaseCloudMusicGtk4.appdata.xml</Path>
+            <Path fileType="data">/usr/share/applications/com.gitee.gmg137.NeteaseCloudMusicGtk4.desktop</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas/com.gitee.gmg137.NeteaseCloudMusicGtk4.gschema.xml</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/com.gitee.gmg137.NeteaseCloudMusicGtk4.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/com.gitee.gmg137.NeteaseCloudMusicGtk4-symbolic.svg</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/netease-cloud-music-gtk4.mo</Path>
+            <Path fileType="data">/usr/share/netease-cloud-music-gtk4/netease-cloud-music-gtk4.gresource</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2022-03-22</Date>
-            <Version>1.2.2</Version>
+        <Update release="3">
+            <Date>2022-07-14</Date>
+            <Version>2.0.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
