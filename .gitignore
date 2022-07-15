@@ -1,3 +1,6 @@
 *.eopkg
 *.yml~
 *.xml~
+
+fc/main
+fc/*.zip
