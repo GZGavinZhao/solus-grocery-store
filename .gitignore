@@ -4,3 +4,6 @@
 
 fc/main
 fc/*.zip
+
+build/
+output/

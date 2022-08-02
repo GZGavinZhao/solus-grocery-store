@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
+	"errors"
+	"fmt"
 	"os"
-	"os/exec"
 	"path/filepath"
-	"strings"
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/aliyun/fc-runtime-go-sdk/events"
@@ -16,6 +16,16 @@ import (
 const (
 	mntPoint   = "/mnt/grocery"
 	bucketName = "solus-grocery-store-oss"
+	indexFile  = "eopkg-index.xml"
+)
+
+var (
+	indexFiles = [4]string{
+		"eopkg-index.xml.xz",
+		"eopkg-index.xml.xz.sha1sum",
+		"eopkg-index.xml",
+		"eopkg-index.xml.sha1sum",
+	}
 )
 
 func HandleRequest(ctx context.Context, event events.OssEvent) error {
@@ -23,60 +33,58 @@ func HandleRequest(ctx context.Context, event events.OssEvent) error {
 	credentials := fcctx.Credentials
 	logger := fcctx.GetLogger()
 
-	logger.Debug("Uid:", os.Getuid())
-	logger.Debug("Gid:", os.Getgid())
-	logger.Debug("User:", fcctx.AccountId)
-
-	if _, err := os.Stat(mntPoint); err != nil {
-		if os.IsNotExist(err) {
-			logger.Error("NAS doesn't seem to be mounted!")
-		} else {
-			logger.Error(err)
-		}
-		return err
+	if len(event.Events) > 1 {
+		logger.Error("More than two events received, I can't handle them:", event.Events)
+		return errors.New(fmt.Sprintf("Expecting 1 event, received %d", len(event.Events)))
 	}
 
-	logger.Info("Try if we can write file to NAS...")
-	if err := os.WriteFile(filepath.Join(mntPoint, "test.txt"), []byte("Hello NAS from FC!"), 0666); err != nil {
-		logger.Error(err)
-	} else {
-		logger.Info("Successfully wrote file to NAS!")
-	}
-
-	logger.Info("Try if we can read file in NAS...")
-	if _, err := os.ReadFile(filepath.Join(mntPoint, "test.txt")); err != nil {
-		logger.Error(err)
-	} else {
-		logger.Info("Successfully read file in NAS!")
-	}
-
-	logger.Info("See if we can delete file in NAS...")
-	if err := os.Remove(filepath.Join(mntPoint, "test.txt")); err != nil {
-		logger.Error(err)
-	} else {
-		logger.Info("Successfully deleted file in NAS!")
-	}
-
+	// Connect to OSS.
 	logger.Info("Connecting to OSS using endpoint: " + "oss-" + fcctx.Region + "-internal.aliyuncs.com")
 	client, err := oss.New("oss-"+fcctx.Region+"-internal.aliyuncs.com", credentials.AccessKeyId, credentials.AccessKeySecret, oss.SecurityToken(credentials.SecurityToken))
 	if err != nil {
-		logger.Error(err)
+		logger.Error("Failed to connect to OSS:", err)
+		return err
 	} else {
 		logger.Info("Successfully connected to OSS!")
 	}
 
+	// Connect to bucket.
 	bucket, err := client.Bucket(bucketName)
 	if err != nil {
-		logger.Error(err)
-	}
-	if err := bucket.PutObject("fctest.txt", strings.NewReader("Hello OSS from FC!")); err != nil {
-		logger.Error(err)
-	} else {
-		logger.Info("Successfully wrote file to OSS!")
+		logger.Error("Failed to connect to OSS bucket:", err)
+		return err
 	}
 
-	logger.Info("Listing top-level files in NAS...")
-	exec.Command("ls", mntPoint)
+	// Get the (relative) path of the package.
+	obj := event.Events[0].Oss.Object
+	pkgPath := obj.Key
+	nasPkgPath := filepath.Join(mntPoint, *pkgPath)
+
+	// Create the corresponding location in NAS if it doesn't exist.
+	err = os.Mkdir(filepath.Dir(nasPkgPath), 00755)
+	if err != nil {
+		logger.Error("Failed to create path for package in NAS:", err)
+		return err
+	}
+
+	// Download object from OSS to NAS.
+	err = bucket.GetObjectToFile(*pkgPath, nasPkgPath)
+	if err != nil {
+		logger.Error("Failed to download package from OSS:", err)
+		return err
+	}
+
+	err = indexDir(mntPoint, ctx)
+	if err != nil {
+		return err
+	}
+
+	for _, file := range indexFiles {
+		err = bucket.PutObjectFromFile(file, filepath.Join(mntPoint, file))
+		if err != nil {
+			return err
+		}
+	}
 
 	return nil
 }
