@@ -99,8 +99,12 @@ func indexDir(dir string, ctx context.Context) error {
 	}
 
 	logger.Info("Associating delta packages to their parent packages...")
-	err = filepath.WalkDir("build",
+	err = filepath.WalkDir(dir,
 		func(path string, entry os.DirEntry, err error) error {
+			if err != nil {
+				return err
+			}
+
 			if !entry.IsDir() && isDelta(path) {
 				// We have to use the file name to get its previous versions...
 				// logger.Println(path)
