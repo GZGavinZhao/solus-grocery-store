@@ -5,18 +5,24 @@ repository is inspired by
 [prateekmedia's work](https://github.com/prateekmedia/Solus-3rdParty). A big
 shout-out to you if you're seeing this :)
 
+This repository is an actual repository (i.e. the packages are built and
+uploaded to the cloud where they will get indexed in a cloud function and
+uploaded into a storage
+bucket), unlike previous attempts that used GitHub as a storage and required
+manual indexing. For more info on how this repository is architectured entirely
+on the cloud, please see the [Architecture](#architecture) section.
+
 I typically update these packages once a month, and will work on some aesthetic
 improvements later.
 
 I just learned how to more formally package using `solbuild`, and will try to do
-some re-builds when I have time.
+some more re-builds when I have time.
 
 Notable packages includes:
 
 - cascadia-code
 - trezor-bridge
 - microsoft-edge
-- mold
 - netease-cloud-music-gtk
 
 ## Disclaimer
@@ -140,3 +146,7 @@ the terminal:
 ```
 
 Please open an issue if you know how might it be resolved. Any help is appreciated!
+
+## Architecture
+
+Alicloud FC+NAS+OSS. WIP.
