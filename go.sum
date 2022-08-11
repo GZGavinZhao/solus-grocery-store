@@ -1,10 +1,6 @@
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/GZGavinZhao/libeopkg v0.1.1-0.20220717192549-157f1ee004de h1:1K4ZIv0KspGsqte61JKXJXhj0mEijskjRXxCzaX7t00=
-github.com/GZGavinZhao/libeopkg v0.1.1-0.20220717192549-157f1ee004de/go.mod h1:fLdu1w0JJ7SpRl2S1irNJs7dZ7nkUMglWVAc3Dsn1Cw=
-github.com/GZGavinZhao/libeopkg v0.1.1-0.20220801025909-51d50e345dca h1:GSCsUAK7WP6aND3IZHr2TWVIdPfAhcQZJAqaZs6VdOw=
-github.com/GZGavinZhao/libeopkg v0.1.1-0.20220801025909-51d50e345dca/go.mod h1:fLdu1w0JJ7SpRl2S1irNJs7dZ7nkUMglWVAc3Dsn1Cw=
 github.com/GZGavinZhao/libeopkg v0.1.1-0.20220802024412-3c2ca85e6f85 h1:pbFrc9qwW0PYWoavgLNFpevju823DlHG2NmLQRzxwKU=
 github.com/GZGavinZhao/libeopkg v0.1.1-0.20220802024412-3c2ca85e6f85/go.mod h1:fLdu1w0JJ7SpRl2S1irNJs7dZ7nkUMglWVAc3Dsn1Cw=
 github.com/HdrHistogram/hdrhistogram-go v1.1.2/go.mod h1:yDgFjdqOqDEKOvasDdhWNXYg9BVp4O+o5f6V/ehm6Oo=

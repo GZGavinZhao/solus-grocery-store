@@ -1,4 +1,4 @@
-package main
+package shared
 
 import (
 	"context"
@@ -15,18 +15,8 @@ import (
 	"github.com/aliyun/fc-runtime-go-sdk/fccontext"
 )
 
-var (
-	distribution = index.Distribution{
-		SourceName: "Solus",
-		Version:    1,
-		Type:       "main",
-		BinaryName: "Solus",
-	}
-)
-
-func indexDir(dir string, ctx context.Context) error {
+func IndexDir(dir string, ctx context.Context) error {
 	fcctx, _ := fccontext.FromContext(ctx)
-	// credentials := fcctx.Credentials
 	logger := fcctx.GetLogger()
 
 	// We'll support loading from an existing index later...
@@ -49,7 +39,7 @@ func indexDir(dir string, ctx context.Context) error {
 	// 	return err
 	// }
 
-	var idx = index.Index{Distribution: distribution}
+	var idx = index.Index{Distribution: Distribution}
 	var pkgs = make(map[string]*archive.Package)
 
 	logger.Info("Walking the given directory to find indexable packages...")
@@ -89,7 +79,7 @@ func indexDir(dir string, ctx context.Context) error {
 					pkgs[name] = &pkg
 				} else if pkgs[name].History[0].Release == release {
 					// Same release, should never happen
-					return errors.New(fmt.Sprintf("Package %s has two packages with the same release version %d, path ", name, release))
+					return errors.New(fmt.Sprintf("Package %s has two packages with the same release version %d, paths are %s and %s", name, release, filepath.Join(dir, pkg.PackageURI), path))
 				}
 			}
 			return nil
@@ -106,9 +96,6 @@ func indexDir(dir string, ctx context.Context) error {
 			}
 
 			if !entry.IsDir() && isDelta(path) {
-				// We have to use the file name to get its previous versions...
-				// logger.Println(path)
-
 				eopkg, err := archive.Open(path)
 				if err != nil {
 					return err
@@ -124,6 +111,7 @@ func indexDir(dir string, ctx context.Context) error {
 				name := pkg.Name
 				parent := pkgs[name]
 
+				// We have to use the file name to get its previous versions...
 				splitted := strings.Split(filepath.Base(path)[len(name):], "-")
 				// Why is there a space at the front???
 				toVer, err := strconv.Atoi(splitted[2])
@@ -170,9 +158,10 @@ func indexDir(dir string, ctx context.Context) error {
 		idx.Packages = append(idx.Packages, *pkg)
 	}
 
-	logger.Info("Saving index...")
+	logger.Infof("Saving index to %s", dir)
 	err = idx.Save(dir)
 	if err != nil {
+		logger.Error("There's something wrong with saving the index:", err)
 		return err
 	}
 

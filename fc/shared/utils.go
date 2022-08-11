@@ -1,4 +1,4 @@
-package main
+package shared
 
 import (
 	"context"
@@ -11,7 +11,29 @@ import (
 	"path/filepath"
 
 	"github.com/GZGavinZhao/libeopkg/archive"
+	"github.com/GZGavinZhao/libeopkg/index"
 	"github.com/aliyun/fc-runtime-go-sdk/fccontext"
+)
+
+const (
+	MntPoint = "/mnt/repo"
+)
+
+var (
+	BucketName   = "pisces-repo"
+	Distribution = index.Distribution{
+		SourceName: "Solus",
+		Version:    1,
+		Type:       "main",
+		BinaryName: "Solus",
+	}
+	IndexFiles = [4]string{
+		"eopkg-index.xml.xz",
+		"eopkg-index.xml.xz.sha1sum",
+		"eopkg-index.xml",
+		"eopkg-index.xml.sha1sum",
+	}
+	RepoDir = "solus"
 )
 
 func sha1AndSize(path string, ctx context.Context) (string, int64, error) {
@@ -22,17 +44,20 @@ func sha1AndSize(path string, ctx context.Context) (string, int64, error) {
 	f, err := os.Open(path)
 	if err != nil {
 		logger.Error(err)
+		return "", -1, err
 	}
 	defer f.Close()
 
 	h := sha1.New()
 	if _, err := io.Copy(h, f); err != nil {
 		logger.Error(err)
+		return "", -1, err
 	}
 
 	stat, err := f.Stat()
 	if err != nil {
 		logger.Error(err)
+		return "", -1, err
 	}
 
 	return hex.EncodeToString(h.Sum(nil)[:]), stat.Size(), nil

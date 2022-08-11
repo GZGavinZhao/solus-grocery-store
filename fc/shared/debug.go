@@ -1,9 +1,8 @@
-package main
+package shared
 
 import (
 	"context"
 	"os"
-	"os/exec"
 	"path/filepath"
 	"strings"
 
@@ -21,7 +20,7 @@ func FCEnvDebug(ctx context.Context, event events.OssEvent) error {
 	logger.Debug("Gid:", os.Getgid())
 	logger.Debug("User:", fcctx.AccountId)
 
-	if _, err := os.Stat(mntPoint); err != nil {
+	if _, err := os.Stat(MntPoint); err != nil {
 		if os.IsNotExist(err) {
 			logger.Error("NAS doesn't seem to be mounted!")
 		} else {
@@ -31,21 +30,21 @@ func FCEnvDebug(ctx context.Context, event events.OssEvent) error {
 	}
 
 	logger.Info("Try if we can write file to NAS...")
-	if err := os.WriteFile(filepath.Join(mntPoint, "test.txt"), []byte("Hello NAS from FC!"), 0666); err != nil {
+	if err := os.WriteFile(filepath.Join(MntPoint, "test.txt"), []byte("Hello NAS from FC!"), 0666); err != nil {
 		logger.Error(err)
 	} else {
 		logger.Info("Successfully wrote file to NAS!")
 	}
 
 	logger.Info("Try if we can read file in NAS...")
-	if _, err := os.ReadFile(filepath.Join(mntPoint, "test.txt")); err != nil {
+	if _, err := os.ReadFile(filepath.Join(MntPoint, "test.txt")); err != nil {
 		logger.Error(err)
 	} else {
 		logger.Info("Successfully read file in NAS!")
 	}
 
 	logger.Info("See if we can delete file in NAS...")
-	if err := os.Remove(filepath.Join(mntPoint, "test.txt")); err != nil {
+	if err := os.Remove(filepath.Join(MntPoint, "test.txt")); err != nil {
 		logger.Error(err)
 	} else {
 		logger.Info("Successfully deleted file in NAS!")
@@ -59,7 +58,7 @@ func FCEnvDebug(ctx context.Context, event events.OssEvent) error {
 		logger.Info("Successfully connected to OSS!")
 	}
 
-	bucket, err := client.Bucket(bucketName)
+	bucket, err := client.Bucket(BucketName)
 	if err != nil {
 		logger.Error(err)
 	}
@@ -68,9 +67,6 @@ func FCEnvDebug(ctx context.Context, event events.OssEvent) error {
 	} else {
 		logger.Info("Successfully wrote file to OSS!")
 	}
-
-	logger.Info("Listing top-level files in NAS...")
-	exec.Command("ls", mntPoint)
 
 	return nil
 }
