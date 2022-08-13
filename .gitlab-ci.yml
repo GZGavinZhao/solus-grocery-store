@@ -3,22 +3,10 @@ image: silkeh/solus:ypkg
 include: '/.gitlab/ci/template.yml'
 
 stages:
-  - lint
   - build
-  - deploy
 
-.lint-test-job:
-  stage: lint
-  script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 1
-    - echo "No lint issues found."
-
-.deploy-job:
-  stage: deploy
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+aliyun-cli:
+  extends: .build
 
 bazelisk:
   extends: .build

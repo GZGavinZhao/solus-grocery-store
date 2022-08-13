@@ -1,6 +1,5 @@
 default:
   before_script:
-    - eopkg lr
     - sudo eopkg dr Solus
     - sudo eopkg ar Unstable https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
     - sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
