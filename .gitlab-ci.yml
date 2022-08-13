@@ -32,9 +32,6 @@ microsoft-edge:
 mimalloc:
   extends: .build
 
-mold:
-  extends: .build
-
 netease-cloud-music-gtk:
   extends: .build
 
