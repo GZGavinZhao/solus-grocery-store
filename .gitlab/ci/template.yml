@@ -4,7 +4,7 @@ default:
     - sudo eopkg ar Unstable https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
     - sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
     - sudo eopkg up -y
-    - sudo eopkg it -y -c system.devel
+    - sudo eopkg it -y -c system.devel abi-wizard
 
 .build:
   stage: build
@@ -16,5 +16,5 @@ default:
         - $CI_JOB_NAME/*
   script:
     - cd $CI_JOB_NAME 
-    - ypkg --force package.yml
+    - fakeroot ypkg --force package.yml
     - abi-wizard /var/ypkg-root/root/${CI_JOB_NAME}/install
