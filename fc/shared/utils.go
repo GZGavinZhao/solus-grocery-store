@@ -33,7 +33,7 @@ var (
 		"eopkg-index.xml",
 		"eopkg-index.xml.sha1sum",
 	}
-	RepoDir = "solus"
+	RepoDir = ""
 )
 
 func sha1AndSize(path string, ctx context.Context) (string, int64, error) {

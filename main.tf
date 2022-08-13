@@ -457,11 +457,11 @@ resource "alicloud_fc_service" "repo" {
   ]
 }
 
-data "alicloud_file_crc64_checksum" "solus-repo-indexer" {
-  filename = "solus-repo-indexer.zip"
+data "alicloud_file_crc64_checksum" "indexer" {
+  filename = "indexer.zip"
 }
 
-resource "alicloud_fc_function" "solus-repo-indexer" {
+resource "alicloud_fc_function" "indexer" {
   service       = alicloud_fc_service.repo.name
   name          = "${var.repo_name}-repo-solus-indexer"
   description   = <<EOT
@@ -471,17 +471,16 @@ resource "alicloud_fc_function" "solus-repo-indexer" {
   handler       = "main"
   memory_size   = "512"
   runtime       = "go1"
-  filename      = "solus-repo-indexer.zip"
-  code_checksum = data.alicloud_file_crc64_checksum.solus-repo-indexer.checksum
+  filename      = "indexer.zip"
+  code_checksum = data.alicloud_file_crc64_checksum.indexer.checksum
   environment_variables = {
     "BUCKET" : alicloud_oss_bucket.repo.id,
-    "REPO_PREFIX" : "solus",
   }
 }
 
 resource "alicloud_fc_trigger" "solus-repo-trigger" {
   service    = alicloud_fc_service.repo.name
-  function   = alicloud_fc_function.solus-repo-indexer.name
+  function   = alicloud_fc_function.indexer.name
   name       = "repo-oss-trigger"
   role       = alicloud_ram_role.repo-fc.arn
   source_arn = "acs:oss:${var.REGION}:${var.ACCOUNT_ID}:${alicloud_oss_bucket.repo.id}"
@@ -496,7 +495,7 @@ resource "alicloud_fc_trigger" "solus-repo-trigger" {
     ],
     "filter": {
       "key": {
-        "prefix": "solus/",
+        "prefix": "",
         "suffix": ".eopkg"
       }
     }
