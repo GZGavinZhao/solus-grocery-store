@@ -16,5 +16,5 @@ default:
         - $CI_JOB_NAME/*
   script:
     - cd $CI_JOB_NAME 
-    - fakeroot ypkg --force package.yml
+    - ypkg --force package.yml
     - abi-wizard /var/ypkg-root/root/${CI_JOB_NAME}/install
