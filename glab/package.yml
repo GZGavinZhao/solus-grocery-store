@@ -12,7 +12,7 @@ networking : yes
 builddeps  :
     - golang
 build      : |
-    go build -o glab -ldflags "-s -w -X main.version=%version%" cmd/glab/main.go
+    go build -o glab -ldflags "-s -w -X main.version=%version%" cmd/glab
 
     # manpages
     go run cmd/gen-docs/docs.go --manpage --path ./
