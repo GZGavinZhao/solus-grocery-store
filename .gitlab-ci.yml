@@ -20,16 +20,10 @@ darts:
 glab:
   extends: .build
 
-glibmm-2.68:
-  extends: .build
-
 ibus-theme-tools:
   extends: .build
 
 microsoft-edge:
-  extends: .build
-
-mimalloc:
   extends: .build
 
 netease-cloud-music-gtk:
