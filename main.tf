@@ -89,7 +89,7 @@ resource "alicloud_nas_file_system" "repo" {
   storage_type     = "Performance"
   # Illegal characters... What?!? No spaces???
   # description      = lower("NAS for ${local.repoName} repo since OSS sucks in performance")
-  description = "nas4repofc"
+  description = "nas4${var.repo_name}repofc"
   zone_id     = "${var.REGION}a"
   vpc_id      = alicloud_vpc.repo.id
   vswitch_id  = alicloud_vswitch.repo.id
@@ -98,7 +98,7 @@ resource "alicloud_nas_file_system" "repo" {
 resource "alicloud_nas_access_group" "repo" {
   access_group_name = "${var.repo_name}-repo-ag"
   access_group_type = "Vpc"
-  description       = "ag4repofc"
+  description       = "ag4${var.repo_name}repofc"
   file_system_type  = "standard"
 }
 
@@ -463,7 +463,7 @@ data "alicloud_file_crc64_checksum" "indexer" {
 
 resource "alicloud_fc_function" "indexer" {
   service       = alicloud_fc_service.repo.name
-  name          = "${var.repo_name}-repo-solus-indexer"
+  name          = "${var.repo_name}-repo-indexer"
   description   = <<EOT
   ${local.repoName} Solus repo auto indexer.
   ${local.repoName}Solus仓库的自动indexer。
