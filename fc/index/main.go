@@ -79,9 +79,7 @@ func HandleRequest(ctx context.Context, event events.OssEvent) error {
 			return err
 		}
 	} else if *event.Events[0].EventName == "ObjectRemoved:DeleteObjects" {
-		logger.Debug("Received ObjectRemoved:DeleteObjects...")
-		logger.Debug(*event.Events[0])
-		logger.Debug(*event.Events[0].Oss)
+		logger.Warn("FC doesn't receive the full list of objects deleted when using ObjectRemoved:DeleteObjects. Checking every file in NAS...")
 	} else {
 		logger.Info("Downloading package...")
 
