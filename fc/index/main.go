@@ -68,18 +68,18 @@ func HandleRequest(ctx context.Context, event events.OssEvent) error {
 	if *event.Events[0].EventName == "ObjectRemoved:DeleteObject" {
 		logger.Info("Cleaning package...")
 
-		if _, err := os.Stat(nasPkgPath); err == nil {
-			err := os.Remove(nasPkgPath)
-			if err != nil {
-				logger.Error("Failed to delete package at", nasPkgPath, ":", err)
-				return err
-			}
-		} else if !errors.Is(err, os.ErrNotExist) {
-			logger.Error("Unable to check if file", pkgPath, "exists:", err)
+		if err := shared.DeleteFile(nasPkgPath); err != nil {
+			logger.Error("Failed to remove package", pkgPath, "at", nasPkgPath, ":", err)
 			return err
 		}
 	} else if *event.Events[0].EventName == "ObjectRemoved:DeleteObjects" {
 		logger.Warn("FC doesn't receive the full list of objects deleted when using ObjectRemoved:DeleteObjects. Checking every file in NAS...")
+
+		err := shared.Clean(bucket, shared.MntPoint)
+		if err != nil {
+			logger.Error("Failed to clean orphaned packages:", err)
+			return err
+		}
 	} else {
 		logger.Info("Downloading package...")
 

@@ -81,3 +81,16 @@ func verifyPackageLocation(path string, pkg archive.Package, repoDir string) err
 
 	return nil
 }
+
+func DeleteFile(path string) error {
+	if _, err := os.Stat(path); err == nil {
+		err := os.Remove(path)
+		if err != nil {
+			return errors.New(fmt.Sprint("Failed to delete package at", path, ":", err))
+		}
+	} else if !errors.Is(err, os.ErrNotExist) {
+		return errors.New(fmt.Sprint("Unable to check if file", path, "exists:", err))
+	}
+
+	return nil
+}
