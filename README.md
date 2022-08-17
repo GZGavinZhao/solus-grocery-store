@@ -45,16 +45,20 @@ packages.
 
 ### General
 
-For users in North America:
-
-```bash
-sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
-```
-
-Anywhere else:
+Paste the following into your terminal:
 
 ```bash
 sudo eopkg ar Grocery https://repo-cdn.gzgz.dev/eopkg-index.xml.xz
+```
+
+I'm not too familiar with CDN settings, so if occasionally you get packages not
+found / cannot be downloaded errors, wait for a few hours (at most a day). This
+likely happened because the index file was refreshed but the new packages were
+not (yet). If this happens frequently, use the original link. Note that it
+might be slow if you're not in North America.
+
+```bash
+sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
 ```
 
 Run `eopkg la Grocery` to see what packages are available.
@@ -149,6 +153,11 @@ the terminal:
 ```
 
 Please open an issue if you know how might it be resolved. Any help is appreciated!
+
+## Development
+
+If you need to develop **on top of** packages in this repo, see the two
+`*.profile` files located at the root of the repo.
 
 ## Architecture
 
