@@ -1,11 +1,11 @@
 name       : aliyun-cli
-version    : 3.0.123
-release    : 1
+version    : 3.0.124
+release    : 2
 source     :
-    - git|https://github.com/aliyun/aliyun-cli : v3.0.123
+    - git|https://github.com/aliyun/aliyun-cli : v3.0.124
 license    : Apache-2.0
 component  : network.clients
-summary    : Alibaba Cloud CLI 
+summary    : Alibaba Cloud CLI
 description: |
     The Alibaba Cloud CLI is a tool to manage and use Alibaba Cloud resources through a command line interface. It is written in Go and built on the top of Alibaba Cloud OpenAPI.
 networking : yes
