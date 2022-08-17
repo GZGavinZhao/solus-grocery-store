@@ -20,10 +20,13 @@ some more re-builds when I have time.
 
 Notable packages includes:
 
+- aliyun-cli
 - cascadia-code
 - trezor-bridge
 - microsoft-edge
 - netease-cloud-music-gtk
+- various ROCm packages while waiting them to be accepted into the official
+  repo
 
 ## Disclaimer
 
