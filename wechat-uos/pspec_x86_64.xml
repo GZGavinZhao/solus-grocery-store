@@ -1,0 +1,222 @@
+<PISI>
+    <Source>
+        <Name>wechat-uos</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Proprietary</License>
+        <PartOf>internet.im</PartOf>
+        <Summary xml:lang="en">Native WeChat in UOS</Summary>
+        <Description xml:lang="en">Native WeChat in UOS
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>wechat-uos</Name>
+        <Summary xml:lang="en">Native WeChat in UOS</Summary>
+        <Description xml:lang="en">Native WeChat in UOS
+</Description>
+        <PartOf>internet.im</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/wechat</Path>
+            <Path fileType="library">/usr/lib64/wechat-uos/libuosdevicea.so</Path>
+            <Path fileType="data">/usr/share/applications/wechat-uos.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/weixin.png</Path>
+            <Path fileType="data">/usr/share/wechat-uos/LICENSE.electron.txt</Path>
+            <Path fileType="data">/usr/share/wechat-uos/LICENSES.chromium.html</Path>
+            <Path fileType="data">/usr/share/wechat-uos/chrome-sandbox</Path>
+            <Path fileType="data">/usr/share/wechat-uos/chrome_100_percent.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/chrome_200_percent.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/chrome_crashpad_handler</Path>
+            <Path fileType="data">/usr/share/wechat-uos/icudtl.dat</Path>
+            <Path fileType="data">/usr/share/wechat-uos/libEGL.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/libGLESv2.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/libffmpeg.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/libvk_swiftshader.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/libvulkan.so.1</Path>
+            <Path fileType="data">/usr/share/wechat-uos/license/etc/lsb-release</Path>
+            <Path fileType="data">/usr/share/wechat-uos/license/etc/os-release</Path>
+            <Path fileType="data">/usr/share/wechat-uos/license/var/lib/uos-license/.license.json</Path>
+            <Path fileType="data">/usr/share/wechat-uos/license/var/uos/.license.key</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/am.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ar.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/bg.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/bn.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ca.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/cs.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/da.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/de.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/el.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/en-GB.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/en-US.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/es-419.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/es.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/et.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/fa.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/fi.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/fil.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/fr.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/gu.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/he.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/hi.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/hr.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/hu.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/id.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/it.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ja.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/kn.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ko.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/lt.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/lv.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ml.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/mr.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ms.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/nb.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/nl.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/pl.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/pt-BR.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/pt-PT.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ro.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ru.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/sk.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/sl.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/sr.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/sv.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/sw.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/ta.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/te.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/th.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/tr.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/uk.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/vi.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/zh-CN.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/locales/zh-TW.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources.pak</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/package.json</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/alita.node</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/alita_log.node</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/lib/libprivate_protobuf.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/lib/libvoipChannel.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/lib/libvoipCodec.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/lib/libvoipComm.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/alita/libs/lib/libwechat_alita.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/bin/scrot/libImlib2.so.1</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/bin/scrot/libImlib2.so.1.5.1</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/bin/scrot/libgiblib.so.1</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/bin/scrot/libgiblib.so.1.0.6</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/bin/scrot/scrot</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/main/dist/index.js</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/preload/dist/home.js</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/preload/dist/login.js</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/index.html</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/css/chunk-vendors.c18666a6.css</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/css/index.1b1da95a.css</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Ai.5a970552.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Bin.e879bcf0.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Cdr.0cdac3c2.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Dwg.4c7b6413.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Excel.13ea4925.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Exe.2f8c1f7e.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Ink.631ac578.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Keynote.b9146764.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Movie.cd9a2308.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Music.586a7400.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Number.be7e2806.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/PDF.51c362dd.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/PPT.0f1df0f9.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Pages.f4ee47ec.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Ps.a28bc11a.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Word.951100b4.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Wps.5494df97.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/Zip.390dc144.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/arrow.172543fd.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/arrow.765ec020.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/avatar_default.1f742bda.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/bubble-corner.d7f82ebd.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/checkbox_checked.00cf278c.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/checkbox_radio_default.6a4ae295.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/close.eec542e3.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/contact-active.86983f33.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/contact-default.cc563d1b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/conversation-active.eb159b47.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/conversation-default.89c1456a.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/dele-item.5b86d4c0.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/folder.47a4841d.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_arrow@2x.abad7844.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_arrow_selected@2x.1555f180.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_cancel@2x.006d542a.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_curve@2x.66951ad5.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_curve_selected@2x.6a3899af.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_done@2x.3efc038e.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_ellipse@2x.9cbf2c3b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_ellipse_selected@2x.9a012bac.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_mosaic@2x.b3dbeb46.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_mosaic_selected@2x.b73e9fe9.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_rectangle@2x.0cd92f77.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_rectangle_selected@2x.a04c7f01.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_save@2x.799e7a77.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_text@2x.969edb8b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_text_selected@2x.51b7e3bf.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_undo@2x.166da167.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/ico_undo_disabled@2x.be3b7e2f.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__brower.0f39523e.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__close-window-active.f848bda3.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__close-window-hl.65a9dd5e.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__close-window.58f659ac.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__copylink.1fa3f736.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__file-download.b85db9f9.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__info__gray.248e3a26.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__loading.adebcfe1.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__offline.46e49116.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__play.95c39912.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__refresh.ea63f13b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__success.5639608b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon__voice.8d4a0636.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_capture.a50d41be.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_capture_drop.558990b3.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_maximize.3fae52a2.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_minimize.be7fe2a2.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_panel_empty.5f6f370a.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icon_share.5811afdf.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/icons_restore.524d0697.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/list-arrow.6decc009.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/loading-mask.74e56507.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/more.6f25ae3b.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/more.a5c495ec.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/mute.0cdb1201.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/panel_arrow.41e2447e.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/qrcode-img-mask.229b65e0.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/radio-checked.f8ea8252.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/star.c92aef09.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/sticker.d115f404.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/txt.71271ffd.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/unknow.93669b6a.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/voipCall.4c84fff3.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/img/wechat_logo.8ce659cf.svg</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/js/chunk-vendors.33d9ef75.js</Path>
+            <Path fileType="data">/usr/share/wechat-uos/resources/app/packages/renderer/dist/static/js/index.777ea863.js</Path>
+            <Path fileType="data">/usr/share/wechat-uos/snapshot_blob.bin</Path>
+            <Path fileType="data">/usr/share/wechat-uos/swiftshader/libEGL.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/swiftshader/libGLESv2.so</Path>
+            <Path fileType="data">/usr/share/wechat-uos/v8_context_snapshot.bin</Path>
+            <Path fileType="data">/usr/share/wechat-uos/vk_swiftshader_icd.json</Path>
+            <Path fileType="data">/usr/share/wechat-uos/weixin</Path>
+            <Path fileType="data">/usr/share/wechat-uos/weixin.sh</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-08-19</Date>
+            <Version>2.1.5</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
