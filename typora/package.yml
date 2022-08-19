@@ -1,0 +1,36 @@
+name       : typora
+version    : 1.3.6
+release    : 1
+source     :
+    - https://download.typora.io/linux/Typora-linux-x64-1.3.6.tar.gz : 95c5f47d8555d0210ea3ef97a5877cdfad967f08d53ed3568c2601bbf86d8f15
+license    : EULA
+component  : editor
+summary    : A truly minimal Markdown editor
+description: |
+    A truly minimal Markdown editor.
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(libdrm)
+    - pkgconfig(gbm)
+    - pkgconfig(gtk+-3.0)
+rundeps    :
+    - pandoc
+    - noto-sans-ttf # For emojis
+install    : |
+    cd Typora-linux-x64
+
+    install -dm00755 $installdir/usr/bin
+    install -dm00755 $installdir/usr/share/typora
+
+    # Main content
+    cp -R ** $installdir/usr/share/typora
+    ln -s /usr/share/typora/Typora $installdir/usr/bin/typora
+
+    # Desktop file
+    install -Dm00644 $pkgfiles/typora.desktop -t $installdir/usr/share/applications
+
+    # Icons
+    for size in 16x16 32x32 64x64 128x128 256x256; do
+        install -dm00755 $installdir/usr/share/icons/hicolor/$size
+        ln -s /usr/share/typora/resources/assets/icon/icon_$size.png $installdir/usr/share/icons/hicolor/$size/typora.png
+    done

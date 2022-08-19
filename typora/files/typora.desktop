@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Typora
+Comment=A turly minimal Markdown editor
+Icon=typora
+Exec=/usr/bin/typora
+Terminal=false
+Categories=Office;WordProcessor;TextEditor;GTK;
+MimeType=text/plain;text/markdown;text/x-markdown;
+Keywords=Markdown;editor;document;fullscreen;minimal;distraction;concentration;focused;writing;
