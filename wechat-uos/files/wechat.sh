@@ -6,6 +6,6 @@ fi
 bwrap --dev-bind / / \
     --bind /usr/share/wechat-uos/license/etc/os-release /etc/os-release \
     --bind /usr/share/wechat-uos/license/etc/lsb-release /etc/lsb-release \
-    --bind /usr/lib/wechat-uos/ /usr/lib/license/ \
+    --bind /usr/lib64/wechat-uos/ /usr/lib/license/ \
     --bind /usr/share/wechat-uos/license/var/ /var/ \
     /usr/share/wechat-uos/weixin "$@"

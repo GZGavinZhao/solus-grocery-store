@@ -3,7 +3,7 @@
 # for all of your work!
 name       : wechat-uos
 version    : 2.1.5
-release    : 1
+release    : 2
 source     :
   - https://home-store-packages.uniontech.com/appstore/pool/appstore/c/com.tencent.weixin/com.tencent.weixin_2.1.5_amd64.deb : bd537bc3ea0f5cd4cc27f835469c3f0152c8cad31723e80b89e36e75dcb22181
 license    : Proprietary
@@ -44,8 +44,10 @@ install    : |
 
     # Move /usr/lib/license/libuosdevicea.so to /usr/lib64/wechat-uos/
     mv $installdir/usr/lib/**/** ${installdir}%libdir%/wechat-uos
-    rm -rf $installdir/usr/lib
     chmod 0644 ${installdir}%libdir%/wechat-uos/libuosdevicea.so
+
+    # Required for bubblewrap to bind directories correctly
+    rm -rf $installdir/usr/lib && install -dm00755 ${installdir}%libdir%/license 
 
     # Some mysterious files from Arch that allows it to run...
     tar -xf $pkgfiles/license.tar.gz -C $installdir/usr/share/wechat-uos

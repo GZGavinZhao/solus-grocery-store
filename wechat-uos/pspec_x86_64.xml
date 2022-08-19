@@ -20,6 +20,7 @@
         <PartOf>internet.im</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/wechat</Path>
+            <Path fileType="library">/usr/lib64/license</Path>
             <Path fileType="library">/usr/lib64/wechat-uos/libuosdevicea.so</Path>
             <Path fileType="data">/usr/share/applications/wechat-uos.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/weixin.png</Path>
