@@ -44,7 +44,13 @@ tangram:
 trezor-bridge:
   extends: .build
 
+typora:
+  extends: .build
+
 vala-language-server:
+  extends: .build
+
+wechat-uos:
   extends: .build
 
 xone:
