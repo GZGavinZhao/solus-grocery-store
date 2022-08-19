@@ -47,6 +47,9 @@ trezor-bridge:
 typora:
   extends: .build
 
+typora-beta:
+  extends: .build
+
 vala-language-server:
   extends: .build
 

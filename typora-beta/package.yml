@@ -1,0 +1,28 @@
+name       : typora-beta
+version    : 0.11.18
+release    : 1
+source     :
+    - https://repo.linuxacme.cn/Typora_Linux_0.11.18_amd64.deb : a202935a754c4b7344cc947db143e12885e4a716ca5f70f607f0318c346bb6c6
+license    : EULA
+component  : editor
+summary    : A truly minimal Markdown editor (beta version)
+description: |
+    A truly minimal Markdown editor (beta version).
+conflicts  :
+    # I can't guarantee that installing two Typoras at the same time won't break
+    # them, at least for now.
+    - typora
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(libdrm)
+    - pkgconfig(gbm)
+    - pkgconfig(gtk+-3.0)
+rundeps    :
+    - pandoc
+    - noto-sans-ttf # For emojis
+setup      : |
+    mkdir work
+    tar xf data.tar.xz -C work
+install    : |
+    install -dm00755 $installdir
+    cp -R work/** $installdir/
