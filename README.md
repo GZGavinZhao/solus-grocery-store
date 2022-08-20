@@ -25,6 +25,8 @@ Notable packages includes:
 - trezor-bridge
 - microsoft-edge
 - netease-cloud-music-gtk
+- typora (the stable and paid version) and typora-beta
+- wechat-uos (**native** WeChat for Linux! Though [limitations](#微信wechat) apply)
 - various ROCm packages while waiting them to be accepted into the official
   repo
 
@@ -129,6 +131,15 @@ You can switch to them, but they can only output plain English. If you can't use
 it, refer to [this article](https://manjaro.org.cn/bbs/topic/manjaro%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%EF%BC%88fcitxgooglepinyin%E7%9A%84%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98).
 
 ## Known Issues
+
+### 微信(WeChat)
+
+一些已知但无法解决的问题：
+
+- 最小化到托盘没法用。推测是因为libappindicator的问题（Solus用的是libayatana-appindicator），但是abi-wizard又没有检测出任何一个二进制文件中使用了libappindicator的ABI，所以我不理解……
+- 应用图标依旧是灰色的，应该是由于微信本来是安装在`/opt/apps/com.tencent.weixin/files/weixin`，但是Solus（Arch也是一样）尽量需要安装在`/usr/share`，然后Electron就找不到图标了。
+- 没法通过点右上角的X来关掉。再配合上最小化到托盘失灵，唯一关闭的方式就是左下角设置然后登出。这意味着**每次关闭微信都要登出帐号**，但因为Linux版还没有自动登录的功能，所以我觉得这应该不是一个太大的损失。
+- 登出之后二维码会~~像掺了金坷垃一般~~疯狂刷新。这个时候不用管它，直接点右上角关掉微信即可。
 
 ### 搜狗拼音(sogoupinyin)
 
