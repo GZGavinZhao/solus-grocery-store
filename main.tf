@@ -274,155 +274,155 @@ resource "alicloud_ram_role_policy_attachment" "repo-fc" {
 
 # ========== Setup Log Service ==========
 
-resource "alicloud_log_project" "repo" {
-  name        = "${var.repo_name}-repo"
-  description = <<EOT
-  Log Project for storing logs of the ${local.repoName} repo.
-  用以存储${local.repoName}仓库的Log Project。
-  EOT
-}
-
-resource "alicloud_log_store" "repo-fc" {
-  project          = alicloud_log_project.repo.name
-  name             = "${var.repo_name}-fc"
-  retention_period = 14
-  shard_count      = 1
-}
-
-resource "alicloud_log_store_index" "repo" {
-  project  = alicloud_log_project.repo.name
-  logstore = alicloud_log_store.repo-fc.name
-  full_text {
-    # I don't know why we need another chomp even though we're not using EOT...
-    token = local.sls_token
-  }
-
-  # Required for accurate log querying.
-  field_search {
-    name             = "aggPeriodSeconds"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "concurrentRequests"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "cpuPercent"
-    type             = "double"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "cpuQuotaPercent"
-    type             = "double"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "errorType"
-    type             = "text"
-    enable_analytics = true
-    token            = local.sls_token
-  }
-  field_search {
-    name             = "functionName"
-    type             = "text"
-    case_sensitive   = true
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "hasFunctionError"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "hostname"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "instanceID"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "ipAddress"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "isColdStart"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "memoryLimitMB"
-    type             = "double"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "memoryUsageMB"
-    type             = "double"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "memoryUsagePercent"
-    type             = "double"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "operation"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "qualifier"
-    type             = "text"
-    case_sensitive   = true
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "rxBytes"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "rxTotalBytes"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "serviceName"
-    type             = "text"
-    case_sensitive   = true
-    token            = local.sls_token
-    enable_analytics = true
-  }
-  field_search {
-    name             = "txBytes"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "txTotalBytes"
-    type             = "long"
-    enable_analytics = true
-  }
-  field_search {
-    name             = "versionId"
-    type             = "text"
-    token            = local.sls_token
-    enable_analytics = true
-  }
-}
+# resource "alicloud_log_project" "repo" {
+#   name        = "${var.repo_name}-repo"
+#   description = <<EOT
+#   Log Project for storing logs of the ${local.repoName} repo.
+#   用以存储${local.repoName}仓库的Log Project。
+#   EOT
+# }
+# 
+# resource "alicloud_log_store" "repo-fc" {
+#   project          = alicloud_log_project.repo.name
+#   name             = "${var.repo_name}-fc"
+#   retention_period = 14
+#   shard_count      = 1
+# }
+# 
+# resource "alicloud_log_store_index" "repo" {
+#   project  = alicloud_log_project.repo.name
+#   logstore = alicloud_log_store.repo-fc.name
+#   full_text {
+#     # I don't know why we need another chomp even though we're not using EOT...
+#     token = local.sls_token
+#   }
+# 
+#   # Required for accurate log querying.
+#   field_search {
+#     name             = "aggPeriodSeconds"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "concurrentRequests"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "cpuPercent"
+#     type             = "double"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "cpuQuotaPercent"
+#     type             = "double"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "errorType"
+#     type             = "text"
+#     enable_analytics = true
+#     token            = local.sls_token
+#   }
+#   field_search {
+#     name             = "functionName"
+#     type             = "text"
+#     case_sensitive   = true
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "hasFunctionError"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "hostname"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "instanceID"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "ipAddress"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "isColdStart"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "memoryLimitMB"
+#     type             = "double"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "memoryUsageMB"
+#     type             = "double"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "memoryUsagePercent"
+#     type             = "double"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "operation"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "qualifier"
+#     type             = "text"
+#     case_sensitive   = true
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "rxBytes"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "rxTotalBytes"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "serviceName"
+#     type             = "text"
+#     case_sensitive   = true
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "txBytes"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "txTotalBytes"
+#     type             = "long"
+#     enable_analytics = true
+#   }
+#   field_search {
+#     name             = "versionId"
+#     type             = "text"
+#     token            = local.sls_token
+#     enable_analytics = true
+#   }
+# }
 
 # ========== Setup FC ==========
 
@@ -433,10 +433,10 @@ resource "alicloud_fc_service" "repo" {
   ${local.repoName}仓库搭建服务。
   EOT
   internet_access = false
-  log_config {
-    project  = alicloud_log_project.repo.name
-    logstore = alicloud_log_store.repo-fc.name
-  }
+  # log_config {
+  #   project  = alicloud_log_project.repo.name
+  #   logstore = alicloud_log_store.repo-fc.name
+  # }
   vpc_config {
     vswitch_ids       = [alicloud_vswitch.repo.id]
     security_group_id = alicloud_security_group.repo.id
