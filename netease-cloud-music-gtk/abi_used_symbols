@@ -62,6 +62,7 @@ libc.so.6:eventfd
 libc.so.6:exit
 libc.so.6:fclose
 libc.so.6:fcntl
+libc.so.6:fdopen
 libc.so.6:feof
 libc.so.6:fflush
 libc.so.6:fgets

@@ -1,6 +1,6 @@
 name       : netease-cloud-music-gtk
 version    : 2.0.2
-release    : 3
+release    : 4
 source     :
     - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/2.0.2.tar.gz : 1092b87cd201bc8f51b9c5e76aaf041194085055b59118282ea8a94f251a9fa0
 license    : GPL-3.0-or-later
