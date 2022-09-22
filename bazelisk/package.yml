@@ -1,8 +1,8 @@
 name       : bazelisk
-version    : 1.11.0
-release    : 1
+version    : 1.14.0
+release    : 2
 source     :
-    - https://github.com/bazelbuild/bazelisk/archive/refs/tags/v1.11.0.tar.gz : 5bb97aa5c8976876afa52807d0de9df9c524397a420248fb2353c193549cd3e3
+    - https://github.com/bazelbuild/bazelisk/archive/refs/tags/v1.14.0.tar.gz : 684148112429abf23e7ad40525bfc46fa47316be883fb746d97867f4201fee84
 license    : Apache-2.0
 component  : programming.tools
 summary    : A user-friendly launcher for Bazel
