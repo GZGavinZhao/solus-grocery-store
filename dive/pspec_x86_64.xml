@@ -1,0 +1,34 @@
+<PISI>
+    <Source>
+        <Name>dive</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">A tool for exploring each layer in a docker image</Summary>
+        <Description xml:lang="en">Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>dive</Name>
+        <Summary xml:lang="en">A tool for exploring each layer in a docker image</Summary>
+        <Description xml:lang="en">Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/dive</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-09-21</Date>
+            <Version>0.10.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

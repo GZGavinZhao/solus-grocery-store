@@ -1,0 +1,18 @@
+name       : dive
+version    : 0.10.0
+release    : 1
+source     :
+    - git|https://github.com/wagoodman/dive.git : v0.10.0
+license    : MIT
+component  : programming.tools
+summary    : A tool for exploring each layer in a docker image 
+description: |
+    Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    # Build it to dive.exe to avoid naming conflicts
+    go build -ldflags="-s -w -X main.version=v%version% -X main.commit=$(git rev-parse HEAD) -X 'main.buildTime=$(date)'" -o dive.exe
+install    : |
+    install -Dm00755 dive.exe $installdir/usr/bin/dive
