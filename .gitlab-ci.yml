@@ -17,6 +17,9 @@ cascadia-code:
 darts:
   extends: .build
 
+dive:
+  extends: .build
+
 glab:
   extends: .build
 
