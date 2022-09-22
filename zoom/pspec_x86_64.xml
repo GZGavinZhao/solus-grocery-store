@@ -1185,27 +1185,28 @@
             <Path fileType="data">/usr/share/zoom/scheduler/index.html</Path>
             <Path fileType="data">/usr/share/zoom/scheduler/map.js</Path>
             <Path fileType="data">/usr/share/zoom/scheduler/map.json</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/css/chunk-0b7b38e4.d1e25bd8.css</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/css/zm-tree.cdf7ab6d.css</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/fonts/icozoom.0c8360ba.ttf</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/fonts/icozoom.c3b995fa.woff</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/app.e95f8bbd.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-0b7b38e4.49904711.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0aaf55.d65e90b7.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0b327b.51de92c9.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0c226a.20aa17ee.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0de1f1.6d57e90f.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0de375.373e3f07.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0e17df.6b91ff1c.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d20e7e6.23209bdc.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d20f516.e69085b8.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d2167c6.56b4ff7c.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d21b4fa.b09e114e.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d21d6ce.10dc4813.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d22258b.2ae5c025.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d230459.a4365143.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-vendors.a802c628.js</Path>
-            <Path fileType="data">/usr/share/zoom/scheduler/static/js/zm-tree.931c2cbc.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/css/chunk-ea588dc8.ecc814a7.css</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/css/zm-tree.4edc6983.css</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/fonts/icozoom.0e52b290.woff</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/fonts/icozoom.1d8f0bd8.ttf</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0aaf55.399fdf68.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0b327b.2539948e.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0c226a.871491a2.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0d9fc4.5312b4d7.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0de1f1.c3c09a03.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0de375.ac4cb249.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d0e17df.7c8b895c.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d20e7e6.a3a3e08c.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d20f516.d03fd580.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d2167c6.2ba62a35.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d21b4fa.f663af06.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d21d6ce.9b49d32d.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d22258b.e5494815.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-2d230459.c2a2f46b.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-ea588dc8.1e0500d9.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/chunk-vendors.f26129e8.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/index.bfe2ce09.js</Path>
+            <Path fileType="data">/usr/share/zoom/scheduler/static/js/zm-tree.b6819a5f.js</Path>
             <Path fileType="data">/usr/share/zoom/sip/Hangup.WAV</Path>
             <Path fileType="data">/usr/share/zoom/sip/dtmf_#.wav</Path>
             <Path fileType="data">/usr/share/zoom/sip/dtmf_0.wav</Path>
@@ -1226,6 +1227,7 @@
             <Path fileType="data">/usr/share/zoom/timezones/en/timezones.txt</Path>
             <Path fileType="data">/usr/share/zoom/timezones/es/timezones.txt</Path>
             <Path fileType="data">/usr/share/zoom/timezones/fr/timezones.txt</Path>
+            <Path fileType="data">/usr/share/zoom/timezones/id/timezones.text</Path>
             <Path fileType="data">/usr/share/zoom/timezones/it/timezones.txt</Path>
             <Path fileType="data">/usr/share/zoom/timezones/jp/timezones.txt</Path>
             <Path fileType="data">/usr/share/zoom/timezones/ko/timezones.txt</Path>
@@ -1275,9 +1277,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2022-06-05</Date>
-            <Version>5.10.4.2845</Version>
+        <Update release="2">
+            <Date>2022-09-10</Date>
+            <Version>5.11.10.4400</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
