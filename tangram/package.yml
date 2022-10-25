@@ -1,8 +1,8 @@
 name       : tangram
-version    : 1.4.0
-release    : 2
+version    : 1.4.2
+release    : 3
 source     :
-    - git|https://github.com/sonnyp/Tangram.git : v1.4.0
+    - git|https://github.com/sonnyp/Tangram.git : v1.4.2
 license    : GPL-3.0-or-later
 component  : network.web.browser
 summary    : Browser for your pinned tabs
