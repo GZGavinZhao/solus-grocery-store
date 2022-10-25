@@ -1,0 +1,23 @@
+name       : warp
+version    : 0.3.1
+release    : 1
+source     :
+    - https://gitlab.gnome.org/World/warp/-/archive/v0.3.1/warp-v0.3.1.tar.gz : 3a313708103f6a78b28781cc4f461fbaa1cbb05f4ed1f14fd887793cfc46d869
+license    : GPL-3.0-only
+component  : network
+summary    : Fast and secure file transfer
+description: |
+    Warp allows you to securely send files to each other via the internet or local network by exchanging a word-based code. The best transfer method will be determined using the Magic Wormhole protocol which includes local network transfer if possible. File transfers are encrypted.
+networking : yes
+builddeps  :
+    - pkgconfig(gtk4)
+    - pkgconfig(libadwaita-1)
+    - cargo
+    - desktop-file-utils
+    - itstool
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

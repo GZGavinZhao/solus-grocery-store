@@ -56,6 +56,9 @@ typora-beta:
 vala-language-server:
   extends: .build
 
+warp:
+  extends: .build
+
 wechat-uos:
   extends: .build
 

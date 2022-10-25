@@ -1,0 +1,101 @@
+<PISI>
+    <Source>
+        <Name>warp</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-3.0-only</License>
+        <PartOf>network</PartOf>
+        <Summary xml:lang="en">Fast and secure file transfer</Summary>
+        <Description xml:lang="en">Warp allows you to securely send files to each other via the internet or local network by exchanging a word-based code. The best transfer method will be determined using the Magic Wormhole protocol which includes local network transfer if possible. File transfers are encrypted.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>warp</Name>
+        <Summary xml:lang="en">Fast and secure file transfer</Summary>
+        <Description xml:lang="en">Warp allows you to securely send files to each other via the internet or local network by exchanging a word-based code. The best transfer method will be determined using the Magic Wormhole protocol which includes local network transfer if possible. File transfers are encrypted.
+</Description>
+        <PartOf>network</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/warp</Path>
+            <Path fileType="data">/usr/share/applications/app.drey.Warp.desktop</Path>
+            <Path fileType="doc">/usr/share/help/C/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/C/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/C/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/C/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/de/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/de/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/de/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/de/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/hu/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/hu/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/hu/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/hu/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/pt_BR/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/pt_BR/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/pt_BR/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/pt_BR/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/ru/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/ru/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/ru/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/ru/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/sv/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/sv/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/sv/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/sv/warp/index.page</Path>
+            <Path fileType="doc">/usr/share/help/uk/warp/details-commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/uk/warp/details-glossary.page</Path>
+            <Path fileType="doc">/usr/share/help/uk/warp/general-intro.page</Path>
+            <Path fileType="doc">/usr/share/help/uk/warp/index.page</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/app.drey.Warp.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/app.drey.Warp-symbolic.svg</Path>
+            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/warp.mo</Path>
+            <Path fileType="data">/usr/share/metainfo/app.drey.Warp.metainfo.xml</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-10-25</Date>
+            <Version>0.3.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
