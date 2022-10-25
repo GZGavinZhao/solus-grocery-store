@@ -1,5 +1,6 @@
 libEGL.so
 libGLESv2.so
+libaugloop_client.so
 liblearning_tools.so
 libmicrosoft_apis.so
 libmip_core.so

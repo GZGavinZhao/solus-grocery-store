@@ -36,6 +36,7 @@
             <Path fileType="data">/usr/share/msedge/icudtl.dat</Path>
             <Path fileType="data">/usr/share/msedge/libEGL.so</Path>
             <Path fileType="data">/usr/share/msedge/libGLESv2.so</Path>
+            <Path fileType="data">/usr/share/msedge/libaugloop_client.so</Path>
             <Path fileType="data">/usr/share/msedge/liblearning_tools.so</Path>
             <Path fileType="data">/usr/share/msedge/libmicrosoft_apis.so</Path>
             <Path fileType="data">/usr/share/msedge/libmip_core.so</Path>
@@ -159,9 +160,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2022-08-13</Date>
-            <Version>104.0.1293.54</Version>
+        <Update release="12">
+            <Date>2022-10-24</Date>
+            <Version>106.0.1370.52</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
