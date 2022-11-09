@@ -32,7 +32,6 @@ libadwaita-1.so.0:adw_view_stack_get_visible_child_name
 libadwaita-1.so.0:adw_view_stack_set_visible_child_name
 libadwaita-1.so.0:adw_view_switcher_title_get_type
 libc.so.6:__assert_fail
-libc.so.6:__ctype_tolower_loc
 libc.so.6:__errno_location
 libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
@@ -40,6 +39,7 @@ libc.so.6:__memcpy_chk
 libc.so.6:__register_atfork
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
+libc.so.6:__strcpy_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:__xpg_strerror_r
 libc.so.6:abort
@@ -111,15 +111,6 @@ libc.so.6:pthread_attr_getguardsize
 libc.so.6:pthread_attr_getstack
 libc.so.6:pthread_attr_init
 libc.so.6:pthread_attr_setstacksize
-libc.so.6:pthread_cond_broadcast
-libc.so.6:pthread_cond_destroy
-libc.so.6:pthread_cond_init
-libc.so.6:pthread_cond_signal
-libc.so.6:pthread_cond_timedwait
-libc.so.6:pthread_cond_wait
-libc.so.6:pthread_condattr_destroy
-libc.so.6:pthread_condattr_init
-libc.so.6:pthread_condattr_setclock
 libc.so.6:pthread_create
 libc.so.6:pthread_detach
 libc.so.6:pthread_getattr_np
@@ -130,16 +121,7 @@ libc.so.6:pthread_key_delete
 libc.so.6:pthread_mutex_destroy
 libc.so.6:pthread_mutex_init
 libc.so.6:pthread_mutex_lock
-libc.so.6:pthread_mutex_trylock
 libc.so.6:pthread_mutex_unlock
-libc.so.6:pthread_mutexattr_destroy
-libc.so.6:pthread_mutexattr_init
-libc.so.6:pthread_mutexattr_settype
-libc.so.6:pthread_rwlock_destroy
-libc.so.6:pthread_rwlock_rdlock
-libc.so.6:pthread_rwlock_tryrdlock
-libc.so.6:pthread_rwlock_unlock
-libc.so.6:pthread_rwlock_wrlock
 libc.so.6:pthread_self
 libc.so.6:pthread_setspecific
 libc.so.6:qsort
@@ -416,6 +398,8 @@ libgio-2.0.so.0:g_application_flags_get_type
 libgio-2.0.so.0:g_application_get_default
 libgio-2.0.so.0:g_application_quit
 libgio-2.0.so.0:g_application_run
+libgio-2.0.so.0:g_async_initable_get_type
+libgio-2.0.so.0:g_initable_get_type
 libgio-2.0.so.0:g_resource_load
 libgio-2.0.so.0:g_resource_unref
 libgio-2.0.so.0:g_resources_register
@@ -423,10 +407,12 @@ libgio-2.0.so.0:g_settings_bind
 libgio-2.0.so.0:g_settings_bind_with_mapping
 libgio-2.0.so.0:g_settings_create_action
 libgio-2.0.so.0:g_settings_get_boolean
+libgio-2.0.so.0:g_settings_get_double
 libgio-2.0.so.0:g_settings_get_string
 libgio-2.0.so.0:g_settings_get_uint
 libgio-2.0.so.0:g_settings_new
 libgio-2.0.so.0:g_settings_set_boolean
+libgio-2.0.so.0:g_settings_set_double
 libgio-2.0.so.0:g_settings_set_string
 libgio-2.0.so.0:g_simple_action_new
 libglib-2.0.so.0:g_date_time_get_day_of_month
@@ -453,6 +439,7 @@ libglib-2.0.so.0:g_main_context_unref
 libglib-2.0.so.0:g_malloc
 libglib-2.0.so.0:g_malloc0
 libglib-2.0.so.0:g_quark_to_string
+libglib-2.0.so.0:g_set_application_name
 libglib-2.0.so.0:g_source_add_child_source
 libglib-2.0.so.0:g_source_attach
 libglib-2.0.so.0:g_source_destroy
@@ -473,6 +460,7 @@ libglib-2.0.so.0:g_string_new
 libglib-2.0.so.0:g_strndup
 libglib-2.0.so.0:g_timeout_add_full
 libglib-2.0.so.0:g_timeout_add_seconds_full
+libglib-2.0.so.0:g_timeout_source_new
 libglib-2.0.so.0:g_timeout_source_new_seconds
 libglib-2.0.so.0:g_variant_get_string
 libglib-2.0.so.0:g_variant_get_type
@@ -493,7 +481,7 @@ libgobject-2.0.so.0:g_object_class_install_properties
 libgobject-2.0.so.0:g_object_class_list_properties
 libgobject-2.0.so.0:g_object_get_property
 libgobject-2.0.so.0:g_object_get_type
-libgobject-2.0.so.0:g_object_newv
+libgobject-2.0.so.0:g_object_new_with_properties
 libgobject-2.0.so.0:g_object_ref
 libgobject-2.0.so.0:g_object_ref_sink
 libgobject-2.0.so.0:g_object_set_property
@@ -563,9 +551,9 @@ libgstplayer-1.0.so.0:gst_player_set_uri
 libgstplayer-1.0.so.0:gst_player_set_volume
 libgstplayer-1.0.so.0:gst_player_stop
 libgstreamer-1.0.so.0:gst_init_check
+libgstreamer-1.0.so.0:gst_is_initialized
 libgstreamer-1.0.so.0:gst_structure_free
 libgstreamer-1.0.so.0:gst_structure_take_value
-libgstreamer-1.0.so.0:gst_version
 libgtk-4.so.1:gdk_cursor_get_type
 libgtk-4.so.1:gdk_display_get_default
 libgtk-4.so.1:gdk_display_get_type
@@ -713,7 +701,6 @@ libssl.so.1.1:SSL_CTX_set_default_passwd_cb
 libssl.so.1.1:SSL_CTX_set_default_passwd_cb_userdata
 libssl.so.1.1:SSL_CTX_set_keylog_callback
 libssl.so.1.1:SSL_CTX_set_msg_callback
-libssl.so.1.1:SSL_CTX_set_next_proto_select_cb
 libssl.so.1.1:SSL_CTX_set_options
 libssl.so.1.1:SSL_CTX_set_post_handshake_auth
 libssl.so.1.1:SSL_CTX_set_verify

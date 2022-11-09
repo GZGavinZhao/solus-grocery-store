@@ -30,9 +30,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2022-09-06</Date>
-            <Version>2.0.2</Version>
+        <Update release="5">
+            <Date>2022-11-04</Date>
+            <Version>2.0.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
