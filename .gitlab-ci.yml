@@ -35,12 +35,6 @@ netease-cloud-music-gtk:
 ossfs:
   extends: .build
 
-rpi-imager:
-  extends: .build
-
-rtw89:
-  extends: .build
-
 tangram:
   extends: .build
 
@@ -60,9 +54,6 @@ warp:
   extends: .build
 
 wechat-uos:
-  extends: .build
-
-xone:
   extends: .build
 
 zoom:
