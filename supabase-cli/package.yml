@@ -1,0 +1,17 @@
+name       : supabase-cli
+version    : 1.16.4
+release    : 2
+source     :
+    - https://github.com/supabase/cli/archive/refs/tags/v1.16.4.tar.gz : 78cab495dc26174f7c1200257af9627a54c48f89e783ebff86d2b7e093e2280f
+license    : MIT
+component  : programming.tools
+summary    : Supabase CLI
+description: |
+    CLI for Supabase, an open source Firebase alternative.
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags '-s -w -X github.com/supabase/cli/cmd.version=%version%'
+install    : |
+    install -Dm00755 cli $installdir/usr/bin/supabase

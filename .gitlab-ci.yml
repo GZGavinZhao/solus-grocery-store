@@ -35,6 +35,9 @@ netease-cloud-music-gtk:
 ossfs:
   extends: .build
 
+supabase-cli:
+  extends: .build
+
 tangram:
   extends: .build
 
