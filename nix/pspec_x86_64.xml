@@ -1,0 +1,209 @@
+<PISI>
+    <Source>
+        <Name>nix</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>LGPL-2.1-or-later</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">the purely functional package manager</Summary>
+        <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>nix</Name>
+        <Summary xml:lang="en">the purely functional package manager</Summary>
+        <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">nix-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/init/nix-daemon.conf</Path>
+            <Path fileType="config">/etc/profile.d/nix-daemon.fish</Path>
+            <Path fileType="config">/etc/profile.d/nix-daemon.sh</Path>
+            <Path fileType="config">/etc/profile.d/nix.fish</Path>
+            <Path fileType="config">/etc/profile.d/nix.sh</Path>
+            <Path fileType="executable">/usr/bin/nix</Path>
+            <Path fileType="executable">/usr/bin/nix-build</Path>
+            <Path fileType="executable">/usr/bin/nix-channel</Path>
+            <Path fileType="executable">/usr/bin/nix-collect-garbage</Path>
+            <Path fileType="executable">/usr/bin/nix-copy-closure</Path>
+            <Path fileType="executable">/usr/bin/nix-daemon</Path>
+            <Path fileType="executable">/usr/bin/nix-env</Path>
+            <Path fileType="executable">/usr/bin/nix-hash</Path>
+            <Path fileType="executable">/usr/bin/nix-instantiate</Path>
+            <Path fileType="executable">/usr/bin/nix-prefetch-url</Path>
+            <Path fileType="executable">/usr/bin/nix-shell</Path>
+            <Path fileType="executable">/usr/bin/nix-store</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.service</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
+            <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/nix/nix/build-remote</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/nix</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/nix.fish</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_nix</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/run-help-nix</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>nix-devel</Name>
+        <Summary xml:lang="en">Development files for nix</Summary>
+        <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">nix</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/nix/abstract-setting-to-json.hh</Path>
+            <Path fileType="header">/usr/include/nix/ansicolor.hh</Path>
+            <Path fileType="header">/usr/include/nix/archive.hh</Path>
+            <Path fileType="header">/usr/include/nix/args.hh</Path>
+            <Path fileType="header">/usr/include/nix/attr-path.hh</Path>
+            <Path fileType="header">/usr/include/nix/attr-set.hh</Path>
+            <Path fileType="header">/usr/include/nix/attrs.hh</Path>
+            <Path fileType="header">/usr/include/nix/binary-cache-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/build-result.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/derivation-goal.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/drv-output-substitution-goal.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/goal.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/hook-instance.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/local-derivation-goal.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/substitution-goal.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/worker.hh</Path>
+            <Path fileType="header">/usr/include/nix/builtins.hh</Path>
+            <Path fileType="header">/usr/include/nix/builtins/buildenv.hh</Path>
+            <Path fileType="header">/usr/include/nix/ca-specific-schema.sql.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/cache.hh</Path>
+            <Path fileType="header">/usr/include/nix/callback.hh</Path>
+            <Path fileType="header">/usr/include/nix/cgroup.hh</Path>
+            <Path fileType="header">/usr/include/nix/chunked-vector.hh</Path>
+            <Path fileType="header">/usr/include/nix/closure.hh</Path>
+            <Path fileType="header">/usr/include/nix/command.hh</Path>
+            <Path fileType="header">/usr/include/nix/common-args.hh</Path>
+            <Path fileType="header">/usr/include/nix/common-eval-args.hh</Path>
+            <Path fileType="header">/usr/include/nix/comparator.hh</Path>
+            <Path fileType="header">/usr/include/nix/compression.hh</Path>
+            <Path fileType="header">/usr/include/nix/compute-levels.hh</Path>
+            <Path fileType="header">/usr/include/nix/config.h</Path>
+            <Path fileType="header">/usr/include/nix/config.hh</Path>
+            <Path fileType="header">/usr/include/nix/content-address.hh</Path>
+            <Path fileType="header">/usr/include/nix/crypto.hh</Path>
+            <Path fileType="header">/usr/include/nix/daemon.hh</Path>
+            <Path fileType="header">/usr/include/nix/derivations.hh</Path>
+            <Path fileType="header">/usr/include/nix/derived-path.hh</Path>
+            <Path fileType="header">/usr/include/nix/error.hh</Path>
+            <Path fileType="header">/usr/include/nix/eval-cache.hh</Path>
+            <Path fileType="header">/usr/include/nix/eval-inline.hh</Path>
+            <Path fileType="header">/usr/include/nix/eval.hh</Path>
+            <Path fileType="header">/usr/include/nix/experimental-features.hh</Path>
+            <Path fileType="header">/usr/include/nix/fetch-settings.hh</Path>
+            <Path fileType="header">/usr/include/nix/fetchers.hh</Path>
+            <Path fileType="header">/usr/include/nix/fetchurl.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/filetransfer.hh</Path>
+            <Path fileType="header">/usr/include/nix/finally.hh</Path>
+            <Path fileType="header">/usr/include/nix/flake/call-flake.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/flake/flake.hh</Path>
+            <Path fileType="header">/usr/include/nix/flake/flakeref.hh</Path>
+            <Path fileType="header">/usr/include/nix/flake/lockfile.hh</Path>
+            <Path fileType="header">/usr/include/nix/fmt.hh</Path>
+            <Path fileType="header">/usr/include/nix/fs-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/function-trace.hh</Path>
+            <Path fileType="header">/usr/include/nix/gc-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/get-drvs.hh</Path>
+            <Path fileType="header">/usr/include/nix/git.hh</Path>
+            <Path fileType="header">/usr/include/nix/globals.hh</Path>
+            <Path fileType="header">/usr/include/nix/hash.hh</Path>
+            <Path fileType="header">/usr/include/nix/hilite.hh</Path>
+            <Path fileType="header">/usr/include/nix/imported-drv-to-derivation.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/installables.hh</Path>
+            <Path fileType="header">/usr/include/nix/json-to-value.hh</Path>
+            <Path fileType="header">/usr/include/nix/json-utils.hh</Path>
+            <Path fileType="header">/usr/include/nix/legacy.hh</Path>
+            <Path fileType="header">/usr/include/nix/lexer-tab.hh</Path>
+            <Path fileType="header">/usr/include/nix/local-fs-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/local-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/lock.hh</Path>
+            <Path fileType="header">/usr/include/nix/log-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/loggers.hh</Path>
+            <Path fileType="header">/usr/include/nix/logging.hh</Path>
+            <Path fileType="header">/usr/include/nix/lru-cache.hh</Path>
+            <Path fileType="header">/usr/include/nix/machines.hh</Path>
+            <Path fileType="header">/usr/include/nix/make-content-addressed.hh</Path>
+            <Path fileType="header">/usr/include/nix/markdown.hh</Path>
+            <Path fileType="header">/usr/include/nix/monitor-fd.hh</Path>
+            <Path fileType="header">/usr/include/nix/names.hh</Path>
+            <Path fileType="header">/usr/include/nix/nar-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/nar-info-disk-cache.hh</Path>
+            <Path fileType="header">/usr/include/nix/nar-info.hh</Path>
+            <Path fileType="header">/usr/include/nix/nixexpr.hh</Path>
+            <Path fileType="header">/usr/include/nix/parsed-derivations.hh</Path>
+            <Path fileType="header">/usr/include/nix/parser-tab.hh</Path>
+            <Path fileType="header">/usr/include/nix/path-info.hh</Path>
+            <Path fileType="header">/usr/include/nix/path-with-outputs.hh</Path>
+            <Path fileType="header">/usr/include/nix/path.hh</Path>
+            <Path fileType="header">/usr/include/nix/pathlocks.hh</Path>
+            <Path fileType="header">/usr/include/nix/pool.hh</Path>
+            <Path fileType="header">/usr/include/nix/primops.hh</Path>
+            <Path fileType="header">/usr/include/nix/profiles.hh</Path>
+            <Path fileType="header">/usr/include/nix/progress-bar.hh</Path>
+            <Path fileType="header">/usr/include/nix/realisation.hh</Path>
+            <Path fileType="header">/usr/include/nix/ref.hh</Path>
+            <Path fileType="header">/usr/include/nix/references.hh</Path>
+            <Path fileType="header">/usr/include/nix/registry.hh</Path>
+            <Path fileType="header">/usr/include/nix/remote-fs-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/remote-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/repair-flag.hh</Path>
+            <Path fileType="header">/usr/include/nix/s3-binary-cache-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/s3.hh</Path>
+            <Path fileType="header">/usr/include/nix/schema.sql.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/serialise.hh</Path>
+            <Path fileType="header">/usr/include/nix/serve-protocol.hh</Path>
+            <Path fileType="header">/usr/include/nix/shared.hh</Path>
+            <Path fileType="header">/usr/include/nix/split.hh</Path>
+            <Path fileType="header">/usr/include/nix/sqlite.hh</Path>
+            <Path fileType="header">/usr/include/nix/ssh.hh</Path>
+            <Path fileType="header">/usr/include/nix/store-api.hh</Path>
+            <Path fileType="header">/usr/include/nix/store-cast.hh</Path>
+            <Path fileType="header">/usr/include/nix/suggestions.hh</Path>
+            <Path fileType="header">/usr/include/nix/symbol-table.hh</Path>
+            <Path fileType="header">/usr/include/nix/sync.hh</Path>
+            <Path fileType="header">/usr/include/nix/tarfile.hh</Path>
+            <Path fileType="header">/usr/include/nix/thread-pool.hh</Path>
+            <Path fileType="header">/usr/include/nix/topo-sort.hh</Path>
+            <Path fileType="header">/usr/include/nix/types.hh</Path>
+            <Path fileType="header">/usr/include/nix/uds-remote-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/url-parts.hh</Path>
+            <Path fileType="header">/usr/include/nix/url.hh</Path>
+            <Path fileType="header">/usr/include/nix/util.hh</Path>
+            <Path fileType="header">/usr/include/nix/value-to-json.hh</Path>
+            <Path fileType="header">/usr/include/nix/value-to-xml.hh</Path>
+            <Path fileType="header">/usr/include/nix/value.hh</Path>
+            <Path fileType="header">/usr/include/nix/worker-protocol.hh</Path>
+            <Path fileType="header">/usr/include/nix/xml-writer.hh</Path>
+            <Path fileType="library">/usr/lib64/libnixcmd.so</Path>
+            <Path fileType="library">/usr/lib64/libnixexpr.so</Path>
+            <Path fileType="library">/usr/lib64/libnixfetchers.so</Path>
+            <Path fileType="library">/usr/lib64/libnixmain.so</Path>
+            <Path fileType="library">/usr/lib64/libnixstore.so</Path>
+            <Path fileType="library">/usr/lib64/libnixutil.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/nix-cmd.pc</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/nix-expr.pc</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/nix-main.pc</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/nix-store.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-12-13</Date>
+            <Version>2.12.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

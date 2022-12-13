@@ -1,0 +1,7 @@
+libnixcmd.so
+libnixexpr.so
+libnixfetchers.so
+libnixmain.so
+libnixstore.so
+libnixutil.so
+nix
