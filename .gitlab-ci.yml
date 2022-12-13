@@ -20,6 +20,9 @@ darts:
 dive:
   extends: .build
 
+editline:
+  extends: .build
+
 glab:
   extends: .build
 

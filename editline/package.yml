@@ -1,0 +1,16 @@
+name       : editline
+version    : 1.17.1
+release    : 1
+source     :
+    - https://github.com/troglobit/editline/archive/refs/tags/1.17.1.tar.gz : d65c5739c8ca388fa71feabc5aae506d052e1a6d288ee4e7fcab7efb07a3be74
+license    : Spencer-94
+component  : programming.library
+summary    : A small replacement for GNU readline() for UNIX 
+description: |
+    A small replacement for GNU readline() for UNIX 
+setup      : |
+    %autogen
+build      : |
+    %make
+install    : |
+    %make_install

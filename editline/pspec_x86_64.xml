@@ -1,0 +1,63 @@
+<PISI>
+    <Source>
+        <Name>editline</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Spencer-94</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">A small replacement for GNU readline() for UNIX</Summary>
+        <Description xml:lang="en">A small replacement for GNU readline() for UNIX 
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>editline</Name>
+        <Summary xml:lang="en">A small replacement for GNU readline() for UNIX</Summary>
+        <Description xml:lang="en">A small replacement for GNU readline() for UNIX 
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/libeditline.so.1</Path>
+            <Path fileType="library">/usr/lib64/libeditline.so.1.0.2</Path>
+            <Path fileType="man">/usr/share/man/man3/editline.3</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>editline-devel</Name>
+        <Summary xml:lang="en">Development files for editline</Summary>
+        <Description xml:lang="en">A small replacement for GNU readline() for UNIX 
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">editline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/editline.h</Path>
+            <Path fileType="library">/usr/lib64/libeditline.a</Path>
+            <Path fileType="library">/usr/lib64/libeditline.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libeditline.pc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>editline-docs</Name>
+        <Summary xml:lang="en">Documentation for editline</Summary>
+        <Description xml:lang="en">A small replacement for GNU readline() for UNIX 
+</Description>
+        <PartOf>programming.docs</PartOf>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/editline/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/editline/README.md</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-12-13</Date>
+            <Version>1.17.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
