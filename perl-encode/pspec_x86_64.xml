@@ -1,0 +1,98 @@
+<PISI>
+    <Source>
+        <Name>perl-encode</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Artistic-1.0-Perl</License>
+        <PartOf>programming.perl</PartOf>
+        <Summary xml:lang="en">Character encodings in Perl</Summary>
+        <Description xml:lang="en">Character encodings in Perl
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>perl-encode</Name>
+        <Summary xml:lang="en">Character encodings in Perl</Summary>
+        <Description xml:lang="en">Character encodings in Perl
+</Description>
+        <PartOf>programming.perl</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Alias.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Byte.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/CJKConstants.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/CN.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/CN/HZ.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Changes.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Config.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/ConfigLocal_PM.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/EBCDIC.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Encoder.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Encoding.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/GSM0338.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Guess.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/JP.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/JP/H2Z.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/JP/JIS7.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/KR.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/KR/2022_KR.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/MIME/Header.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/MIME/Header/ISO_2022_JP.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/MIME/Name.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Makefile_PL.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/PerlIO.pod</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/README.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Supported.pod</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Symbol.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/TW.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Unicode.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/Unicode/UTF7.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/_PM.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/_T.e2x</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/Encode/encode.h</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/.packlist</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/Byte/Byte.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/CN/CN.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/EBCDIC/EBCDIC.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/Encode.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/JP/JP.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/KR/KR.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/Symbol/Symbol.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/TW/TW.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/auto/Encode/Unicode/Unicode.so</Path>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/x86_64-linux-thread-multi/encoding.pm</Path>
+            <Path fileType="man">/usr/share/man/man1/enc2xs.1</Path>
+            <Path fileType="man">/usr/share/man/man1/encguess.1</Path>
+            <Path fileType="man">/usr/share/man/man1/piconv.1</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Alias.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::CJKConstants.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::CN::HZ.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Config.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Encoder.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Encoding.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::GSM0338.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Guess.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::JP::H2Z.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::JP::JIS7.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::KR::2022_KR.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::MIME::Header.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::MIME::Name.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::PerlIO.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Supported.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/Encode::Unicode::UTF7.3pm</Path>
+            <Path fileType="man">/usr/share/man/man3/encoding.3pm</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-11-22</Date>
+            <Version>3.19</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

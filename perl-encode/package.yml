@@ -1,0 +1,22 @@
+name       : perl-encode
+version    : 3.19
+release    : 1
+source     :
+    - https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Encode-3.19.tar.gz : 9163f848eef69e4d4cc8838397f0861fd9ea7ede001117dbd9694f8d95052ef5
+license    : Artistic-1.0-Perl
+component  : programming.perl
+summary    : Character encodings in Perl
+description: |
+    Character encodings in Perl
+builddeps  :
+    - perl-test-needs
+    - perl-business-isbn
+setup      : |
+    %perl_setup
+build      : |
+    %perl_build
+install    : |
+    %perl_install
+    rm -rf $installdir/usr/bin
+check      : |
+    %perl_build test
