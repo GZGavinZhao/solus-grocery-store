@@ -21,7 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib64/libeditline.so.1</Path>
             <Path fileType="library">/usr/lib64/libeditline.so.1.0.2</Path>
-            <Path fileType="man">/usr/share/man/man3/editline.3</Path>
         </Files>
     </Package>
     <Package>
