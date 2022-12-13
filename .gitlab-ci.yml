@@ -35,6 +35,9 @@ microsoft-edge:
 netease-cloud-music-gtk:
   extends: .build
 
+nlohmann-json:
+  extends: .build
+
 ossfs:
   extends: .build
 
