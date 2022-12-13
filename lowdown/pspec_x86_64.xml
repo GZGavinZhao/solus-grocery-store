@@ -1,0 +1,87 @@
+<PISI>
+    <Source>
+        <Name>lowdown</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>ISC</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">A simple Markdown translator</Summary>
+        <Description xml:lang="en">lowdown is a Markdown translator producing HTML5, roff documents in the ms and man formats, LaTeX, gemini, OpenDocument, and terminal output.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>lowdown</Name>
+        <Summary xml:lang="en">A simple Markdown translator</Summary>
+        <Description xml:lang="en">lowdown is a Markdown translator producing HTML5, roff documents in the ms and man formats, LaTeX, gemini, OpenDocument, and terminal output.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/lowdown</Path>
+            <Path fileType="executable">/usr/bin/lowdown-diff</Path>
+            <Path fileType="library">/usr/lib64/liblowdown.so.1</Path>
+            <Path fileType="data">/usr/man/man1/lowdown-diff.1</Path>
+            <Path fileType="data">/usr/man/man1/lowdown.1</Path>
+            <Path fileType="data">/usr/man/man3/lowdown.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_buf.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_buf_diff.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_buf_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_buf_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_diff.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_doc_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_doc_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_doc_parse.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_file.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_file_diff.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_gemini_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_gemini_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_gemini_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_html_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_html_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_html_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_latex_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_latex_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_latex_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_metaq_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_node_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_nroff_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_nroff_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_nroff_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_odt_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_odt_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_odt_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_term_free.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_term_new.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_term_rndr.3</Path>
+            <Path fileType="data">/usr/man/man3/lowdown_tree_rndr.3</Path>
+            <Path fileType="data">/usr/man/man5/lowdown.5</Path>
+            <Path fileType="data">/usr/share/lowdown/odt/styles.xml</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>lowdown-devel</Name>
+        <Summary xml:lang="en">Development files for lowdown</Summary>
+        <Description xml:lang="en">lowdown is a Markdown translator producing HTML5, roff documents in the ms and man formats, LaTeX, gemini, OpenDocument, and terminal output.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">lowdown</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/lowdown.h</Path>
+            <Path fileType="library">/usr/lib64/liblowdown.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/lowdown.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-12-13</Date>
+            <Version>1.0.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

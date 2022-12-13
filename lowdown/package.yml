@@ -1,0 +1,18 @@
+name       : lowdown
+version    : 1.0.0
+release    : 1
+source     :
+    - https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_1_0_0.tar.gz : 29f38e59d367103335cc25a94e35319e46c20fc6522751015f8096687d98d856
+license    : ISC
+component  : programming.library
+summary    : A simple Markdown translator
+description: |
+    lowdown is a Markdown translator producing HTML5, roff documents in the ms and man formats, LaTeX, gemini, OpenDocument, and terminal output.
+setup      : |
+    ./configure PREFIX=/usr LIBDIR=/usr/lib64
+build      : |
+    %make
+install    : |
+    %make_install install_lib_common \
+                  install_shared
+    ln -s /usr/lib64/liblowdown.so.1 $installdir/usr/lib64/liblowdown.so

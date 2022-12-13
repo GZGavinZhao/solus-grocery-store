@@ -29,6 +29,9 @@ glab:
 ibus-theme-tools:
   extends: .build
 
+lowdown:
+  extends: .build
+
 microsoft-edge:
   extends: .build
 
