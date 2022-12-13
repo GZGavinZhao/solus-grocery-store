@@ -25,10 +25,9 @@ Notable packages includes:
 - trezor-bridge
 - microsoft-edge
 - netease-cloud-music-gtk
+- nix
 - typora (the stable and paid version) and typora-beta
 - wechat-uos (**native** WeChat for Linux! Though [limitations](#微信wechat) apply)
-- various ROCm packages while waiting them to be accepted into the official
-  repo
 
 ## Disclaimer
 
