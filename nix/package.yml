@@ -1,6 +1,6 @@
 name       : nix
 version    : 2.12.0
-release    : 1
+release    : 2
 source     :
     - https://github.com/NixOS/nix/archive/refs/tags/2.12.0.tar.gz : 1d9ce6a096c9df6d4840ead1d3c3efce9c7ec749c7493d946d9cb28c4084d864
 license    : LGPL-2.1-or-later
@@ -8,6 +8,7 @@ component  : programming.tools
 summary    : The purely functional package manager 
 description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+patterns   : /*
 builddeps  :
     - pkgconfig(libsodium)
     - pkgconfig(libbrotlidec)
