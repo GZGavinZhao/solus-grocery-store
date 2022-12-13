@@ -38,6 +38,9 @@ microsoft-edge:
 netease-cloud-music-gtk:
   extends: .build
 
+nix:
+  extends: .build
+
 nlohmann-json:
   extends: .build
 
@@ -45,6 +48,9 @@ ossfs:
   extends: .build
 
 perl-encode:
+  extends: .build
+
+perl-uri-encode:
   extends: .build
 
 supabase-cli:

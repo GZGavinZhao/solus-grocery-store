@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>perl-uri-encode</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>Artistic-1.0-Perl</License>
+        <PartOf>programming.perl</PartOf>
+        <Summary xml:lang="en">Percent encoding/decoding for URIs</Summary>
+        <Description xml:lang="en">Percent encoding/decoding for URIs
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>perl-uri-encode</Name>
+        <Summary xml:lang="en">Percent encoding/decoding for URIs</Summary>
+        <Description xml:lang="en">Percent encoding/decoding for URIs
+</Description>
+        <PartOf>programming.perl</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/perl5/vendor_perl/5.36/URI/Encode.pm</Path>
+            <Path fileType="man">/usr/share/man/man3/URI::Encode.3pm</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2022-11-22</Date>
+            <Version>1.1.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>
