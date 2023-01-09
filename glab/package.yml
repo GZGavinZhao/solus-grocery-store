@@ -1,8 +1,8 @@
 name       : glab
-version    : 1.22.0
-release    : 1
+version    : 1.24.1
+release    : 2
 source     :
-    - https://gitlab.com/gitlab-org/cli/-/archive/v1.22.0/cli-v1.22.0.tar.gz : 4d9bceb6818c8bf9f681119dae3a65f1c895fa21e9da6b38e8f88d245f524e10
+    - https://gitlab.com/gitlab-org/cli/-/archive/v1.24.1/cli-v1.24.1.tar.gz : dc942f7806aa417714483bd5323bfcde9eceadd7ed33154f7a77038b416bdd95
 license    : MIT
 component  : system.utils # gitlab-cli uses this... But why?
 summary    : A GitLab CLI tool bringing GitLab to your command line
