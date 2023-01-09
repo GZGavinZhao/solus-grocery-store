@@ -1,8 +1,8 @@
 name       : netease-cloud-music-gtk
-version    : 2.1.0
-release    : 6
+version    : 2.2.0
+release    : 7
 source     :
-    - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/2.1.0.tar.gz : 1ff23078038c63a1365d6a6f76461080df446d343f1bf69ee0ae56b46a2f9099
+    - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/2.2.0.tar.gz : 76e0c2bb3447df2aee0c7e6d978c8f8fe866a31bf7caf0c7c72ea8de2e6a1d8f
 license    : GPL-3.0-or-later
 component  : multimedia.audio
 summary    : Netease Cloud Music (网易云音乐) Rust + GTK client.
