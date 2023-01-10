@@ -1,0 +1,156 @@
+<PISI>
+    <Source>
+        <Name>python-polars</Name>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Fast multi-threaded, hybrid-streaming DataFrame library</Summary>
+        <Description xml:lang="en">Polars is a blazingly fast DataFrames library implemented in Rust using Apache Arrow Columnar Format as the memory model.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-polars</Name>
+        <Summary xml:lang="en">Fast multi-threaded, hybrid-streaming DataFrame library</Summary>
+        <Description xml:lang="en">Polars is a blazingly fast DataFrames library implemented in Rust using Apache Arrow Columnar Format as the memory model.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/INSTALLER</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/REQUESTED</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/direct_url.json</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars-0.15.14.dist-info/license_files/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/_html.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/api.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/build_info.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/cfg.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/convert.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/datatypes.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/datatypes_constructor.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/dependencies.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/exceptions.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/io.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/show_versions.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/string_cache.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/__pycache__/utils.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/_html.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/api.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/build_info.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/cfg.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/convert.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/datatypes.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/datatypes_constructor.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/dependencies.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/exceptions.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/anonymous_scan.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/batched.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/construction.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/functions.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/io.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/lazy_functions.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/slice.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/type_aliases.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/__pycache__/whenthen.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/anonymous_scan.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/batched.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/construction.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/__pycache__/frame.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/__pycache__/groupby.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/__pycache__/pivot.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/frame.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/groupby.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/dataframe/pivot.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/binary.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/categorical.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/datetime.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/expr.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/list.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/meta.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/string.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/__pycache__/struct.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/binary.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/categorical.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/datetime.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/expr.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/list.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/meta.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/string.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/expr/struct.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/functions.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/io.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazy_functions.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/__pycache__/frame.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/__pycache__/groupby.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/frame.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/lazyframe/groupby.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/_numpy.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/binary.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/categorical.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/datetime.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/list.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/series.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/string.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/struct.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/__pycache__/utils.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/_numpy.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/binary.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/categorical.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/datetime.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/list.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/series.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/string.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/struct.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/series/utils.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/slice.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/sql/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/sql/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/sql/__pycache__/context.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/sql/context.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/type_aliases.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/internals/whenthen.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/io.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/polars.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/show_versions.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/string_cache.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__pycache__/__init__.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__pycache__/_parametric.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__pycache__/_private.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__pycache__/asserts.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/__pycache__/parametric.cpython-310.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/_parametric.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/_private.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/asserts.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/testing/parametric.py</Path>
+            <Path fileType="library">/usr/lib/python3.10/site-packages/polars/utils.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2023-01-10</Date>
+            <Version>0.15.14</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

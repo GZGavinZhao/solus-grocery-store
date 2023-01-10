@@ -1,0 +1,31 @@
+name       : python-polars
+version    : 0.15.14
+release    : 1
+source     :
+    - https://github.com/pola-rs/polars/archive/refs/tags/py-0.15.14.tar.gz : 49b2d0e34089c9445779fef3ea39442c748b531a4959caaa554c4f460f0a7543
+license    : MIT
+component  : programming.python
+summary    : Fast multi-threaded, hybrid-streaming DataFrame library
+description: |
+    Polars is a blazingly fast DataFrames library implemented in Rust using Apache Arrow Columnar Format as the memory model.
+builddeps  :
+    - pkgconfig(jemalloc)
+    - pkgconfig(libgit2)
+    - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-packaging
+    - python-wheel
+    - python-maturin
+    # - cargo
+    - rustup
+networking : yes
+setup      : |
+    # For SIMD optimizations, nightly Rust is required
+    rustup toolchain install nightly
+build      : |
+    cd py-polars
+    maturin build -j %YJOBS% --release --strip -- -C target-cpu=native
+install    : |
+    cd py-polars
+    python3 -m pip install --no-deps --root=$installdir target/wheels/*.whl
