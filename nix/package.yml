@@ -1,11 +1,11 @@
 name       : nix
-version    : 2.12.0
-release    : 2
+version    : 2.13.2
+release    : 4
 source     :
-    - https://github.com/NixOS/nix/archive/refs/tags/2.12.0.tar.gz : 1d9ce6a096c9df6d4840ead1d3c3efce9c7ec749c7493d946d9cb28c4084d864
+    - https://github.com/NixOS/nix/archive/refs/tags/2.13.2.tar.gz : 4587244c5273b6dd0252c0585ef564358b4ccff1d31ba0eaa1fcacbdab70e709
 license    : LGPL-2.1-or-later
 component  : programming.tools
-summary    : The purely functional package manager 
+summary    : The purely functional package manager
 description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 patterns   : /*
@@ -30,9 +30,23 @@ builddeps  :
     - jq
 setup      : |
     %reconfigure --enable-gc \
-                 --localstatedir=/var/nix \
                  --disable-doc-gen \
+                 --localstatedir=/nix/var \
 build      : |
     %make
 install    : |
     %make_install
+
+    # systemd integration
+    install -Dm00644 $pkgfiles/tmpfiles.conf "$installdir/%libdir%/tmpfiles.d/nix-daemon.conf"
+    install -Dm00644 $pkgfiles/sysusers.conf "$installdir/%libdir%/sysusers.d/nix-daemon.conf"
+    install -Dm00644 $pkgfiles/user.tmpfiles.conf "$installdir/usr/share/user-tmpfiles.d/nix-daemon.conf"
+    install -Dm00644 $pkgfiles/user.environment.conf "$installdir/%libdir%/environment.d/nix-daemon.conf"
+
+    # configuration
+    install -Dm00644 $pkgfiles/nix.conf -t "$installdir/etc/nix"
+
+    # rm -rf \
+    #     "$installdir/etc/init" \
+    #     "$installdir/etc/profile.d/nix.sh" \
+    #     "$installdir/etc/profile.d/nix.fish"

@@ -70,7 +70,6 @@ UNKNOWN:_ZTVN3nix12StringSourceE
 UNKNOWN:_ZTVN3nix14BufferedSourceE
 UNKNOWN:_ZTVN3nix15AbstractSettingE
 UNKNOWN:_ZTVN3nix16InstallableFlakeE
-UNKNOWN:_ZTVN3nix16InstallableValueE
 UNKNOWN:_ZTVN3nix4ArgsE
 UNKNOWN:_ZTVN3nix4ExitE
 UNKNOWN:_ZTVN3nix6ConfigE
@@ -129,9 +128,13 @@ libbrotlienc.so.1:BrotliEncoderIsFinished
 libc.so.6:__assert_fail
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
+libc.so.6:__fdelt_chk
+libc.so.6:__fprintf_chk
 libc.so.6:__libc_single_threaded
 libc.so.6:__libc_start_main
+libc.so.6:__longjmp_chk
 libc.so.6:__nss_configure_lookup
+libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:_exit
 libc.so.6:_setjmp
@@ -171,7 +174,6 @@ libc.so.6:ferror
 libc.so.6:flock
 libc.so.6:fopen
 libc.so.6:fork
-libc.so.6:fprintf
 libc.so.6:fread
 libc.so.6:free
 libc.so.6:freeifaddrs
@@ -216,7 +218,6 @@ libc.so.6:llistxattr
 libc.so.6:localeconv
 libc.so.6:localtime
 libc.so.6:localtime_r
-libc.so.6:longjmp
 libc.so.6:lremovexattr
 libc.so.6:lseek
 libc.so.6:lstat
@@ -278,7 +279,7 @@ libc.so.6:sigfillset
 libc.so.6:signal
 libc.so.6:sigprocmask
 libc.so.6:sigwait
-libc.so.6:snprintf
+libc.so.6:sleep
 libc.so.6:socket
 libc.so.6:splice
 libc.so.6:srandom
@@ -418,6 +419,8 @@ libsqlite3.so.0:sqlite3_column_text
 libsqlite3.so.0:sqlite3_column_type
 libsqlite3.so.0:sqlite3_db_filename
 libsqlite3.so.0:sqlite3_errcode
+libsqlite3.so.0:sqlite3_errmsg
+libsqlite3.so.0:sqlite3_error_offset
 libsqlite3.so.0:sqlite3_errstr
 libsqlite3.so.0:sqlite3_exec
 libsqlite3.so.0:sqlite3_expanded_sql
@@ -468,6 +471,7 @@ libstdc++.so.6:_ZNSo5flushEv
 libstdc++.so.6:_ZNSo5writeEPKcl
 libstdc++.so.6:_ZNSo6sentryC1ERSo
 libstdc++.so.6:_ZNSo6sentryD1Ev
+libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIbEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIdEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
@@ -499,6 +503,7 @@ libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmo
 libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv
 libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev
 libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEED1Ev
+libstdc++.so.6:_ZNSt13basic_fstreamIcSt11char_traitsIcEEC1Ev
 libstdc++.so.6:_ZNSt13basic_fstreamIcSt11char_traitsIcEED1Ev
 libstdc++.so.6:_ZNSt13random_device7_M_finiEv
 libstdc++.so.6:_ZNSt13random_device7_M_initERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
