@@ -1,11 +1,12 @@
 name       : microsoft-edge
-version    : 106.0.1370.52
-release    : 12
+version    : 109.0.1518.78
+release    : 13
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_106.0.1370.52-1_amd64.deb : 19bd28810a3d48b6210eb9e254af7eb358c806953ef12b41b7968753bfb14ef4
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_109.0.1518.78-1_amd64.deb : ff534da020d4316091a6c89c66e8c6c4f2e0ae53164f2485215300f1708b85c9
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
+extract    : no
 description: |
     Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
 builddeps  :
@@ -21,6 +22,7 @@ builddeps  :
     - pkgconfig(libsecret-1)
     - pkgconfig(osmesa)
     - pkgconfig(pango)
+    - pkgconfig(Qt5Core)
     - pkgconfig(xcomposite)
     - pkgconfig(xdamage)
     - pkgconfig(xfixes)

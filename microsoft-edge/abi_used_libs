@@ -1,5 +1,8 @@
 UNKNOWN
 ld-linux-x86-64.so.2
+libQt5Core.so.5
+libQt5Gui.so.5
+libQt5Widgets.so.5
 libX11.so.6
 libXcomposite.so.1
 libXdamage.so.1
@@ -35,7 +38,6 @@ libsecret-1.so.0
 libsmime3.so
 libstdc++.so.6
 libuuid.so.1
-libwayland-client.so.0
 libxcb.so.1
 libxkbcommon.so.0
 libxml2.so.2
