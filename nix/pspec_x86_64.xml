@@ -174,6 +174,13 @@
             <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
             <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
             <Path fileType="library">/usr/lib64/environment.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixcmd.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixexpr.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixfetchers.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixmain.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixstore.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/libnixutil.so</Path>
+            <Path fileType="library">/usr/lib64/haswell/nix/nix/build-remote</Path>
             <Path fileType="library">/usr/lib64/libnixcmd.so</Path>
             <Path fileType="library">/usr/lib64/libnixexpr.so</Path>
             <Path fileType="library">/usr/lib64/libnixfetchers.so</Path>
@@ -195,8 +202,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2023-02-04</Date>
+        <Update release="5">
+            <Date>2023-02-07</Date>
             <Version>2.13.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>

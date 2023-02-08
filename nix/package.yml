@@ -1,6 +1,6 @@
 name       : nix
 version    : 2.13.2
-release    : 4
+release    : 5
 source     :
     - https://github.com/NixOS/nix/archive/refs/tags/2.13.2.tar.gz : 4587244c5273b6dd0252c0585ef564358b4ccff1d31ba0eaa1fcacbdab70e709
 license    : LGPL-2.1-or-later
@@ -8,6 +8,8 @@ component  : programming.tools
 summary    : The purely functional package manager
 description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+lto        : yes
+avx2       : yes
 patterns   : /*
 builddeps  :
     - pkgconfig(libsodium)
@@ -22,16 +24,20 @@ builddeps  :
     - pkgconfig(lowdown)
     - pkgconfig(nlohmann_json)
     - autoconf-archive
+    - busybox
     - bison-devel
     - flex-devel
     - gtest-devel
     - libboost-devel
     - lowdown
     - jq
+rundeps    :
+    - busybox
 setup      : |
     %reconfigure --enable-gc \
                  --disable-doc-gen \
                  --localstatedir=/nix/var \
+                 --with-sandbox-shell=/bin/busybox \
 build      : |
     %make
 install    : |
