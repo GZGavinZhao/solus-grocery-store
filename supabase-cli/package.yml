@@ -1,8 +1,8 @@
 name       : supabase-cli
-version    : 1.16.4
-release    : 2
+version    : 1.38.2
+release    : 3
 source     :
-    - https://github.com/supabase/cli/archive/refs/tags/v1.16.4.tar.gz : 78cab495dc26174f7c1200257af9627a54c48f89e783ebff86d2b7e093e2280f
+    - https://github.com/supabase/cli/archive/refs/tags/v1.38.2.tar.gz : a245f64c7a6a9413e86f60990ea8e1bb01b3c168c544c818b284a327d5752edb
 license    : MIT
 component  : programming.tools
 summary    : Supabase CLI
