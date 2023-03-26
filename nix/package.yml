@@ -1,8 +1,8 @@
 name       : nix
-version    : 2.13.2
-release    : 5
+version    : 2.14.0
+release    : 6
 source     :
-    - https://github.com/NixOS/nix/archive/refs/tags/2.13.2.tar.gz : 4587244c5273b6dd0252c0585ef564358b4ccff1d31ba0eaa1fcacbdab70e709
+    - https://github.com/NixOS/nix/archive/refs/tags/2.14.0.tar.gz : 7f95535f82d7bd5654714f9eea2dfa1ee4331a8c49be8df251e19fb307f5cf7f
 license    : LGPL-2.1-or-later
 component  : programming.tools
 summary    : The purely functional package manager
