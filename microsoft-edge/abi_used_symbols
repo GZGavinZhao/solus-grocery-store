@@ -343,8 +343,6 @@ libatk-1.0.so.0:atk_value_get_minimum_value
 libatk-1.0.so.0:atk_value_get_type
 libatk-1.0.so.0:atk_window_get_type
 libatk-bridge-2.0.so.0:atk_bridge_adaptor_init
-libatomic.so.1:__atomic_compare_exchange
-libatomic.so.1:__atomic_load
 libatspi.so.0:atspi_accessible_get_application
 libatspi.so.0:atspi_accessible_get_attributes
 libatspi.so.0:atspi_accessible_get_child_at_index
@@ -427,7 +425,6 @@ libc.so.6:atoi
 libc.so.6:atol
 libc.so.6:bcmp
 libc.so.6:bind
-libc.so.6:btowc
 libc.so.6:calloc
 libc.so.6:catclose
 libc.so.6:catgets
@@ -459,7 +456,6 @@ libc.so.6:epoll_create1
 libc.so.6:epoll_ctl
 libc.so.6:epoll_wait
 libc.so.6:eventfd
-libc.so.6:execl
 libc.so.6:execlp
 libc.so.6:execv
 libc.so.6:execvp
@@ -476,7 +472,6 @@ libc.so.6:fdopendir
 libc.so.6:feof
 libc.so.6:ferror
 libc.so.6:fflush
-libc.so.6:fgetc
 libc.so.6:fgets
 libc.so.6:fileno
 libc.so.6:flock
@@ -561,18 +556,8 @@ libc.so.6:isprint
 libc.so.6:isspace
 libc.so.6:isupper
 libc.so.6:iswalnum
-libc.so.6:iswalpha_l
-libc.so.6:iswblank_l
-libc.so.6:iswcntrl_l
 libc.so.6:iswdigit
-libc.so.6:iswdigit_l
-libc.so.6:iswlower_l
-libc.so.6:iswprint_l
-libc.so.6:iswpunct_l
 libc.so.6:iswspace
-libc.so.6:iswspace_l
-libc.so.6:iswupper_l
-libc.so.6:iswxdigit_l
 libc.so.6:isxdigit
 libc.so.6:kill
 libc.so.6:lchown
@@ -611,7 +596,6 @@ libc.so.6:mremap
 libc.so.6:munmap
 libc.so.6:nanosleep
 libc.so.6:newlocale
-libc.so.6:nl_langinfo_l
 libc.so.6:ntohs
 libc.so.6:open
 libc.so.6:open_memstream
@@ -638,7 +622,6 @@ libc.so.6:printf
 libc.so.6:program_invocation_name
 libc.so.6:program_invocation_short_name
 libc.so.6:pthread_attr_destroy
-libc.so.6:pthread_attr_getdetachstate
 libc.so.6:pthread_attr_init
 libc.so.6:pthread_attr_setdetachstate
 libc.so.6:pthread_create
@@ -712,13 +695,11 @@ libc.so.6:strcasecmp
 libc.so.6:strcat
 libc.so.6:strchr
 libc.so.6:strcmp
-libc.so.6:strcoll_l
 libc.so.6:strcpy
 libc.so.6:strcspn
 libc.so.6:strdup
 libc.so.6:strerror
 libc.so.6:strerror_r
-libc.so.6:strfmon_l
 libc.so.6:strftime
 libc.so.6:strftime_l
 libc.so.6:strlen
@@ -747,7 +728,6 @@ libc.so.6:strtoll_l
 libc.so.6:strtoul
 libc.so.6:strtoull
 libc.so.6:strtoull_l
-libc.so.6:strxfrm_l
 libc.so.6:swprintf
 libc.so.6:symlink
 libc.so.6:syscall
@@ -763,13 +743,9 @@ libc.so.6:timerfd_settime
 libc.so.6:timezone
 libc.so.6:tmpfile64
 libc.so.6:tolower
-libc.so.6:tolower_l
 libc.so.6:toupper
-libc.so.6:toupper_l
 libc.so.6:towlower
-libc.so.6:towlower_l
 libc.so.6:towupper
-libc.so.6:towupper_l
 libc.so.6:truncate64
 libc.so.6:tzname
 libc.so.6:tzset
@@ -792,7 +768,6 @@ libc.so.6:waitpid
 libc.so.6:wcrtomb
 libc.so.6:wcschr
 libc.so.6:wcscmp
-libc.so.6:wcscoll_l
 libc.so.6:wcscpy
 libc.so.6:wcsftime
 libc.so.6:wcslen
@@ -805,8 +780,6 @@ libc.so.6:wcsrtombs
 libc.so.6:wcstod
 libc.so.6:wcstol
 libc.so.6:wcstombs
-libc.so.6:wcsxfrm_l
-libc.so.6:wctob
 libc.so.6:wmemchr
 libc.so.6:wmemcmp
 libc.so.6:wmemcpy
@@ -994,9 +967,11 @@ libgcc_s.so.1:_Unwind_Resume
 libgcc_s.so.1:_Unwind_SetGR
 libgcc_s.so.1:_Unwind_SetIP
 libgcc_s.so.1:__udivti3
+libgio-2.0.so.0:g_bus_get_sync
 libgio-2.0.so.0:g_cancellable_cancel
 libgio-2.0.so.0:g_cancellable_new
 libgio-2.0.so.0:g_content_type_get_icon
+libgio-2.0.so.0:g_dbus_connection_call_sync
 libgio-2.0.so.0:g_dbus_connection_get_unique_name
 libgio-2.0.so.0:g_dbus_connection_send_message
 libgio-2.0.so.0:g_dbus_connection_signal_subscribe
@@ -1022,6 +997,7 @@ libgio-2.0.so.0:g_settings_new
 libgio-2.0.so.0:g_settings_schema_has_key
 libgio-2.0.so.0:g_settings_schema_source_get_default
 libgio-2.0.so.0:g_settings_schema_source_lookup
+libgio-2.0.so.0:g_settings_schema_unref
 libgio-2.0.so.0:g_unix_fd_list_get
 libglib-2.0.so.0:g_array_free
 libglib-2.0.so.0:g_array_unref
@@ -1093,6 +1069,7 @@ libglib-2.0.so.0:g_utf8_substring
 libglib-2.0.so.0:g_variant_builder_add
 libglib-2.0.so.0:g_variant_builder_init
 libglib-2.0.so.0:g_variant_get
+libglib-2.0.so.0:g_variant_get_boolean
 libglib-2.0.so.0:g_variant_get_child
 libglib-2.0.so.0:g_variant_get_string
 libglib-2.0.so.0:g_variant_iter_free
@@ -1115,6 +1092,7 @@ libgobject-2.0.so.0:g_object_notify
 libgobject-2.0.so.0:g_object_ref
 libgobject-2.0.so.0:g_object_ref_sink
 libgobject-2.0.so.0:g_object_remove_weak_pointer
+libgobject-2.0.so.0:g_object_set
 libgobject-2.0.so.0:g_object_set_data
 libgobject-2.0.so.0:g_object_set_data_full
 libgobject-2.0.so.0:g_object_unref
@@ -1195,6 +1173,8 @@ libm.so.6:hypot
 libm.so.6:hypotf
 libm.so.6:ilogbf
 libm.so.6:ldexp
+libm.so.6:ldexpf
+libm.so.6:ldexpl
 libm.so.6:llround
 libm.so.6:llroundf
 libm.so.6:log
@@ -1429,10 +1409,8 @@ libpthread.so.0:read
 libpthread.so.0:recv
 libpthread.so.0:recvfrom
 libpthread.so.0:recvmsg
-libpthread.so.0:sem_close
 libpthread.so.0:sem_destroy
 libpthread.so.0:sem_init
-libpthread.so.0:sem_open
 libpthread.so.0:sem_post
 libpthread.so.0:sem_timedwait
 libpthread.so.0:sem_trywait
@@ -1814,10 +1792,8 @@ libstdc++.so.6:__cxa_throw
 libstdc++.so.6:__dynamic_cast
 libstdc++.so.6:__gxx_personality_v0
 libstdc++.so.6:__once_proxy
-libuuid.so.1:uuid_generate
 libuuid.so.1:uuid_generate_random
 libuuid.so.1:uuid_unparse
-libuuid.so.1:uuid_unparse_lower
 libxcb.so.1:xcb_connect
 libxcb.so.1:xcb_connection_has_error
 libxcb.so.1:xcb_depth_next

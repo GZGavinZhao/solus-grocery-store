@@ -8,7 +8,6 @@ libmip_protection_sdk.so
 liboneauth.so
 liboneds.so
 libqt5_shim.so
-libsmartscreen.so
 libsmartscreenn.so
 libtelclient.so
 libvk_swiftshader.so
