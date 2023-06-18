@@ -1,0 +1,16 @@
+name       : feishu
+version    : 5.26
+release    : 1
+source     :
+    - https://sf3-cn.feishucdn.com/obj/ee-appcenter/77addb94fbbb/Feishu-linux_x64-5.26.13.deb : 7bf3d7c414a59f78899ee1f9d66af47d8fbabc0e6ef90683b5182841356030d5
+license    : Proprietary
+component  : network.im
+summary    : A team productivity suite that boosts creativity and engagement
+description: |
+    A team productivity suite that boosts creativity and engagement.
+setup      : |
+    ar x $sources/*.deb
+    tar xf data.tar.*
+install    : |
+    mkdir -p $installdir
+    cp -r ** $installdir/
