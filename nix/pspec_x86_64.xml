@@ -63,12 +63,14 @@
             <Path fileType="header">/usr/include/nix/cgroup.hh</Path>
             <Path fileType="header">/usr/include/nix/chunked-vector.hh</Path>
             <Path fileType="header">/usr/include/nix/closure.hh</Path>
+            <Path fileType="header">/usr/include/nix/command-installable-value.hh</Path>
             <Path fileType="header">/usr/include/nix/command.hh</Path>
             <Path fileType="header">/usr/include/nix/common-args.hh</Path>
             <Path fileType="header">/usr/include/nix/common-eval-args.hh</Path>
             <Path fileType="header">/usr/include/nix/comparator.hh</Path>
             <Path fileType="header">/usr/include/nix/compression.hh</Path>
             <Path fileType="header">/usr/include/nix/compute-levels.hh</Path>
+            <Path fileType="header">/usr/include/nix/config-impl.hh</Path>
             <Path fileType="header">/usr/include/nix/config.h</Path>
             <Path fileType="header">/usr/include/nix/config.hh</Path>
             <Path fileType="header">/usr/include/nix/content-address.hh</Path>
@@ -76,6 +78,8 @@
             <Path fileType="header">/usr/include/nix/daemon.hh</Path>
             <Path fileType="header">/usr/include/nix/derivations.hh</Path>
             <Path fileType="header">/usr/include/nix/derived-path.hh</Path>
+            <Path fileType="header">/usr/include/nix/downstream-placeholder.hh</Path>
+            <Path fileType="header">/usr/include/nix/editor-for.hh</Path>
             <Path fileType="header">/usr/include/nix/error.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-cache.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-inline.hh</Path>
@@ -100,6 +104,11 @@
             <Path fileType="header">/usr/include/nix/hash.hh</Path>
             <Path fileType="header">/usr/include/nix/hilite.hh</Path>
             <Path fileType="header">/usr/include/nix/imported-drv-to-derivation.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/input-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/installable-attr-path.hh</Path>
+            <Path fileType="header">/usr/include/nix/installable-derived-path.hh</Path>
+            <Path fileType="header">/usr/include/nix/installable-flake.hh</Path>
+            <Path fileType="header">/usr/include/nix/installable-value.hh</Path>
             <Path fileType="header">/usr/include/nix/installables.hh</Path>
             <Path fileType="header">/usr/include/nix/json-impls.hh</Path>
             <Path fileType="header">/usr/include/nix/json-to-value.hh</Path>
@@ -118,6 +127,7 @@
             <Path fileType="header">/usr/include/nix/markdown.hh</Path>
             <Path fileType="header">/usr/include/nix/monitor-fd.hh</Path>
             <Path fileType="header">/usr/include/nix/names.hh</Path>
+            <Path fileType="header">/usr/include/nix/namespaces.hh</Path>
             <Path fileType="header">/usr/include/nix/nar-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/nar-info-disk-cache.hh</Path>
             <Path fileType="header">/usr/include/nix/nar-info.hh</Path>
@@ -132,6 +142,7 @@
             <Path fileType="header">/usr/include/nix/pathlocks.hh</Path>
             <Path fileType="header">/usr/include/nix/pool.hh</Path>
             <Path fileType="header">/usr/include/nix/primops.hh</Path>
+            <Path fileType="header">/usr/include/nix/print.hh</Path>
             <Path fileType="header">/usr/include/nix/profiles.hh</Path>
             <Path fileType="header">/usr/include/nix/progress-bar.hh</Path>
             <Path fileType="header">/usr/include/nix/realisation.hh</Path>
@@ -142,6 +153,7 @@
             <Path fileType="header">/usr/include/nix/remote-fs-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/remote-store.hh</Path>
             <Path fileType="header">/usr/include/nix/repair-flag.hh</Path>
+            <Path fileType="header">/usr/include/nix/repl.hh</Path>
             <Path fileType="header">/usr/include/nix/s3-binary-cache-store.hh</Path>
             <Path fileType="header">/usr/include/nix/s3.hh</Path>
             <Path fileType="header">/usr/include/nix/schema.sql.gen.hh</Path>
@@ -150,6 +162,7 @@
             <Path fileType="header">/usr/include/nix/shared.hh</Path>
             <Path fileType="header">/usr/include/nix/split.hh</Path>
             <Path fileType="header">/usr/include/nix/sqlite.hh</Path>
+            <Path fileType="header">/usr/include/nix/ssh-store-config.hh</Path>
             <Path fileType="header">/usr/include/nix/ssh.hh</Path>
             <Path fileType="header">/usr/include/nix/store-api.hh</Path>
             <Path fileType="header">/usr/include/nix/store-cast.hh</Path>
@@ -202,9 +215,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2023-02-07</Date>
-            <Version>2.13.2</Version>
+        <Update release="7">
+            <Date>2023-06-25</Date>
+            <Version>2.16.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>

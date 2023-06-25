@@ -1,8 +1,8 @@
 name       : nix
-version    : 2.14.0
-release    : 6
+version    : 2.16.1
+release    : 7
 source     :
-    - https://github.com/NixOS/nix/archive/refs/tags/2.14.0.tar.gz : 7f95535f82d7bd5654714f9eea2dfa1ee4331a8c49be8df251e19fb307f5cf7f
+    - https://github.com/NixOS/nix/archive/refs/tags/2.16.1.tar.gz : dcea9d91faf5cbe4198a45bf4f4a325902bc7056d04fb44eefbcdf8b8fc46f18
 license    : LGPL-2.1-or-later
 component  : programming.tools
 summary    : The purely functional package manager
@@ -11,6 +11,7 @@ description: |
 lto        : yes
 avx2       : yes
 patterns   : /*
+# networking : yes # Required for full doc gen
 builddeps  :
     - pkgconfig(libsodium)
     - pkgconfig(libbrotlidec)
@@ -27,15 +28,18 @@ builddeps  :
     - busybox
     - bison-devel
     - flex-devel
-    - gtest-devel
     - libboost-devel
     - lowdown
     - jq
 rundeps    :
     - busybox
 setup      : |
+    # # Enable later when we want to build documentation too.
+    # sed -i 's|$(bindir)|$(nix_DIR)|g' doc/manual/local.mk
+
     %reconfigure --enable-gc \
                  --disable-doc-gen \
+                 --disable-tests \
                  --localstatedir=/nix/var \
                  --with-sandbox-shell=/bin/busybox \
 build      : |
