@@ -1,8 +1,8 @@
 name       : python-polars
-version    : 0.15.14
-release    : 1
+version    : 0.18.4
+release    : 3
 source     :
-    - https://github.com/pola-rs/polars/archive/refs/tags/py-0.15.14.tar.gz : 49b2d0e34089c9445779fef3ea39442c748b531a4959caaa554c4f460f0a7543
+    - https://github.com/pola-rs/polars/archive/refs/tags/py-0.18.4.tar.gz : 1cf0f1ca348a7c0bbf53a9a3f967f57bd744541c0fd1f576b378041af98bd315
 license    : MIT
 component  : programming.python
 summary    : Fast multi-threaded, hybrid-streaming DataFrame library
