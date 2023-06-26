@@ -47,6 +47,9 @@ nlohmann-json:
 ossfs:
   extends: .build
 
+python-polars:
+  extends: .build
+
 perl-encode:
   extends: .build
 

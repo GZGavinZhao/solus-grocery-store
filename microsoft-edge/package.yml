@@ -1,8 +1,8 @@
 name       : microsoft-edge
-version    : 111.0.1661.62
-release    : 14
+version    : 114.0.1823.58
+release    : 15
 source     :
-    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_111.0.1661.62-1_amd64.deb : d7ed8232773fdf1e5a7cbd92f5ba19402d608a96c87bf1a28e58bc8005d72245
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_114.0.1823.58-1_amd64.deb : 561db82d59118c968cd9f0a5c0b1013f1d4e0ca674c3d823819dc9d59491a0b8
 license    : Proprietary
 component  : network.web.browser
 summary    : The web browser from Microsoft.
