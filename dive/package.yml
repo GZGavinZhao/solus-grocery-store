@@ -1,8 +1,8 @@
 name       : dive
-version    : 0.10.0
-release    : 1
+version    : 0.11.0
+release    : 3
 source     :
-    - git|https://github.com/wagoodman/dive.git : v0.10.0
+    - git|https://github.com/wagoodman/dive.git : v0.11.0
 license    : MIT
 component  : programming.tools
 summary    : A tool for exploring each layer in a docker image 
