@@ -1,0 +1,30 @@
+name       : eopkg4
+version    : 4.0
+release    : 1
+source     :
+    - git|https://github.com/getsolus/eopkg.git : 28883b8ccfbebf77739f383ef6362881a585b7ca
+homepage   : https://github.com/getsolus/eopkg/tree/python3
+license    : GPL-2.0-or-later
+component  : system.base
+summary    : "Python3 port of eopkg/pisi (WARNING: for testing only)"
+description: |
+    Python3 port of eopkg/pisi. WARNING: this is for testing only and may break your system!
+replaces   :
+    - pisi
+builddeps  :
+    - python-build
+    - python-wheel
+    - python-packaging
+    - python-installer
+    - python-lxml
+    - python-magic
+setup      : |
+    echo "import setuptools" >> setup.py
+    echo "setuptools.setup()" >> setup.py
+    %python3_setup
+install    : |
+    %python3_install
+
+    for file in eopkg lseopkg uneopkg; do
+        mv $installdir/usr/bin/$file $installdir/usr/bin/${file}4
+    done

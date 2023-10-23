@@ -23,6 +23,9 @@ dive:
 editline:
   extends: .build
 
+eopkg4:
+  extends: .build
+
 glab:
   extends: .build
 
