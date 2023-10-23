@@ -7,7 +7,7 @@
             <Email>me@gzgz.dev</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
-        <PartOf>system.base</PartOf>
+        <PartOf>system.utils</PartOf>
         <Summary xml:lang="en">Python3 port of eopkg/pisi (WARNING: for testing only)</Summary>
         <Description xml:lang="en">Python3 port of eopkg/pisi. WARNING: this is for testing only and may break your system!
 </Description>
@@ -18,7 +18,7 @@
         <Summary xml:lang="en">Python3 port of eopkg/pisi (WARNING: for testing only)</Summary>
         <Description xml:lang="en">Python3 port of eopkg/pisi. WARNING: this is for testing only and may break your system!
 </Description>
-        <PartOf>system.base</PartOf>
+        <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/eopkg4</Path>
             <Path fileType="executable">/usr/bin/lseopkg4</Path>
@@ -555,12 +555,9 @@
             <Path fileType="library">/usr/lib/python3.10/site-packages/pisi/util.py</Path>
             <Path fileType="library">/usr/lib/python3.10/site-packages/pisi/version.py</Path>
         </Files>
-        <Replaces>
-            <Package>pisi</Package>
-        </Replaces>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2023-10-23</Date>
             <Version>4.0</Version>
             <Comment>Packaging update</Comment>

@@ -57,12 +57,7 @@ sudo eopkg ar Grocery https://repo-cdn.gzgz.dev/eopkg-index.xml.xz
 I'm not too familiar with CDN settings, so if occasionally you get packages not
 found / cannot be downloaded errors, wait for a few hours (at most a day). This
 likely happened because the index file was refreshed but the new packages were
-not (yet). If this happens frequently, use the original link. Note that it
-might be slow if you're not in North America.
-
-```bash
-sudo eopkg ar Grocery https://solus-grocery-store-oss.oss-us-east-1.aliyuncs.com/eopkg-index.xml.xz
-```
+not (yet).
 
 Run `eopkg la Grocery` to see what packages are available.
 
