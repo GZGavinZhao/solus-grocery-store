@@ -10,7 +10,7 @@
         <Summary xml:lang="en">The purely functional package manager</Summary>
         <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>nix</Name>
@@ -18,13 +18,11 @@
         <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 </Description>
         <PartOf>programming.tools</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="8">nix-devel</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc/init/nix-daemon.conf</Path>
             <Path fileType="config">/etc/nix/nix.conf</Path>
-            <Path fileType="config">/etc/profile.d/nix-daemon.fish</Path>
-            <Path fileType="config">/etc/profile.d/nix-daemon.sh</Path>
-            <Path fileType="config">/etc/profile.d/nix.fish</Path>
-            <Path fileType="config">/etc/profile.d/nix.sh</Path>
             <Path fileType="executable">/usr/bin/nix</Path>
             <Path fileType="executable">/usr/bin/nix-build</Path>
             <Path fileType="executable">/usr/bin/nix-channel</Path>
@@ -37,6 +35,37 @@
             <Path fileType="executable">/usr/bin/nix-prefetch-url</Path>
             <Path fileType="executable">/usr/bin/nix-shell</Path>
             <Path fileType="executable">/usr/bin/nix-store</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.service</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
+            <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/environment.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixcmd.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixexpr.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixfetchers.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixmain.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixstore.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixutil.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/nix/nix/build-remote</Path>
+            <Path fileType="library">/usr/lib64/nix/nix/build-remote</Path>
+            <Path fileType="library">/usr/lib64/sysusers.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/nix</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/nix.fish</Path>
+            <Path fileType="data">/usr/share/user-tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_nix</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/run-help-nix</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>nix-devel</Name>
+        <Summary xml:lang="en">Development files for nix</Summary>
+        <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="8">nix</Dependency>
+        </RuntimeDependencies>
+        <Files>
             <Path fileType="header">/usr/include/nix/abstract-setting-to-json.hh</Path>
             <Path fileType="header">/usr/include/nix/ansicolor.hh</Path>
             <Path fileType="header">/usr/include/nix/archive.hh</Path>
@@ -54,6 +83,7 @@
             <Path fileType="header">/usr/include/nix/build/personality.hh</Path>
             <Path fileType="header">/usr/include/nix/build/substitution-goal.hh</Path>
             <Path fileType="header">/usr/include/nix/build/worker.hh</Path>
+            <Path fileType="header">/usr/include/nix/built-path.hh</Path>
             <Path fileType="header">/usr/include/nix/builtins.hh</Path>
             <Path fileType="header">/usr/include/nix/builtins/buildenv.hh</Path>
             <Path fileType="header">/usr/include/nix/ca-specific-schema.sql.gen.hh</Path>
@@ -77,12 +107,14 @@
             <Path fileType="header">/usr/include/nix/crypto.hh</Path>
             <Path fileType="header">/usr/include/nix/daemon.hh</Path>
             <Path fileType="header">/usr/include/nix/derivations.hh</Path>
+            <Path fileType="header">/usr/include/nix/derived-path-map.hh</Path>
             <Path fileType="header">/usr/include/nix/derived-path.hh</Path>
             <Path fileType="header">/usr/include/nix/downstream-placeholder.hh</Path>
             <Path fileType="header">/usr/include/nix/editor-for.hh</Path>
             <Path fileType="header">/usr/include/nix/error.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-cache.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-inline.hh</Path>
+            <Path fileType="header">/usr/include/nix/eval-settings.hh</Path>
             <Path fileType="header">/usr/include/nix/eval.hh</Path>
             <Path fileType="header">/usr/include/nix/experimental-features.hh</Path>
             <Path fileType="header">/usr/include/nix/fetch-settings.hh</Path>
@@ -104,6 +136,7 @@
             <Path fileType="header">/usr/include/nix/hash.hh</Path>
             <Path fileType="header">/usr/include/nix/hilite.hh</Path>
             <Path fileType="header">/usr/include/nix/imported-drv-to-derivation.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/indirect-root-store.hh</Path>
             <Path fileType="header">/usr/include/nix/input-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/installable-attr-path.hh</Path>
             <Path fileType="header">/usr/include/nix/installable-derived-path.hh</Path>
@@ -136,6 +169,7 @@
             <Path fileType="header">/usr/include/nix/parsed-derivations.hh</Path>
             <Path fileType="header">/usr/include/nix/parser-tab.hh</Path>
             <Path fileType="header">/usr/include/nix/path-info.hh</Path>
+            <Path fileType="header">/usr/include/nix/path-references.hh</Path>
             <Path fileType="header">/usr/include/nix/path-regex.hh</Path>
             <Path fileType="header">/usr/include/nix/path-with-outputs.hh</Path>
             <Path fileType="header">/usr/include/nix/path.hh</Path>
@@ -151,12 +185,14 @@
             <Path fileType="header">/usr/include/nix/regex-combinators.hh</Path>
             <Path fileType="header">/usr/include/nix/registry.hh</Path>
             <Path fileType="header">/usr/include/nix/remote-fs-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/remote-store-connection.hh</Path>
             <Path fileType="header">/usr/include/nix/remote-store.hh</Path>
             <Path fileType="header">/usr/include/nix/repair-flag.hh</Path>
             <Path fileType="header">/usr/include/nix/repl.hh</Path>
             <Path fileType="header">/usr/include/nix/s3-binary-cache-store.hh</Path>
             <Path fileType="header">/usr/include/nix/s3.hh</Path>
             <Path fileType="header">/usr/include/nix/schema.sql.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/search-path.hh</Path>
             <Path fileType="header">/usr/include/nix/serialise.hh</Path>
             <Path fileType="header">/usr/include/nix/serve-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/shared.hh</Path>
@@ -181,43 +217,26 @@
             <Path fileType="header">/usr/include/nix/value-to-xml.hh</Path>
             <Path fileType="header">/usr/include/nix/value.hh</Path>
             <Path fileType="header">/usr/include/nix/value/context.hh</Path>
+            <Path fileType="header">/usr/include/nix/variant-wrapper.hh</Path>
+            <Path fileType="header">/usr/include/nix/worker-protocol-impl.hh</Path>
             <Path fileType="header">/usr/include/nix/worker-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/xml-writer.hh</Path>
-            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.service</Path>
-            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
-            <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/environment.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixcmd.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixexpr.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixfetchers.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixmain.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixstore.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/libnixutil.so</Path>
-            <Path fileType="library">/usr/lib64/haswell/nix/nix/build-remote</Path>
             <Path fileType="library">/usr/lib64/libnixcmd.so</Path>
             <Path fileType="library">/usr/lib64/libnixexpr.so</Path>
             <Path fileType="library">/usr/lib64/libnixfetchers.so</Path>
             <Path fileType="library">/usr/lib64/libnixmain.so</Path>
             <Path fileType="library">/usr/lib64/libnixstore.so</Path>
             <Path fileType="library">/usr/lib64/libnixutil.so</Path>
-            <Path fileType="library">/usr/lib64/nix/nix/build-remote</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-cmd.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-expr.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-main.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-store.pc</Path>
-            <Path fileType="library">/usr/lib64/sysusers.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="data">/usr/share/bash-completion/completions/nix</Path>
-            <Path fileType="data">/usr/share/fish/vendor_completions.d/nix.fish</Path>
-            <Path fileType="data">/usr/share/user-tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="data">/usr/share/zsh/site-functions/_nix</Path>
-            <Path fileType="data">/usr/share/zsh/site-functions/run-help-nix</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2023-06-25</Date>
-            <Version>2.16.1</Version>
+        <Update release="8">
+            <Date>2023-10-23</Date>
+            <Version>2.18.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>

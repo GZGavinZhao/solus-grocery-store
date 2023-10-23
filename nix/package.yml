@@ -1,16 +1,17 @@
 name       : nix
-version    : 2.16.1
-release    : 7
+version    : 2.18.1
+release    : 8
 source     :
-    - https://github.com/NixOS/nix/archive/refs/tags/2.16.1.tar.gz : dcea9d91faf5cbe4198a45bf4f4a325902bc7056d04fb44eefbcdf8b8fc46f18
+    - https://github.com/NixOS/nix/archive/refs/tags/2.18.1.tar.gz : 3180f05697ee8b2314ad4a7f4fb7a21638bde9be869aa8725d0fe6bd96dc6d13
 license    : LGPL-2.1-or-later
 component  : programming.tools
 summary    : The purely functional package manager
 description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
+clang      : yes
 lto        : yes
 avx2       : yes
-patterns   : /*
+# patterns   : /*
 # networking : yes # Required for full doc gen
 builddeps  :
     - pkgconfig(libsodium)
@@ -41,7 +42,7 @@ setup      : |
                  --disable-doc-gen \
                  --disable-tests \
                  --localstatedir=/nix/var \
-                 --with-sandbox-shell=/bin/busybox \
+                 --with-sandbox-shell=/usr/bin/busybox \
 build      : |
     %make
 install    : |
@@ -56,7 +57,7 @@ install    : |
     # configuration
     install -Dm00644 $pkgfiles/nix.conf -t "$installdir/etc/nix"
 
-    # rm -rf \
-    #     "$installdir/etc/init" \
-    #     "$installdir/etc/profile.d/nix.sh" \
-    #     "$installdir/etc/profile.d/nix.fish"
+    # mv $installdir/usr/lib/** $installdir/%libdir%
+    rm -rf \
+        "$installdir/etc/init" \
+        "$installdir/etc/profile.d" \
