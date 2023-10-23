@@ -102,8 +102,6 @@ liblowdown.so.1:rcsdate2str
 liblowdown.so.1:readpassphrase
 liblowdown.so.1:recallocarray
 liblowdown.so.1:smarty
-liblowdown.so.1:strlcat
-liblowdown.so.1:strlcpy
 liblowdown.so.1:strtonum
 liblowdown.so.1:verr
 liblowdown.so.1:verrc

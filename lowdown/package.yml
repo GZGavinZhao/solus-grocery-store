@@ -1,6 +1,6 @@
 name       : lowdown
 version    : 1.0.0
-release    : 1
+release    : 2
 source     :
     - https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_1_0_0.tar.gz : 29f38e59d367103335cc25a94e35319e46c20fc6522751015f8096687d98d856
 license    : ISC
