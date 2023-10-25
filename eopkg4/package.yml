@@ -1,8 +1,8 @@
 name       : eopkg4
 version    : 4.0
-release    : 2
+release    : 3
 source     :
-    - git|https://github.com/getsolus/eopkg.git : 28883b8ccfbebf77739f383ef6362881a585b7ca
+    - git|https://github.com/getsolus/eopkg.git : 2712bbb74b5881a04ff51ab13526c388ddcf9c71
 homepage   : https://github.com/getsolus/eopkg/tree/python3
 license    : GPL-2.0-or-later
 component  : system.utils
