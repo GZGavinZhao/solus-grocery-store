@@ -1,6 +1,6 @@
 name       : nix
 version    : 2.18.1
-release    : 8
+release    : 9
 source     :
     - https://github.com/NixOS/nix/archive/refs/tags/2.18.1.tar.gz : 3180f05697ee8b2314ad4a7f4fb7a21638bde9be869aa8725d0fe6bd96dc6d13
 license    : LGPL-2.1-or-later

@@ -19,7 +19,7 @@
 </Description>
         <PartOf>programming.tools</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">nix-devel</Dependency>
+            <Dependency release="9">nix-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/nix/nix.conf</Path>
@@ -63,7 +63,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">nix</Dependency>
+            <Dependency release="9">nix</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/nix/abstract-setting-to-json.hh</Path>
@@ -234,8 +234,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2023-10-23</Date>
+        <Update release="9">
+            <Date>2023-12-01</Date>
             <Version>2.18.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>

@@ -66,11 +66,11 @@ libarchive.so.13:archive_write_set_bytes_in_last_block
 libarchive.so.13:archive_write_set_bytes_per_block
 libarchive.so.13:archive_write_set_filter_option
 libarchive.so.13:archive_write_set_format_raw
-libboost_context.so.1.80.0:_ZN5boost7context12stack_traits12default_sizeEv
-libboost_context.so.1.80.0:_ZN5boost7context12stack_traits9page_sizeEv
-libboost_context.so.1.80.0:jump_fcontext
-libboost_context.so.1.80.0:make_fcontext
-libboost_context.so.1.80.0:ontop_fcontext
+libboost_context.so.1.83.0:_ZN5boost7context12stack_traits12default_sizeEv
+libboost_context.so.1.83.0:_ZN5boost7context12stack_traits9page_sizeEv
+libboost_context.so.1.83.0:jump_fcontext
+libboost_context.so.1.83.0:make_fcontext
+libboost_context.so.1.83.0:ontop_fcontext
 libbrotlidec.so.1:BrotliDecoderCreateInstance
 libbrotlidec.so.1:BrotliDecoderDecompressStream
 libbrotlidec.so.1:BrotliDecoderDestroyInstance
