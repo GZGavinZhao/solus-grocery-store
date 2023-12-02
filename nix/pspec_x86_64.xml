@@ -36,11 +36,13 @@
             <Path fileType="header">/usr/include/nix/ansicolor.hh</Path>
             <Path fileType="header">/usr/include/nix/archive.hh</Path>
             <Path fileType="header">/usr/include/nix/args.hh</Path>
+            <Path fileType="header">/usr/include/nix/args/root.hh</Path>
             <Path fileType="header">/usr/include/nix/attr-path.hh</Path>
             <Path fileType="header">/usr/include/nix/attr-set.hh</Path>
             <Path fileType="header">/usr/include/nix/attrs.hh</Path>
             <Path fileType="header">/usr/include/nix/binary-cache-store.hh</Path>
             <Path fileType="header">/usr/include/nix/build-result.hh</Path>
+            <Path fileType="header">/usr/include/nix/build/child.hh</Path>
             <Path fileType="header">/usr/include/nix/build/derivation-goal.hh</Path>
             <Path fileType="header">/usr/include/nix/build/drv-output-substitution-goal.hh</Path>
             <Path fileType="header">/usr/include/nix/build/goal.hh</Path>
@@ -63,6 +65,8 @@
             <Path fileType="header">/usr/include/nix/command.hh</Path>
             <Path fileType="header">/usr/include/nix/common-args.hh</Path>
             <Path fileType="header">/usr/include/nix/common-eval-args.hh</Path>
+            <Path fileType="header">/usr/include/nix/common-protocol-impl.hh</Path>
+            <Path fileType="header">/usr/include/nix/common-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/comparator.hh</Path>
             <Path fileType="header">/usr/include/nix/compression.hh</Path>
             <Path fileType="header">/usr/include/nix/compute-levels.hh</Path>
@@ -71,12 +75,14 @@
             <Path fileType="header">/usr/include/nix/config.hh</Path>
             <Path fileType="header">/usr/include/nix/content-address.hh</Path>
             <Path fileType="header">/usr/include/nix/crypto.hh</Path>
+            <Path fileType="header">/usr/include/nix/current-process.hh</Path>
             <Path fileType="header">/usr/include/nix/daemon.hh</Path>
             <Path fileType="header">/usr/include/nix/derivations.hh</Path>
             <Path fileType="header">/usr/include/nix/derived-path-map.hh</Path>
             <Path fileType="header">/usr/include/nix/derived-path.hh</Path>
             <Path fileType="header">/usr/include/nix/downstream-placeholder.hh</Path>
             <Path fileType="header">/usr/include/nix/editor-for.hh</Path>
+            <Path fileType="header">/usr/include/nix/environment-variables.hh</Path>
             <Path fileType="header">/usr/include/nix/error.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-cache.hh</Path>
             <Path fileType="header">/usr/include/nix/eval-inline.hh</Path>
@@ -86,6 +92,8 @@
             <Path fileType="header">/usr/include/nix/fetch-settings.hh</Path>
             <Path fileType="header">/usr/include/nix/fetchers.hh</Path>
             <Path fileType="header">/usr/include/nix/fetchurl.nix.gen.hh</Path>
+            <Path fileType="header">/usr/include/nix/file-descriptor.hh</Path>
+            <Path fileType="header">/usr/include/nix/file-system.hh</Path>
             <Path fileType="header">/usr/include/nix/filetransfer.hh</Path>
             <Path fileType="header">/usr/include/nix/finally.hh</Path>
             <Path fileType="header">/usr/include/nix/flake/call-flake.nix.gen.hh</Path>
@@ -93,7 +101,8 @@
             <Path fileType="header">/usr/include/nix/flake/flakeref.hh</Path>
             <Path fileType="header">/usr/include/nix/flake/lockfile.hh</Path>
             <Path fileType="header">/usr/include/nix/fmt.hh</Path>
-            <Path fileType="header">/usr/include/nix/fs-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/fs-input-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/fs-sink.hh</Path>
             <Path fileType="header">/usr/include/nix/function-trace.hh</Path>
             <Path fileType="header">/usr/include/nix/gc-store.hh</Path>
             <Path fileType="header">/usr/include/nix/get-drvs.hh</Path>
@@ -113,6 +122,7 @@
             <Path fileType="header">/usr/include/nix/json-to-value.hh</Path>
             <Path fileType="header">/usr/include/nix/json-utils.hh</Path>
             <Path fileType="header">/usr/include/nix/legacy.hh</Path>
+            <Path fileType="header">/usr/include/nix/length-prefixed-protocol-helper.hh</Path>
             <Path fileType="header">/usr/include/nix/lexer-tab.hh</Path>
             <Path fileType="header">/usr/include/nix/local-fs-store.hh</Path>
             <Path fileType="header">/usr/include/nix/local-store.hh</Path>
@@ -124,6 +134,8 @@
             <Path fileType="header">/usr/include/nix/machines.hh</Path>
             <Path fileType="header">/usr/include/nix/make-content-addressed.hh</Path>
             <Path fileType="header">/usr/include/nix/markdown.hh</Path>
+            <Path fileType="header">/usr/include/nix/memory-input-accessor.hh</Path>
+            <Path fileType="header">/usr/include/nix/memory-source-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/monitor-fd.hh</Path>
             <Path fileType="header">/usr/include/nix/names.hh</Path>
             <Path fileType="header">/usr/include/nix/namespaces.hh</Path>
@@ -141,8 +153,10 @@
             <Path fileType="header">/usr/include/nix/path.hh</Path>
             <Path fileType="header">/usr/include/nix/pathlocks.hh</Path>
             <Path fileType="header">/usr/include/nix/pool.hh</Path>
+            <Path fileType="header">/usr/include/nix/posix-source-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/primops.hh</Path>
             <Path fileType="header">/usr/include/nix/print.hh</Path>
+            <Path fileType="header">/usr/include/nix/processes.hh</Path>
             <Path fileType="header">/usr/include/nix/profiles.hh</Path>
             <Path fileType="header">/usr/include/nix/progress-bar.hh</Path>
             <Path fileType="header">/usr/include/nix/realisation.hh</Path>
@@ -160,8 +174,11 @@
             <Path fileType="header">/usr/include/nix/schema.sql.gen.hh</Path>
             <Path fileType="header">/usr/include/nix/search-path.hh</Path>
             <Path fileType="header">/usr/include/nix/serialise.hh</Path>
+            <Path fileType="header">/usr/include/nix/serve-protocol-impl.hh</Path>
             <Path fileType="header">/usr/include/nix/serve-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/shared.hh</Path>
+            <Path fileType="header">/usr/include/nix/signals.hh</Path>
+            <Path fileType="header">/usr/include/nix/source-accessor.hh</Path>
             <Path fileType="header">/usr/include/nix/split.hh</Path>
             <Path fileType="header">/usr/include/nix/sqlite.hh</Path>
             <Path fileType="header">/usr/include/nix/ssh-store-config.hh</Path>
@@ -171,13 +188,17 @@
             <Path fileType="header">/usr/include/nix/suggestions.hh</Path>
             <Path fileType="header">/usr/include/nix/symbol-table.hh</Path>
             <Path fileType="header">/usr/include/nix/sync.hh</Path>
+            <Path fileType="header">/usr/include/nix/tarball.hh</Path>
             <Path fileType="header">/usr/include/nix/tarfile.hh</Path>
+            <Path fileType="header">/usr/include/nix/terminal.hh</Path>
             <Path fileType="header">/usr/include/nix/thread-pool.hh</Path>
             <Path fileType="header">/usr/include/nix/topo-sort.hh</Path>
             <Path fileType="header">/usr/include/nix/types.hh</Path>
             <Path fileType="header">/usr/include/nix/uds-remote-store.hh</Path>
+            <Path fileType="header">/usr/include/nix/unix-domain-socket.hh</Path>
             <Path fileType="header">/usr/include/nix/url-parts.hh</Path>
             <Path fileType="header">/usr/include/nix/url.hh</Path>
+            <Path fileType="header">/usr/include/nix/users.hh</Path>
             <Path fileType="header">/usr/include/nix/util.hh</Path>
             <Path fileType="header">/usr/include/nix/value-to-json.hh</Path>
             <Path fileType="header">/usr/include/nix/value-to-xml.hh</Path>
@@ -219,9 +240,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="10">
+        <Update release="11">
             <Date>2023-12-02</Date>
-            <Version>2.18.1</Version>
+            <Version>2.19.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>
