@@ -1,0 +1,19 @@
+name       : cuda-cudart-11-0
+version    : 11.0.194
+release    : 1
+source     :
+    - https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-cudart-11-0_11.0.194-1_amd64.deb : 1f3f72178182bcbdf80fc2ad7635ddf93ed33af52fed55a7174791d5719c8402
+    - https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-cudart-dev-11-0_11.0.194-1_amd64.deb : c6625c49a153ead3a002a725ae8e8cfc04a256e4b05f7a3a36fd2c4987f2340e
+license    : EULA
+component  : programming.library
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+extract    : no
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install

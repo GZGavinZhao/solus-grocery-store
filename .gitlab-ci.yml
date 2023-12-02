@@ -1,4 +1,6 @@
-image: silkeh/solus:ypkg
+image:
+  name: silkeh/solus:ypkg
+  entrypoint: ["/bin/bash", "-c"]
 
 include: '/.gitlab/ci/template.yml'
 
