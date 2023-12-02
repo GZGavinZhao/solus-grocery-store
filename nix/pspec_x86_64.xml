@@ -18,9 +18,6 @@
         <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 </Description>
         <PartOf>programming.tools</PartOf>
-        <RuntimeDependencies>
-            <Dependency release="9">nix-devel</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/nix/nix.conf</Path>
             <Path fileType="executable">/usr/bin/nix</Path>
@@ -35,37 +32,6 @@
             <Path fileType="executable">/usr/bin/nix-prefetch-url</Path>
             <Path fileType="executable">/usr/bin/nix-shell</Path>
             <Path fileType="executable">/usr/bin/nix-store</Path>
-            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.service</Path>
-            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
-            <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/environment.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixcmd.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixexpr.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixfetchers.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixmain.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixstore.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixutil.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/nix/nix/build-remote</Path>
-            <Path fileType="library">/usr/lib64/nix/nix/build-remote</Path>
-            <Path fileType="library">/usr/lib64/sysusers.d/nix-daemon.conf</Path>
-            <Path fileType="library">/usr/lib64/tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="data">/usr/share/bash-completion/completions/nix</Path>
-            <Path fileType="data">/usr/share/fish/vendor_completions.d/nix.fish</Path>
-            <Path fileType="data">/usr/share/user-tmpfiles.d/nix-daemon.conf</Path>
-            <Path fileType="data">/usr/share/zsh/site-functions/_nix</Path>
-            <Path fileType="data">/usr/share/zsh/site-functions/run-help-nix</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>nix-devel</Name>
-        <Summary xml:lang="en">Development files for nix</Summary>
-        <Description xml:lang="en">Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
-</Description>
-        <PartOf>programming.devel</PartOf>
-        <RuntimeDependencies>
-            <Dependency release="9">nix</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/nix/abstract-setting-to-json.hh</Path>
             <Path fileType="header">/usr/include/nix/ansicolor.hh</Path>
             <Path fileType="header">/usr/include/nix/archive.hh</Path>
@@ -221,21 +187,40 @@
             <Path fileType="header">/usr/include/nix/worker-protocol-impl.hh</Path>
             <Path fileType="header">/usr/include/nix/worker-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/xml-writer.hh</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.service</Path>
+            <Path fileType="library">/usr/lib/systemd/system/nix-daemon.socket</Path>
+            <Path fileType="library">/usr/lib/tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/environment.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixcmd.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixexpr.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixfetchers.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixmain.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixstore.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixutil.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/nix/nix/build-remote</Path>
             <Path fileType="library">/usr/lib64/libnixcmd.so</Path>
             <Path fileType="library">/usr/lib64/libnixexpr.so</Path>
             <Path fileType="library">/usr/lib64/libnixfetchers.so</Path>
             <Path fileType="library">/usr/lib64/libnixmain.so</Path>
             <Path fileType="library">/usr/lib64/libnixstore.so</Path>
             <Path fileType="library">/usr/lib64/libnixutil.so</Path>
+            <Path fileType="library">/usr/lib64/nix/nix/build-remote</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-cmd.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-expr.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-main.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nix-store.pc</Path>
+            <Path fileType="library">/usr/lib64/sysusers.d/nix-daemon.conf</Path>
+            <Path fileType="library">/usr/lib64/tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/nix</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/nix.fish</Path>
+            <Path fileType="data">/usr/share/user-tmpfiles.d/nix-daemon.conf</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_nix</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/run-help-nix</Path>
         </Files>
     </Package>
     <History>
-        <Update release="9">
-            <Date>2023-12-01</Date>
+        <Update release="10">
+            <Date>2023-12-02</Date>
             <Version>2.18.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
