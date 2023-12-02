@@ -1,8 +1,8 @@
 name       : aliyun-cli
-version    : 3.0.167
-release    : 3
+version    : 3.0.188
+release    : 4
 source     :
-    - git|https://github.com/aliyun/aliyun-cli : v3.0.167
+    - git|https://github.com/aliyun/aliyun-cli : v3.0.188
 license    : Apache-2.0
 component  : network.clients
 summary    : Alibaba Cloud CLI
