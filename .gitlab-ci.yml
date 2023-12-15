@@ -34,6 +34,9 @@ glab:
 ibus-theme-tools:
   extends: .build
 
+l-smash:
+  extends: .build
+
 lowdown:
   extends: .build
 
