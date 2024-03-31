@@ -1,0 +1,65 @@
+<PISI>
+    <Source>
+        <Name>icecream</Name>
+        <Homepage>https://github.com/icecc/icecream</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">Distributed compiler with a central scheduler to share build load</Summary>
+        <Description xml:lang="en">Icecream was created by SUSE based on distcc. Like distcc, Icecream takes compile jobs from a build and distributes them among remote machines allowing a parallel build. But unlike distcc, Icecream uses a central server that dynamically schedules the compile jobs to the fastest free server.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>icecream</Name>
+        <Summary xml:lang="en">Distributed compiler with a central scheduler to share build load</Summary>
+        <Description xml:lang="en">Icecream was created by SUSE based on distcc. Like distcc, Icecream takes compile jobs from a build and distributes them among remote machines allowing a parallel build. But unlike distcc, Icecream uses a central server that dynamically schedules the compile jobs to the fastest free server.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/icecc</Path>
+            <Path fileType="executable">/usr/bin/icecc-create-env</Path>
+            <Path fileType="executable">/usr/bin/icecc-test-env</Path>
+            <Path fileType="executable">/usr/bin/icerun</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/c++</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/cc</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/clang</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/clang++</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/g++</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/bin/gcc</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/compilerwrapper</Path>
+            <Path fileType="library">/usr/lib64/icecream/icecc/icecc-create-env</Path>
+            <Path fileType="executable">/usr/sbin/icecc-scheduler</Path>
+            <Path fileType="executable">/usr/sbin/iceccd</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>icecream-devel</Name>
+        <Summary xml:lang="en">Development files for icecream</Summary>
+        <Description xml:lang="en">Icecream was created by SUSE based on distcc. Like distcc, Icecream takes compile jobs from a build and distributes them among remote machines allowing a parallel build. But unlike distcc, Icecream uses a central server that dynamically schedules the compile jobs to the fastest free server.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">icecream</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/icecc/comm.h</Path>
+            <Path fileType="header">/usr/include/icecc/job.h</Path>
+            <Path fileType="header">/usr/include/icecc/logging.h</Path>
+            <Path fileType="library">/usr/lib64/libicecc.a</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/icecc.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-03-31</Date>
+            <Version>1.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

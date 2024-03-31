@@ -1,0 +1,22 @@
+name       : icecream
+version    : 1.4
+release    : 1
+source     :
+    - https://github.com/icecc/icecream/archive/refs/tags/1.4.tar.gz : 249dcf74f0fc477ff9735ff0bdcdfaa4c257a864c4db5255d8b25c9f4fd20b6b
+homepage   : https://github.com/icecc/icecream
+license    : GPL-2.0-or-later
+component  : programming.tools
+summary    : Distributed compiler with a central scheduler to share build load 
+description: |
+    Icecream was created by SUSE based on distcc. Like distcc, Icecream takes compile jobs from a build and distributes them among remote machines allowing a parallel build. But unlike distcc, Icecream uses a central server that dynamically schedules the compile jobs to the fastest free server.
+builddeps  :
+    - pkgconfig(libzstd)
+    - pkgconfig(libarchive)
+    - pkgconfig(libcap-ng)
+    - pkgconfig(lzo2)
+setup      : |
+    %autogen --without-man
+build      : |
+    %make
+install    : |
+    %make_install
