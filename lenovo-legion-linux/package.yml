@@ -1,0 +1,35 @@
+name       : lenovo-legion-linux
+version    : 0.0.15
+release    : 1
+source     :
+    - git|https://github.com/johnfanv2/LenovoLegionLinux : v0.0.15
+homepage   : https://github.com/johnfanv2/LenovoLegionLinux
+license    : GPL-2.0-or-later
+component  : kernel.drivers
+summary    : Driver and tools for controlling Lenovo Legion laptops in Linux including fan control and power mode
+description: |
+    Lenovo Legion Linux (LLL) brings additional drivers and tools for Lenovo Legion series laptops to Linux. It is the alternative to Lenovo Vantage or Legion Zone (both Windows only). It allows you to control features like the fan curve, power mode, power limits, rapid charging, and more. This has been achieved through reverse engineering and disassembling the ACPI firmware, as well as the firmware and memory of the embedded controller (EC).
+builddeps  :
+    - pkgconfig(inih)
+    - linux-current
+    - linux-current-headers
+    - python-build
+    - python-wheel
+    - python-installer
+rundeps      :
+    - python-qt6
+    - pyyaml
+setup      : |
+    sed -i 's|version = _VERSION|verison = %version%|' python/legion_linux/setup.cfg
+build      : |
+    # %make -C extra/service/legiond
+
+    pushd python/legion_linux
+        python3 -m build --wheel --no-isolation
+    popd
+install    : |
+    # %make_install -C extra/service/legiond
+
+    pushd python/legion_linux
+        python3 -m installer --destdir=%installroot% dist/*.whl
+    popd
