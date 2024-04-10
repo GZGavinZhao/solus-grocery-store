@@ -7,18 +7,22 @@
             <Email>me@gzgz.dev</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
-        <PartOf>kernel.drivers</PartOf>
-        <Summary xml:lang="en">Driver and tools for controlling Lenovo Legion laptops in Linux including fan control and power mode</Summary>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">(DRIVER NOT INCLUDED) Tools for controlling Lenovo Legion laptops in Linux including fan control and power mode</Summary>
         <Description xml:lang="en">Lenovo Legion Linux (LLL) brings additional drivers and tools for Lenovo Legion series laptops to Linux. It is the alternative to Lenovo Vantage or Legion Zone (both Windows only). It allows you to control features like the fan curve, power mode, power limits, rapid charging, and more. This has been achieved through reverse engineering and disassembling the ACPI firmware, as well as the firmware and memory of the embedded controller (EC).
+
+WARNING: this package doesn&apos;t provide the drivers. You must install the driver by yourself and reinstall every time you update your kernel to a new version. Visit the homepage for more info.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>lenovo-legion-linux</Name>
-        <Summary xml:lang="en">Driver and tools for controlling Lenovo Legion laptops in Linux including fan control and power mode</Summary>
+        <Summary xml:lang="en">(DRIVER NOT INCLUDED) Tools for controlling Lenovo Legion laptops in Linux including fan control and power mode</Summary>
         <Description xml:lang="en">Lenovo Legion Linux (LLL) brings additional drivers and tools for Lenovo Legion series laptops to Linux. It is the alternative to Lenovo Vantage or Legion Zone (both Windows only). It allows you to control features like the fan curve, power mode, power limits, rapid charging, and more. This has been achieved through reverse engineering and disassembling the ACPI firmware, as well as the firmware and memory of the embedded controller (EC).
+
+WARNING: this package doesn&apos;t provide the drivers. You must install the driver by yourself and reinstall every time you update your kernel to a new version. Visit the homepage for more info.
 </Description>
-        <PartOf>kernel.drivers</PartOf>
+        <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/legion_cli</Path>
             <Path fileType="executable">/usr/bin/legion_gui</Path>
@@ -60,7 +64,7 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2024-04-10</Date>
             <Version>0.0.15</Version>
             <Comment>Packaging update</Comment>
