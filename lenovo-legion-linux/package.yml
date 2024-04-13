@@ -1,16 +1,16 @@
 name       : lenovo-legion-linux
 version    : 0.0.15
-release    : 2
+release    : 3
 source     :
     - git|https://github.com/johnfanv2/LenovoLegionLinux : v0.0.15
 homepage   : https://github.com/johnfanv2/LenovoLegionLinux
 license    : GPL-2.0-or-later
-component  : system.utils # kernel.drivers
-summary    : (DRIVER NOT INCLUDED) Tools for controlling Lenovo Legion laptops in Linux including fan control and power mode
+component  : kernel.drivers
+summary    : (DRIVER for linux-current and unstable users only) Tools for controlling Lenovo Legion laptops in Linux including fan control and power mode
 description: |
     Lenovo Legion Linux (LLL) brings additional drivers and tools for Lenovo Legion series laptops to Linux. It is the alternative to Lenovo Vantage or Legion Zone (both Windows only). It allows you to control features like the fan curve, power mode, power limits, rapid charging, and more. This has been achieved through reverse engineering and disassembling the ACPI firmware, as well as the firmware and memory of the embedded controller (EC).
 
-    WARNING: this package doesn't provide the drivers. You must install the driver by yourself and reinstall every time you update your kernel to a new version. Visit the homepage for more info.
+    WARNING: the drivers that this package provides will be kept up-to-date with linux-current on a best-effort basis. This will also likely not work for users on the Shannon repo because you may get a driver update that is intended for a kernel that hasn't be synced to Shannon (stable channel).
 builddeps  :
     - pkgconfig(inih)
     - linux-current
@@ -21,17 +21,21 @@ builddeps  :
 rundeps      :
     - python-qt6
     - pyyaml
+permanent  :
+    - /lib/modules
 setup      : |
     sed -i 's|version = _VERSION|verison = %version%|' python/legion_linux/setup.cfg
 build      : |
-    # %make -C extra/service/legiond
+    %make -C kernel_module KERNELVERSION=%kernel_version_current% KSRC=/lib/modules/%kernel_version_current%/build
 
     pushd python/legion_linux
         python3 -m build --wheel --no-isolation
     popd
 install    : |
-    # %make_install -C extra/service/legiond
+    install -Dm00755 kernel_module/legion-laptop.ko -t $installdir/lib/modules/%kernel_version_current%/kernel/drivers/platform/x86/
 
     pushd python/legion_linux
         python3 -m installer --destdir=%installroot% dist/*.whl
     popd
+
+    find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;
