@@ -1,13 +1,14 @@
 name       : zoom
-version    : 5.14.0.1720
-release    : 3
+version    : 6.1.11.1545
+release    : 5
 source     :
-    - https://cdn.zoom.us/prod/5.14.0.1720/zoom_x86_64.tar.xz : 137ef06adfce80cc89825750ba962c43dcfc9582af7f823365b9774fd88422f6
+    - https://zoom.us/client/6.1.11.1545/zoom_x86_64.tar.xz : b4a743ff8360ab589e8cf6538ebfb39f461a459dad2f63a443e4ff608e88a0a9
 license    : Proprietary
 component  : network.web
 summary    : Zoom video conference client
 description: |
     Zoom video conference client.
+# For rundeps detection only
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(libglvnd)

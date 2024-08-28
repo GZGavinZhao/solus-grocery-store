@@ -1,4 +1,5 @@
 ZoomLauncher
+ZoomWebviewHost
 aomhost
 chrome-sandbox
 libEGL.so
@@ -22,12 +23,11 @@ libQt5WaylandClient.so.5
 libQt5Widgets.so.5
 libQt5X11Extras.so.5
 libQt5XcbQpa.so.5
-libVkICD_mock_icd.so
-libVkLayer_khronos_validation.so
+libQt5Xml.so.5
 libaomagent.so
-libavcodec.so.58
-libavformat.so.58
-libavutil.so.56
+libavcodec.so.59
+libavformat.so.59
+libavutil.so.57
 libbradient.so
 libcef.so
 libclDNN64.so
@@ -38,7 +38,6 @@ libdmabuf-server.so
 libdrm-egl-server.so
 libdvf.so
 libfcitxplatforminputcontextplugin.so
-libfdk-aac.so.2
 libffmpeg.so
 libfullscreen-shell-v1.so
 libibusplatforminputcontextplugin.so
@@ -123,8 +122,7 @@ libqxdgdesktopportal.so
 libsharedimageplugin.so
 libshm-emulation-server.so
 libsqlite3.so.0
-libswresample.so.3
-libturbojpeg.so.0
+libswresample.so.4
 libvk_swiftshader.so
 libvulkan-server.so
 libvulkan.so.1
