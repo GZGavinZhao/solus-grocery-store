@@ -7,15 +7,15 @@
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
-        <Summary xml:lang="en">Netease Cloud Music (网易云音乐) Rust + GTK client.</Summary>
-        <Description xml:lang="en">Linux 平台下基于 Rust + GTK 开发的网易云音乐播放器。
+        <Summary xml:lang="en">Netease Cloud Music (&#x7f51;&#x6613;&#x4e91;&#x97f3;&#x4e50;) Rust + GTK client.</Summary>
+        <Description xml:lang="en">Linux &#x5e73;&#x53f0;&#x4e0b;&#x57fa;&#x4e8e; Rust + GTK &#x5f00;&#x53d1;&#x7684;&#x7f51;&#x6613;&#x4e91;&#x97f3;&#x4e50;&#x64ad;&#x653e;&#x5668;&#x3002;
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>netease-cloud-music-gtk</Name>
-        <Summary xml:lang="en">Netease Cloud Music (网易云音乐) Rust + GTK client.</Summary>
-        <Description xml:lang="en">Linux 平台下基于 Rust + GTK 开发的网易云音乐播放器。
+        <Summary xml:lang="en">Netease Cloud Music (&#x7f51;&#x6613;&#x4e91;&#x97f3;&#x4e50;) Rust + GTK client.</Summary>
+        <Description xml:lang="en">Linux &#x5e73;&#x53f0;&#x4e0b;&#x57fa;&#x4e8e; Rust + GTK &#x5f00;&#x53d1;&#x7684;&#x7f51;&#x6613;&#x4e91;&#x97f3;&#x4e50;&#x64ad;&#x653e;&#x5668;&#x3002;
 </Description>
         <PartOf>multimedia.audio</PartOf>
         <Files>
@@ -30,9 +30,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2024-03-22</Date>
-            <Version>2.3.1</Version>
+        <Update release="9">
+            <Date>2024-09-20</Date>
+            <Version>2.4.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>

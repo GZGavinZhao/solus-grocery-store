@@ -1,8 +1,8 @@
 name       : netease-cloud-music-gtk
-version    : 2.3.1
-release    : 8
+version    : 2.4.1
+release    : 9
 source     :
-    - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/2.3.1.tar.gz : e520bc3bdebd0b9522fa26fdd5991de278947552d968b9c8217ff87305990039
+    - https://github.com/gmg137/netease-cloud-music-gtk/archive/refs/tags/2.4.1.tar.gz : b40c0bce48ba8277c35b9a3b0184900f12e57b956f13c86108b848fd16f3b3ef
 license    : GPL-3.0-or-later
 component  : multimedia.audio
 summary    : Netease Cloud Music (网易云音乐) Rust + GTK client.
@@ -13,6 +13,7 @@ builddeps  :
     - pkgconfig(atk)
     - pkgconfig(cairo)
     - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gobject-2.0)
     - pkgconfig(graphene-gobject-1.0)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
@@ -20,10 +21,12 @@ builddeps  :
     - pkgconfig(gstreamer-player-1.0)
     - pkgconfig(libadwaita-1)
     - pkgconfig(pango)
-    - cargo
+    - rust-devel
     - desktop-file-utils
 setup      : |
     # cargo check -r # Generate cargo.lock
+    # https://github.com/gmg137/netease-cloud-music-gtk/commit/7fabdadb2ebdbb2dfd76afa9f7f01f0170fc4749
+    sed -i 's|~0.7|=0.7.0|' Cargo.toml
     %meson_configure --buildtype=release
 build      : |
     %ninja_build

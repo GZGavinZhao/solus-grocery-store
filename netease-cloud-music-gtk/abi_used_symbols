@@ -36,10 +36,8 @@ libadwaita-1.so.0:adw_view_stack_set_visible_child_name
 libadwaita-1.so.0:adw_view_switcher_title_get_type
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
-libc.so.6:__fdelt_chk
 libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
-libc.so.6:__read_chk
 libc.so.6:__register_atfork
 libc.so.6:__res_init
 libc.so.6:__sprintf_chk
@@ -48,7 +46,6 @@ libc.so.6:__strcpy_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:__xpg_strerror_r
 libc.so.6:abort
-libc.so.6:access
 libc.so.6:bcmp
 libc.so.6:bind
 libc.so.6:bind_textdomain_codeset
@@ -88,17 +85,19 @@ libc.so.6:ftell
 libc.so.6:fwrite
 libc.so.6:gai_strerror
 libc.so.6:getaddrinfo
+libc.so.6:getauxval
 libc.so.6:getcwd
 libc.so.6:getenv
 libc.so.6:geteuid
 libc.so.6:getpeername
-libc.so.6:getpwuid
+libc.so.6:getpwuid_r
 libc.so.6:getsockname
 libc.so.6:getsockopt
 libc.so.6:gettext
 libc.so.6:gettimeofday
 libc.so.6:gmtime
 libc.so.6:gnu_get_libc_version
+libc.so.6:ioctl
 libc.so.6:isatty
 libc.so.6:lseek
 libc.so.6:lseek64
@@ -107,7 +106,6 @@ libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
-libc.so.6:memrchr
 libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mmap64
@@ -116,6 +114,7 @@ libc.so.6:munmap
 libc.so.6:open
 libc.so.6:open64
 libc.so.6:opendir
+libc.so.6:pause
 libc.so.6:poll
 libc.so.6:posix_memalign
 libc.so.6:pthread_attr_destroy
@@ -126,7 +125,6 @@ libc.so.6:pthread_attr_setstacksize
 libc.so.6:pthread_create
 libc.so.6:pthread_detach
 libc.so.6:pthread_getattr_np
-libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
 libc.so.6:pthread_key_delete
@@ -269,13 +267,16 @@ libcrypto.so.3:EVP_PKEY_get_id
 libcrypto.so.3:EVP_PKEY_get_security_bits
 libcrypto.so.3:EVP_aes_128_cbc
 libcrypto.so.3:EVP_aes_128_ecb
+libcrypto.so.3:EVP_get_digestbyname
 libcrypto.so.3:EVP_md5
 libcrypto.so.3:EVP_sha1
 libcrypto.so.3:EVP_sha256
+libcrypto.so.3:EVP_sha512_256
 libcrypto.so.3:GENERAL_NAMES_free
 libcrypto.so.3:MD5_Final
 libcrypto.so.3:MD5_Init
 libcrypto.so.3:MD5_Update
+libcrypto.so.3:OBJ_find_sigid_algs
 libcrypto.so.3:OBJ_nid2sn
 libcrypto.so.3:OBJ_obj2txt
 libcrypto.so.3:OCSP_BASICRESP_free
@@ -345,6 +346,7 @@ libcrypto.so.3:X509_STORE_load_path
 libcrypto.so.3:X509_STORE_set_flags
 libcrypto.so.3:X509_STORE_up_ref
 libcrypto.so.3:X509_check_issued
+libcrypto.so.3:X509_digest
 libcrypto.so.3:X509_free
 libcrypto.so.3:X509_get0_extensions
 libcrypto.so.3:X509_get0_notAfter
@@ -356,6 +358,7 @@ libcrypto.so.3:X509_get_ext_d2i
 libcrypto.so.3:X509_get_issuer_name
 libcrypto.so.3:X509_get_pubkey
 libcrypto.so.3:X509_get_serialNumber
+libcrypto.so.3:X509_get_signature_nid
 libcrypto.so.3:X509_get_subject_name
 libcrypto.so.3:X509_get_version
 libcrypto.so.3:X509_load_crl_file
@@ -435,6 +438,7 @@ libglib-2.0.so.0:g_main_context_ref_thread_default
 libglib-2.0.so.0:g_main_context_release
 libglib-2.0.so.0:g_main_context_unref
 libglib-2.0.so.0:g_malloc
+libglib-2.0.so.0:g_markup_escape_text
 libglib-2.0.so.0:g_quark_from_string
 libglib-2.0.so.0:g_quark_to_string
 libglib-2.0.so.0:g_realloc
@@ -446,12 +450,12 @@ libglib-2.0.so.0:g_source_get_context
 libglib-2.0.so.0:g_source_new
 libglib-2.0.so.0:g_source_ref
 libglib-2.0.so.0:g_source_set_callback
+libglib-2.0.so.0:g_source_set_name
 libglib-2.0.so.0:g_source_set_priority
 libglib-2.0.so.0:g_source_set_ready_time
 libglib-2.0.so.0:g_source_unref
 libglib-2.0.so.0:g_strfreev
 libglib-2.0.so.0:g_string_append_len
-libglib-2.0.so.0:g_string_append_unichar
 libglib-2.0.so.0:g_strndup
 libglib-2.0.so.0:g_timeout_add_seconds_full
 libglib-2.0.so.0:g_timeout_source_new
@@ -461,7 +465,6 @@ libglib-2.0.so.0:g_variant_get_string
 libglib-2.0.so.0:g_variant_get_type
 libglib-2.0.so.0:g_variant_is_of_type
 libglib-2.0.so.0:g_variant_type_copy
-libglib-2.0.so.0:g_variant_type_free
 libglib-2.0.so.0:g_variant_type_get_string_length
 libglib-2.0.so.0:g_variant_unref
 libgobject-2.0.so.0:g_closure_add_finalize_notifier
@@ -476,7 +479,6 @@ libgobject-2.0.so.0:g_initially_unowned_get_type
 libgobject-2.0.so.0:g_object_bind_property_full
 libgobject-2.0.so.0:g_object_class_find_property
 libgobject-2.0.so.0:g_object_class_install_properties
-libgobject-2.0.so.0:g_object_class_list_properties
 libgobject-2.0.so.0:g_object_get_property
 libgobject-2.0.so.0:g_object_get_type
 libgobject-2.0.so.0:g_object_new_with_properties
@@ -694,6 +696,9 @@ libgtk-4.so.1:gtk_stack_set_transition_type
 libgtk-4.so.1:gtk_stack_set_visible_child
 libgtk-4.so.1:gtk_style_context_add_provider_for_display
 libgtk-4.so.1:gtk_switch_get_type
+libgtk-4.so.1:gtk_text_buffer_get_start_iter
+libgtk-4.so.1:gtk_text_buffer_insert
+libgtk-4.so.1:gtk_text_buffer_insert_markup
 libgtk-4.so.1:gtk_text_buffer_set_text
 libgtk-4.so.1:gtk_text_view_get_buffer
 libgtk-4.so.1:gtk_text_view_get_type
@@ -773,6 +778,7 @@ libssl.so.3:SSL_connect
 libssl.so.3:SSL_ctrl
 libssl.so.3:SSL_free
 libssl.so.3:SSL_get0_alpn_selected
+libssl.so.3:SSL_get0_group_name
 libssl.so.3:SSL_get0_verified_chain
 libssl.so.3:SSL_get1_peer_certificate
 libssl.so.3:SSL_get_certificate
@@ -795,6 +801,9 @@ libssl.so.3:SSL_set_session
 libssl.so.3:SSL_shutdown
 libssl.so.3:SSL_write
 libssl.so.3:TLS_client_method
+libssl.so.3:TLS_method
+libssl.so.3:d2i_SSL_SESSION
+libssl.so.3:i2d_SSL_SESSION
 libz.so.1:inflate
 libz.so.1:inflateEnd
 libz.so.1:inflateInit2_
