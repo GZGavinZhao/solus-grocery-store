@@ -1,6 +1,6 @@
 name       : lenovo-legion-linux
 version    : 0.0.18
-release    : 18
+release    : 19
 source     :
     - git|https://github.com/johnfanv2/LenovoLegionLinux : v0.0.18
 homepage   : https://github.com/johnfanv2/LenovoLegionLinux
@@ -24,6 +24,7 @@ rundeps      :
 permanent  :
     - /lib/modules
 setup      : |
+    %patch -p1 -i $pkgfiles/251.patch
     sed -i 's|version = _VERSION|verison = %version%|' python/legion_linux/setup.cfg
 build      : |
     %make -C kernel_module KERNELVERSION=%kernel_version_current% KSRC=/lib/modules/%kernel_version_current%/build

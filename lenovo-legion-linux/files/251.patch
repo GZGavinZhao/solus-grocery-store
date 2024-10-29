@@ -1,0 +1,55 @@
+From 61f05e082afe2af9fec3d038e8c800192b2de07f Mon Sep 17 00:00:00 2001
+From: johnfan <johndoe@example.com>
+Date: Sat, 7 Sep 2024 10:09:21 +0200
+Subject: [PATCH] fix: Make legion_remove return void and set remove_new
+
+The type of .remove in platform_driver changed from
+
+int (*)(struct platform_drive*)
+
+to
+
+void (*)(struct platform_drive*)
+
+in kernel 6.11 to force migration. In version before
+
+.remove_new has type
+
+void (*)(struct platform_drive*)
+
+to allows a migration. We use remove_new to make it
+commpatible with different kernels.
+---
+ kernel_module/legion-laptop.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/kernel_module/legion-laptop.c b/kernel_module/legion-laptop.c
+index 405b198..e1c42bd 100644
+--- a/kernel_module/legion-laptop.c
++++ b/kernel_module/legion-laptop.c
+@@ -6084,7 +6084,7 @@ static int legion_add(struct platform_device *pdev)
+ 	return err;
+ }
+ 
+-static int legion_remove(struct platform_device *pdev)
++static void legion_remove(struct platform_device *pdev)
+ {
+ 	struct legion_private *priv = dev_get_drvdata(&pdev->dev);
+ 
+@@ -6112,7 +6112,6 @@ static int legion_remove(struct platform_device *pdev)
+ 	legion_shared_exit(priv);
+ 
+ 	pr_info("Legion platform unloaded\n");
+-	return 0;
+ }
+ 
+ static int legion_resume(struct platform_device *pdev)
+@@ -6144,7 +6143,7 @@ MODULE_DEVICE_TABLE(acpi, legion_device_ids);
+ 
+ static struct platform_driver legion_driver = {
+ 	.probe = legion_add,
+-	.remove = legion_remove,
++	.remove_new = legion_remove,
+ 	.resume = legion_resume,
+ 	.driver = {
+ 		.name   = "legion",
