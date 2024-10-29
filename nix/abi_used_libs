@@ -5,7 +5,7 @@ libboost_context.so.1.83.0
 libbrotlidec.so.1
 libbrotlienc.so.1
 libc.so.6
-libcpuid.so.16
+libcpuid.so.17
 libcrypto.so.3
 libcurl.so.4
 libeditline.so.1

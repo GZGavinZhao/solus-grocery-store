@@ -83,6 +83,7 @@ libc.so.6:__assert_fail
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
+libc.so.6:__getcwd_chk
 libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoll
 libc.so.6:__isoc23_strtoul
@@ -92,7 +93,14 @@ libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
 libc.so.6:__nss_configure_lookup
+libc.so.6:__open_2
+libc.so.6:__openat_2
+libc.so.6:__poll_chk
+libc.so.6:__read_chk
+libc.so.6:__readlink_chk
 libc.so.6:__stack_chk_fail
+libc.so.6:__vfprintf_chk
+libc.so.6:__vsnprintf_chk
 libc.so.6:_exit
 libc.so.6:_setjmp
 libc.so.6:abort
@@ -132,7 +140,6 @@ libc.so.6:ferror
 libc.so.6:flock
 libc.so.6:fopen
 libc.so.6:fork
-libc.so.6:fprintf
 libc.so.6:fread
 libc.so.6:free
 libc.so.6:freeifaddrs
@@ -195,7 +202,6 @@ libc.so.6:mprotect
 libc.so.6:munmap
 libc.so.6:nanosleep
 libc.so.6:open
-libc.so.6:openat
 libc.so.6:opendir
 libc.so.6:personality
 libc.so.6:pipe2
@@ -240,7 +246,6 @@ libc.so.6:sigorset
 libc.so.6:sigprocmask
 libc.so.6:sigwait
 libc.so.6:sleep
-libc.so.6:snprintf
 libc.so.6:socket
 libc.so.6:splice
 libc.so.6:srandom
@@ -283,9 +288,9 @@ libc.so.6:vfork
 libc.so.6:vsnprintf
 libc.so.6:waitpid
 libc.so.6:write
-libcpuid.so.16:cpu_identify
-libcpuid.so.16:cpuid_get_raw_data
-libcpuid.so.16:cpuid_present
+libcpuid.so.17:cpu_identify
+libcpuid.so.17:cpuid_get_raw_data
+libcpuid.so.17:cpuid_present
 libcrypto.so.3:MD5_Final
 libcrypto.so.3:MD5_Init
 libcrypto.so.3:MD5_Update
