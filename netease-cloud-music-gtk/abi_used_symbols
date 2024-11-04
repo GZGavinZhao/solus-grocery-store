@@ -426,6 +426,7 @@ libglib-2.0.so.0:g_get_home_dir
 libglib-2.0.so.0:g_get_user_cache_dir
 libglib-2.0.so.0:g_get_user_config_dir
 libglib-2.0.so.0:g_get_user_data_dir
+libglib-2.0.so.0:g_intern_string
 libglib-2.0.so.0:g_log
 libglib-2.0.so.0:g_main_context_acquire
 libglib-2.0.so.0:g_main_context_default
@@ -449,6 +450,7 @@ libglib-2.0.so.0:g_source_destroy
 libglib-2.0.so.0:g_source_get_context
 libglib-2.0.so.0:g_source_new
 libglib-2.0.so.0:g_source_ref
+libglib-2.0.so.0:g_source_remove
 libglib-2.0.so.0:g_source_set_callback
 libglib-2.0.so.0:g_source_set_name
 libglib-2.0.so.0:g_source_set_priority
@@ -603,6 +605,7 @@ libgtk-4.so.1:gtk_css_provider_new
 libgtk-4.so.1:gtk_editable_get_text
 libgtk-4.so.1:gtk_editable_set_text
 libgtk-4.so.1:gtk_entry_get_type
+libgtk-4.so.1:gtk_event_controller_scroll_new
 libgtk-4.so.1:gtk_flow_box_child_get_index
 libgtk-4.so.1:gtk_flow_box_get_type
 libgtk-4.so.1:gtk_flow_box_insert
@@ -696,13 +699,19 @@ libgtk-4.so.1:gtk_stack_set_transition_type
 libgtk-4.so.1:gtk_stack_set_visible_child
 libgtk-4.so.1:gtk_style_context_add_provider_for_display
 libgtk-4.so.1:gtk_switch_get_type
+libgtk-4.so.1:gtk_text_buffer_apply_tag
+libgtk-4.so.1:gtk_text_buffer_create_mark
+libgtk-4.so.1:gtk_text_buffer_get_end_iter
+libgtk-4.so.1:gtk_text_buffer_get_iter_at_line
 libgtk-4.so.1:gtk_text_buffer_get_start_iter
-libgtk-4.so.1:gtk_text_buffer_insert
-libgtk-4.so.1:gtk_text_buffer_insert_markup
+libgtk-4.so.1:gtk_text_buffer_get_type
+libgtk-4.so.1:gtk_text_buffer_remove_tag
 libgtk-4.so.1:gtk_text_buffer_set_text
-libgtk-4.so.1:gtk_text_view_get_buffer
+libgtk-4.so.1:gtk_text_iter_ends_line
+libgtk-4.so.1:gtk_text_iter_forward_to_line_end
+libgtk-4.so.1:gtk_text_tag_get_type
 libgtk-4.so.1:gtk_text_view_get_type
-libgtk-4.so.1:gtk_text_view_set_buffer
+libgtk-4.so.1:gtk_text_view_scroll_to_mark
 libgtk-4.so.1:gtk_toggle_button_get_type
 libgtk-4.so.1:gtk_volume_button_get_type
 libgtk-4.so.1:gtk_widget_add_controller
