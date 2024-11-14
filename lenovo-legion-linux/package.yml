@@ -1,6 +1,6 @@
 name       : lenovo-legion-linux
 version    : 0.0.18
-release    : 19
+release    : 20
 source     :
     - git|https://github.com/johnfanv2/LenovoLegionLinux : v0.0.18
 homepage   : https://github.com/johnfanv2/LenovoLegionLinux
