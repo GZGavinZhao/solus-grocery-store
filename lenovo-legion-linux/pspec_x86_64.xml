@@ -24,7 +24,7 @@ WARNING: the drivers that this package provides will be kept up-to-date with lin
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <Files>
-            <Path fileType="data">/lib/modules/6.11.7-309.current/kernel/drivers/platform/x86/legion-laptop.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.11.10-310.current/kernel/drivers/platform/x86/legion-laptop.ko.zst</Path>
             <Path fileType="executable">/usr/bin/legion_cli</Path>
             <Path fileType="executable">/usr/bin/legion_gui</Path>
             <Path fileType="library">/usr/lib/python3.11/site-packages/legion_linux-0.0.0.dist-info/METADATA</Path>
@@ -65,8 +65,8 @@ WARNING: the drivers that this package provides will be kept up-to-date with lin
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2024-11-14</Date>
+        <Update release="21">
+            <Date>2024-11-29</Date>
             <Version>0.0.18</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
