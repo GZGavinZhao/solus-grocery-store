@@ -1,8 +1,8 @@
 name       : zoom
-version    : 6.1.11.1545
-release    : 5
+version    : 6.3.11.7212
+release    : 6
 source     :
-    - https://zoom.us/client/6.1.11.1545/zoom_x86_64.tar.xz : b4a743ff8360ab589e8cf6538ebfb39f461a459dad2f63a443e4ff608e88a0a9
+    - https://zoom.us/client/6.3.11.7212/zoom_x86_64.tar.xz : 437d308cfa5e1591103e085f7714c5f20ce070c76bad849b481954942a17c237
 license    : Proprietary
 component  : network.web
 summary    : Zoom video conference client

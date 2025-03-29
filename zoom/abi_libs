@@ -31,6 +31,7 @@ libavutil.so.57
 libbradient.so
 libcef.so
 libclDNN64.so
+libcml.so
 libcomposeplatforminputcontextplugin.so
 libdialogplugin.so
 libdialogsprivateplugin.so
