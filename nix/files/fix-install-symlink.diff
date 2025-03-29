@@ -1,0 +1,77 @@
+diff --git a/src/libstore/globals.cc b/src/libstore/globals.cc
+index d7c000dfa..1ab60ccf8 100644
+--- a/src/libstore/globals.cc
++++ b/src/libstore/globals.cc
+@@ -105,7 +105,14 @@ void loadConfFile(AbstractConfig & config)
+         } catch (SystemError &) { }
+     };
+ 
+-    applyConfigFile(settings.nixConfDir + "/nix.conf");
++    std::string globalPath = settings.nixConfDir + "/nix.conf";
++    std::string statelessPath = "/usr/share/defaults/etc/nix/nix.conf";
++    try {
++        std::string contents = readFile(globalPath);
++        config.applyConfig(contents, globalPath);
++    } catch (SystemError &) {
++        applyConfigFile(statelessPath);
++    }
+ 
+     /* We only want to send overrides to the daemon, i.e. stuff from
+        ~/.nix/nix.conf or the command line. */
+diff --git a/src/nix/meson.build b/src/nix/meson.build
+index 79ad840f6..e7d3818e3 100644
+--- a/src/nix/meson.build
++++ b/src/nix/meson.build
+@@ -239,34 +239,34 @@ foreach linkname : nix_symlinks
+     # The 'runtime' tag is what executables default to, which we want to emulate here.
+     install_tag : 'runtime'
+   )
+-  custom_target(
+-    command: ['ln', '-sf', fs.name(this_exe), '@OUTPUT@'],
+-    output: linkname + executable_suffix,
+-    # native doesn't allow dangling symlinks, but the target executable often doesn't exist at this time
+-    env : { 'MSYS' : 'winsymlinks:lnk' },
+-    # TODO(Ericson2314): Don't do this once we have the `meson.override_find_program` working)
+-    build_by_default: true
+-  )
++  # custom_target(
++  #   command: ['ln', '-sf', fs.name(this_exe), '@OUTPUT@'],
++  #   output: linkname + executable_suffix,
++  #   # native doesn't allow dangling symlinks, but the target executable often doesn't exist at this time
++  #   env : { 'MSYS' : 'winsymlinks:lnk' },
++  #   # TODO(Ericson2314): Don't do this once we have the `meson.override_find_program` working)
++  #   build_by_default: true
++  # )
+   # TODO(Ericson3214): Dosen't yet work
+   #meson.override_find_program(linkname, t)
+ endforeach
+ 
+ install_symlink(
+   'build-remote',
+-  pointing_to : '..' / '..'/ get_option('bindir') / fs.name(this_exe),
+-  install_dir : get_option('libexecdir') / fs.name(this_exe),
++  pointing_to : '..' / '..' / get_option('bindir') / fs.name(this_exe),
++  install_dir : get_option('libexecdir'),
+   # The 'runtime' tag is what executables default to, which we want to emulate here.
+   install_tag : 'runtime'
+ )
+ 
+-custom_target(
+-  command: ['ln', '-sf', fs.name(this_exe), '@OUTPUT@'],
+-  output: 'build-remote' + executable_suffix,
+-  # native doesn't allow dangling symlinks, but the target executable often doesn't exist at this time
+-  env : { 'MSYS' : 'winsymlinks:lnk' },
+-  # TODO(Ericson2314): Don't do this once we have the `meson.override_find_program` working)
+-  build_by_default: true
+-)
++# custom_target(
++#   command: ['ln', '-sf', fs.name(this_exe), '@OUTPUT@'],
++#   output: 'build-remote' + executable_suffix,
++#   # native doesn't allow dangling symlinks, but the target executable often doesn't exist at this time
++#   env : { 'MSYS' : 'winsymlinks:lnk' },
++#   # TODO(Ericson2314): Don't do this once we have the `meson.override_find_program` working)
++#   build_by_default: true
++# )
+ # TODO(Ericson3214): Dosen't yet work
+ #meson.override_find_program(linkname, t)
+ 

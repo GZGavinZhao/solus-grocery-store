@@ -1,7 +1,13 @@
 libnixcmd.so
 libnixexpr.so
+libnixexprc.so
 libnixfetchers.so
+libnixflake.so
+libnixflakec.so
 libnixmain.so
+libnixmainc.so
 libnixstore.so
+libnixstorec.so
 libnixutil.so
+libnixutilc.so
 nix

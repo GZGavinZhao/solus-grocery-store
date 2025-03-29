@@ -1,19 +1,22 @@
 name       : nix
-version    : 2.19.2
-release    : 13
+version    : 2.27.1
+release    : 14
 source     :
-    - https://github.com/NixOS/nix/archive/refs/tags/2.19.2.tar.gz : 8afa34cd67196ba087093ff8b39ab20c4c86b381c51eefa0ca352f239a455b40
+    - https://github.com/NixOS/nix/archive/refs/tags/2.27.1.tar.gz : 55e3ad1faa70d1f4d4c93a3833d0e33bb1d5a5d34d576d825fa8f7ad2f05b2ea
+    - https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.0.tar.gz#libgit2.tar.gz : 75b27d4d6df44bd34e2f70663cfd998f5ec41e680e1e593238bbe517a84c7ed2
+    - https://github.com/ToruNiina/toml11/archive/refs/tags/v4.4.0.tar.gz#toml11.tar.gz : 815bfe6792aa11a13a133b86e7f0f45edc5d71eb78f5fb6686c49c7f792b9049
 license    : LGPL-2.1-or-later
 component  : programming.tools
 summary    : The purely functional package manager
 description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 clang      : yes
-lto        : yes
+# lto        : yes
 avx2       : yes
 # networking : yes # Required for full doc gen
 patterns   : /*
 builddeps  :
+    - pkgconfig(libblake3)
     - pkgconfig(libsodium)
     - pkgconfig(libbrotlidec)
     - pkgconfig(libcurl)
@@ -25,39 +28,72 @@ builddeps  :
     - pkgconfig(libarchive)
     - pkgconfig(lowdown)
     - pkgconfig(nlohmann_json)
-    - autoconf-archive
-    - busybox
-    - bison-devel
-    - flex-devel
     - libboost-devel
-    - lowdown
-    - jq
+    - busybox
+    - lsof
 rundeps    :
     - busybox
+checkdeps  :
+    # Note: ypkg incorrectly detects libgit2 as a rundep of -devel because of
+    # pkgconfig, so it must be present during the build
+    - pkgconfig(libgit2)
+    - graphviz
+environment: |
+    export DEPS_PREFIX=$workdir/depsdir
+    export CMAKE_PREFIX_PATH=$DEPS_PREFIX
+    export PKG_CONFIG_PATH=$DEPS_PREFIX/lib64/pkgconfig
+
+    export LDFLAGS+=" $(pkg-config --libs libssh2)"
+    export LDFLAGS+=" $(pkg-config --libs openssl)"
+    export LDFLAGS+=" $(pkg-config --libs zlib)"
+    export LDFLAGS+=" $(pkg-config --libs libpcre2-8)"
 setup      : |
-    # # Enable later when we want to build documentation too.
-    # sed -i 's|$(bindir)|$(nix_DIR)|g' doc/manual/local.mk
+    mkdir libgit2
+    tar xf $sources/libgit2.tar.gz --strip-components=1 -C libgit2
+    pushd libgit2
+        %cmake_ninja -B build -L \
+          -DBUILD_SHARED_LIBS=OFF \
+          -DBUILD_TESTS=OFF \
+          -DBUILD_CLI=OFF \
+          -DREGEX_BACKEND=pcre2 \
+          -DUSE_SSH=ON \
+          -DUSE_THREADS=ON \
+          -DCMAKE_INSTALL_PREFIX=$DEPS_PREFIX
+        %ninja_build -C build
+        ninja install -C build
+    popd
 
-    %reconfigure --enable-gc \
-                 --disable-doc-gen \
-                 --disable-tests \
-                 --localstatedir=/nix/var \
-                 --with-sandbox-shell=/usr/bin/busybox \
+    mkdir toml11
+    tar xf $sources/toml11.tar.gz --strip-components=1 -C toml11
+    pushd toml11
+        %cmake_ninja -B build -L \
+          -DBUILD_SHARED_LIBS=OFF \
+          -DCMAKE_INSTALL_PREFIX=$DEPS_PREFIX
+        %ninja_build -C build
+        ninja install -C build
+    popd
+
+    %patch -p1 -i $pkgfiles/fix-install-symlink.diff
+
+    %meson_configure \
+      -Ddoc-gen=false \
+      -Dunit-tests=false \
+      -Dbindings=false \
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+    mv $installdir/usr/lib/** $installdir/%libdir%
+    rm -rf $installdir/usr/lib
 
-    # systemd integration
-    install -Dm00644 $pkgfiles/tmpfiles.conf "$installdir/%libdir%/tmpfiles.d/nix-daemon.conf"
-    install -Dm00644 $pkgfiles/sysusers.conf "$installdir/%libdir%/sysusers.d/nix-daemon.conf"
-    install -Dm00644 $pkgfiles/user.tmpfiles.conf "$installdir/usr/share/user-tmpfiles.d/nix-daemon.conf"
-    install -Dm00644 $pkgfiles/user.environment.conf "$installdir/%libdir%/environment.d/nix-daemon.conf"
-
-    # configuration
-    install -Dm00644 $pkgfiles/nix.conf -t "$installdir/etc/nix"
-
-    # mv $installdir/usr/lib/** $installdir/%libdir%
-    rm -rf \
-        "$installdir/etc/init" \
-        "$installdir/etc/profile.d" \
+    if [ -z "$AVX2BUILD" ]; then
+        # systemd integration
+        install -Dm00644 $pkgfiles/sysusers.conf $installdir/%libdir%/sysusers.d/nix-daemon.conf
+        
+        # configuration
+        mkdir -pv $installdir/usr/share/defaults
+        mv $installdir/usr/etc $installdir/usr/share/defaults
+        install -Dm00644 $pkgfiles/nix.conf -t $installdir/usr/share/defaults/etc/nix
+    else
+        rm -rv $installdir/%libdir%/{nix,systemd}
+    fi
