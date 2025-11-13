@@ -1,6 +1,6 @@
 name       : nix
 version    : 2.27.1
-release    : 14
+release    : 15
 source     :
     - https://github.com/NixOS/nix/archive/refs/tags/2.27.1.tar.gz : 55e3ad1faa70d1f4d4c93a3833d0e33bb1d5a5d34d576d825fa8f7ad2f05b2ea
     - https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.0.tar.gz#libgit2.tar.gz : 75b27d4d6df44bd34e2f70663cfd998f5ec41e680e1e593238bbe517a84c7ed2
@@ -12,7 +12,7 @@ description: |
     Nix is a powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible.
 clang      : yes
 # lto        : yes
-avx2       : yes
+# avx2       : yes
 # networking : yes # Required for full doc gen
 patterns   : /*
 builddeps  :

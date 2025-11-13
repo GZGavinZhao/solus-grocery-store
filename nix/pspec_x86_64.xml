@@ -272,18 +272,6 @@
             <Path fileType="header">/usr/include/nix/worker-protocol-impl.hh</Path>
             <Path fileType="header">/usr/include/nix/worker-protocol.hh</Path>
             <Path fileType="header">/usr/include/nix/xml-writer.hh</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixcmd.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixexpr.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixexprc.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixfetchers.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixflake.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixflakec.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixmain.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixmainc.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixstore.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixstorec.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixutil.so</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libnixutilc.so</Path>
             <Path fileType="library">/usr/lib64/libnixcmd.so</Path>
             <Path fileType="library">/usr/lib64/libnixexpr.so</Path>
             <Path fileType="library">/usr/lib64/libnixexprc.so</Path>
@@ -325,8 +313,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2025-03-29</Date>
+        <Update release="15">
+            <Date>2025-11-13</Date>
             <Version>2.27.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
